@@ -547,7 +547,7 @@
             entry<span class="token punctuation">.</span><span class="token function">setValue</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>接着找<code>setvalue</code></p>
+<p>接着找<code>setvalue</code>，，正好是在<code>readObject</code>里</p>
 <p><img src="https://cdn.jsdelivr.net/gh/lingqing777/Cloud-Image-Hosting/26c58484f53dd6a132e1a5a166e2d10f.png"></p>
 <p><code>AnnotationInvocationHandler</code>，而且还正好在<code>readObject</code>。但要注意这不是公有的，所以要反射调用类，还要记得弄放行的<code>accessible</code></p>
 <p><code>AnnotationInvocationHandler(Class&lt;? extends Annotation&gt; type, Map&lt;String, Object&gt; memberValues)</code></p>
